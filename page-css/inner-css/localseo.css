@@ -411,7 +411,8 @@ p {
 }
 
 .content-block {
-    padding: 30px;
+    padding: 30px 15px;
+    /* Reduced side padding to minimize gaps */
     background: var(--primary-bg);
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
@@ -1355,16 +1356,65 @@ p {
     }
 }
 
+.case-study-content img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.content-image-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden;
+}
+
+.case-study-content {
+    overflow-x: hidden;
+}
+
+.content-section {
+    width: 100%;
+    margin-bottom: 60px;
+    overflow: hidden;
+    /* Prevent internal float/flex from leaking */
+}
+
+.content-side-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 40px 0;
+    width: 100%;
+    gap: 15px;
+    min-width: 0;
+    /* Add this to prevent flex items from expanding beyond container */
+}
+
+.side-image {
+    flex: 1;
+    min-width: 0;
+    /* Add this to prevent flex items from expanding beyond container */
+}
+
+.image-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
 /* Content Image Styles */
 .content-image-container {
     margin: 0;
     width: 100%;
+    max-width: 100%;
+    /* Ensure it doesn't overflow */
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-medium);
     border: 1px solid var(--border-color);
     transition: var(--transition-normal);
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .content-image-container:hover {
@@ -1375,8 +1425,68 @@ p {
 
 .content-image-container img {
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+}
+
+.audit-results,
+.overall-impact-stats {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--accent-light);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-color);
+}
+
+.audit-results ul,
+.overall-stats ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.audit-results li,
+.overall-stats li {
+    position: relative;
+    padding-left: 25px;
+}
+
+.audit-results li::before,
+.overall-stats li::before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+}
+
+.keyword-results-full {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--accent-light);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-color);
+}
+
+.keyword-results,
+.strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.keyword-results-full,
+.audit-results,
+.overall-impact-stats {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Image Modal Styles */
@@ -1454,11 +1564,25 @@ p {
     color: var(--accent-color);
 }
 
+.content-block {
+    padding: 30px;
+    background: var(--primary-bg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-normal);
+}
+
+.content-block:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-medium);
+}
+
 .content-side-layout {
     display: flex;
-    align-items: center;
-    gap: 15px;
-    margin: 40px 0;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 30px 0;
+    width: 100%;
 }
 
 .content-side-layout.reverse {
@@ -1469,11 +1593,88 @@ p {
     flex: 1.2;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+}
+
+.side-text ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-text li {
+    position: relative;
+    padding-left: 25px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.side-text li::before {
+    content: '\f058';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.side-text h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 15px;
+    font-weight: 600;
 }
 
 .side-image {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.image-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.content-image-container {
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-small);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.content-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.content-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.audit-results,
+.overall-impact-stats,
+.keyword-results-full {
+    margin-top: 30px;
+    padding: 25px;
+    background: var(--accent-light);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-color);
 }
 
 @media (max-width: 991px) {
