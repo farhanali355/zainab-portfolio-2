@@ -60,7 +60,7 @@ const seoTools = [
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         enableDarkTheme();
     } else {
@@ -95,7 +95,7 @@ themeToggle.addEventListener('click', () => {
 // Mobile Menu Toggle
 mobileToggle.addEventListener('click', () => {
     navRight.classList.toggle('active');
-    
+
     // Change menu icon
     const icon = mobileToggle.querySelector('i');
     if (navRight.classList.contains('active')) {
@@ -130,12 +130,13 @@ function closeImageModal() {
     document.body.style.overflow = '';
 }
 
-// Add click event to image cards
-document.querySelectorAll('.image-card').forEach(card => {
+// Add click event to image cards and case study images
+document.querySelectorAll('.image-card, .content-image-container').forEach(card => {
     card.addEventListener('click', () => {
-        const imageSrc = card.querySelector('img').src;
-        const altText = card.querySelector('img').alt;
-        openImageModal(imageSrc, altText);
+        const img = card.querySelector('img');
+        if (img) {
+            openImageModal(img.src, img.alt);
+        }
     });
 });
 
@@ -151,7 +152,7 @@ imageModal.addEventListener('click', (e) => {
 function openToolsModal() {
     const toolsGrid = document.getElementById('toolsGrid');
     toolsGrid.innerHTML = '';
-    
+
     seoTools.forEach(tool => {
         const toolCard = document.createElement('div');
         toolCard.className = 'tool-card';
@@ -164,7 +165,7 @@ function openToolsModal() {
         `;
         toolsGrid.appendChild(toolCard);
     });
-    
+
     toolsModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -186,11 +187,11 @@ toolsModal.addEventListener('click', (e) => {
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-count'));
     if (!target) return;
-    
+
     const duration = 1500; // milliseconds
     const increment = target / (duration / 16); // 60fps
     let current = 0;
-    
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
@@ -227,11 +228,11 @@ document.querySelectorAll('.stat-item').forEach(item => {
 
 // Add smooth scrolling to all links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
@@ -259,7 +260,7 @@ document.addEventListener('keydown', (e) => {
             icon.classList.add('fa-bars');
         }
     }
-    
+
     // Ctrl/Cmd + D to toggle theme
     if ((e.ctrlKey || e.metaKey) && e.key === 'd') {
         e.preventDefault();
@@ -270,20 +271,20 @@ document.addEventListener('keydown', (e) => {
 // Initialize everything when page loads
 window.addEventListener('DOMContentLoaded', () => {
     initTheme();
-    
+
     // Set current year in footer
     const currentYear = new Date().getFullYear();
     const copyrightElement = document.querySelector('.copy p');
     if (copyrightElement) {
         copyrightElement.innerHTML = copyrightElement.innerHTML.replace('2026', currentYear);
     }
-    
+
     // Add loading animation
     setTimeout(() => {
         document.body.style.opacity = '1';
         document.body.style.transition = 'opacity 0.5s ease';
     }, 100);
-    
+
     // Add animation to elements when they come into view
     const contentObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -296,7 +297,7 @@ window.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     });
-    
+
     // Observe content sections
     document.querySelectorAll('.content-block, .element-card, .image-card').forEach(element => {
         element.style.opacity = '0';
@@ -312,7 +313,7 @@ if (ctaButton) {
     ctaButton.addEventListener('mouseenter', () => {
         ctaButton.style.transform = 'translateY(-5px) scale(1.05)';
     });
-    
+
     ctaButton.addEventListener('mouseleave', () => {
         ctaButton.style.transform = 'translateY(0) scale(1)';
     });
