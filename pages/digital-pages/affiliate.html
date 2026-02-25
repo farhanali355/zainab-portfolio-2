@@ -2,67 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boat Rental PPC Case Study | Miami Digital Growth</title>
-    <link rel="stylesheet" href="../../page-css/digital-m.css/affiliate.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Affiliate Marketing Service - Zainab Samnan</title>
+
+    <!-- Standard Project Styles -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Tailwind Design Specifics -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ["class", ".dark-mode"],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#137fec",
+                        "primary-dark": "#0b5bb0",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                        "text-main": "#111418",
+                        "text-sub": "#617589",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <style>
-        /* Refinement Styles for Light Mode and Image Display */
-        .image-card {
-            cursor: pointer;
-            transition: transform 0.3s ease;
+        /* Ensure navbar doesn't conflict with tailwind fixed positioning */
+        .navbar {
+            z-index: 100 !important;
         }
 
-        .image-card:hover {
-            transform: scale(1.02);
+        /* Fix for potential Tailwind/Project font conflicts */
+        .font-display {
+            font-family: 'Manrope', sans-serif !important;
         }
 
-        .image-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain !important;
-            background: #f8f9fa;
+        /* Robust Dark Mode Overrides for Tailwind Components */
+        .dark-mode .bg-background-light,
+        .dark-mode .bg-gray-50,
+        .dark-mode .bg-gray-100,
+        .dark-mode main {
+            background-color: #101922 !important;
         }
 
-        .dark-mode .image-card img {
-            background: #000;
+        .dark-mode .bg-surface-light,
+        .dark-mode .bg-white,
+        .dark-mode .bg-surface-dark {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
         }
 
-        body:not(.dark-mode) .content-block {
-            background: #ffffff;
-            border-color: #eee;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        .dark-mode .text-text-main,
+        .dark-mode .text-gray-900,
+        .dark-mode .text-black,
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3 {
+            color: #ffffff !important;
         }
 
-        body:not(.dark-mode) .feature-box {
-            background: #f1f5f9;
+        .dark-mode .text-text-sub,
+        .dark-mode .text-gray-600,
+        .dark-mode .text-gray-500,
+        .dark-mode .text-text-sub {
+            color: #a0aec0 !important;
+        }
+
+        .dark-mode .border-gray-200,
+        .dark-mode .border-gray-100 {
+            border-color: #2d3748 !important;
+        }
+
+        .dark-mode .bg-blue-50 {
+            background-color: rgba(59, 130, 246, 0.1) !important;
+        }
+
+        /* Ecosystem section line fix */
+        .dark-mode .bg-gray-200 {
+            background-color: #2d3748 !important;
+        }
+
+        /* Fix for White buttons/backgrounds */
+        .dark-mode .bg-white.text-text-sub {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        /* Navigation fix */
+        body.dark-mode .navbar {
+            background: rgba(26, 38, 52, 0.9) !important;
+            border-bottom-color: #2d3748 !important;
+        }
+
+        /* Footer Refinement */
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid #2d3748;
+            padding-top: 40px;
         }
     </style>
 </head>
 
 <body class="dark-mode">
-    <!-- Navigation -->
+    <!-- Navigation (Standardized) -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <a href="#" class="logo">
-                    <span class="logo-text">Boat Rental Case Study</span>
-                    <span class="logo-dot" style="background: var(--accent-color);"></span>
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Zainab Samnan</span>
+                    <span class="logo-dot"></span>
                 </a>
 
                 <div class="nav-right">
                     <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
                         <i class="fas fa-moon"></i>
-                        <span class="tooltip">Dark/Light Mode</span>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <button class="nav-icon tools-btn" id="toolsBtn" title="Our Marketing Tools">
+                        <i class="fas fa-tools"></i>
+                        <span class="tooltip">Our Tools</span>
                     </button>
                     <a href="../../index.html" class="cta-btn">
-                        <span>Back to Home</span>
+                        <span>Home</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -74,224 +169,324 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="images-section" style="padding-top: 150px; padding-bottom: 80px;">
-        <div class="container">
-            <div class="section-header" style="text-align: center; max-width: 900px; margin: 0 auto;">
-                <span class="section-tag"
-                    style="background: var(--accent-color); color: var(--primary-bg); border: none; padding: 5px 15px; border-radius: 5px; font-weight: bold;">PPC
-                    Case Study</span>
-                <h1 class="section-title" style="margin-top: 20px; font-size: 3.5rem; line-height: 1.1;">Miami Boat
-                    Rental: <br><span style="color: var(--accent-color);">Scaling Luxury Bookings</span></h1>
-                <p class="section-subtitle" style="font-size: 1.35rem; margin-top: 20px; color: var(--text-secondary);">
-                    How data-driven PPC optimization transformed a stagnant ad account into a lead production machine.
-                </p>
-            </div>
-        </div>
-    </section>
+    <div
+        class="relative flex min-h-screen w-full flex-col overflow-x-hidden pt-24 bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+                <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+                    <div class="flex flex-col gap-6">
+                        <h1
+                            class="text-4xl font-black leading-[1.1] tracking-tight text-text-main dark:text-white sm:text-5xl lg:text-6xl">
+                            Affiliate Marketing that Scales with Performance
+                        </h1>
+                        <p class="text-lg text-text-sub dark:text-gray-300 md:text-xl leading-relaxed">
+                            Launch and manage a partner program that drives high-quality traffic and incremental revenue
+                            without the risk of un-tracked referrals.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <button
+                                class="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-white transition-all hover:bg-primary-dark shadow-lg shadow-primary/25">
+                                Launch your program
+                            </button>
+                            <button
+                                class="inline-flex h-12 items-center justify-center rounded-lg border border-gray-200 bg-surface-light px-6 text-base font-bold text-text-main transition-all hover:bg-gray-50 dark:border-gray-700 dark:bg-surface-dark dark:text-white dark:hover:bg-gray-800">
+                                View Case Studies
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-gray-800 shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-multiply">
+                        </div>
+                        <img alt="Data analytics dashboard visualization" class="h-full w-full object-cover opacity-90"
+                            data-alt="Abstract data visualization showing growth and connections"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCetqqZziSetOmLmvWaN0ZZf5Kn5wf3k__U2WHOfOAxrI3etU895zdgIt1_iKwkmgImqBHvG8EDBlnLFWoLERXhvXyuRpoxVohH3xcBJkC6T5k6jzv7fybzRpde4rcts--IZe4vDwBeaf30R3dYQp5m3Et9pMo4CNEaRmCNgHvMhfYHpMWgmY-_tBSdDJSRXqWGvNGOw7tbVv-fSZKE-PFK2yagjciYcz1OQomBVqbKB-8wFmhDDeGcMFysNruda6J2svEbtOWczxnH" />
+                    </div>
+                </div>
+            </section>
 
-    <!-- MAIN CASE STUDY CONTENT -->
-    <section class="content-section" style="background: transparent; padding-top: 0;">
-        <div class="container">
+            <!-- The Strategy -->
+            <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                <div class="mb-12 max-w-3xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-text-main dark:text-white sm:text-4xl">The
+                        Strategy</h2>
+                    <p class="mt-4 text-lg text-text-sub dark:text-gray-300">Our approach to building high-performance
+                        partner ecosystems relies on three core pillars.</p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div
+                        class="group flex flex-col rounded-xl border border-gray-200 bg-surface-light p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-700 dark:bg-surface-dark">
+                        <div
+                            class="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-blue-50 text-primary dark:bg-blue-900/20">
+                            <span class="material-symbols-outlined text-3xl">search</span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">Program Audit</h3>
+                        <p class="text-text-sub dark:text-gray-400">Assessing current structure and potential
+                            opportunities for growth. We identify where you are losing money.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="group flex flex-col rounded-xl border border-gray-200 bg-surface-light p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-700 dark:bg-surface-dark">
+                        <div
+                            class="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-blue-50 text-primary dark:bg-blue-900/20">
+                            <span class="material-symbols-outlined text-3xl">group_add</span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">Partner Acquisition</h3>
+                        <p class="text-text-sub dark:text-gray-400">Identifying and onboarding top-tier affiliates and
+                            influencers who align with your brand values.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="group flex flex-col rounded-xl border border-gray-200 bg-surface-light p-6 transition-all hover:border-primary/50 hover:shadow-lg dark:border-gray-700 dark:bg-surface-dark">
+                        <div
+                            class="mb-4 inline-flex size-12 items-center justify-center rounded-lg bg-blue-50 text-primary dark:bg-blue-900/20">
+                            <span class="material-symbols-outlined text-3xl">verified_user</span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold text-text-main dark:text-white">Compliance & Tracking</h3>
+                        <p class="text-text-sub dark:text-gray-400">Monitoring performance and preventing fraud to
+                            ensure quality traffic. We keep your brand safe.</p>
+                    </div>
+                </div>
+            </section>
 
-            <!-- 01. THE PROBLEM -->
-            <div class="content-grid"
-                style="align-items: flex-start; margin-bottom: 120px; grid-template-columns: 1fr 1fr;">
-                <div class="content-left">
-                    <span
-                        style="color: #666; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">01.
-                        Context</span>
-                    <h2 style="margin-top: 10px; font-size: 2.5rem;">Client Background</h2>
-                    <p class="content-intro" style="font-size: 1.2rem; line-height: 1.6;">Our client is a premier boat
-                        rental and yacht charter company in Miami, operating a diverse fleet of luxury vessels. Despite
-                        high demand, their existing PPC campaigns were underperforming, leading to wasted spend.</p>
-
-                    <div style="margin-top: 40px;">
-                        <div class="feature-box" style="margin-bottom: 20px;">
-                            <i class="fas fa-exclamation-triangle"
-                                style="color: var(--accent-color); font-size: 1.5rem;"></i>
-                            <div style="margin-left: 15px;">
-                                <h4 style="margin: 0;">The Pain Point</h4>
-                                <p style="margin: 5px 0 0; color: var(--text-secondary);">Burning $500+/day on generic
-                                    keywords with zero tracked phone calls.</p>
+            <!-- The Ecosystem (Horizontal Process) -->
+            <section class="bg-white py-16 dark:bg-surface-dark border-y border-gray-100 dark:border-gray-800">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="mb-12">
+                        <h2 class="text-3xl font-bold tracking-tight text-text-main dark:text-white sm:text-4xl">The
+                            Ecosystem</h2>
+                        <p class="mt-2 text-text-sub dark:text-gray-400">From technical setup to scaling revenue.</p>
+                    </div>
+                    <div class="relative">
+                        <!-- Connecting Line (Desktop) -->
+                        <div
+                            class="absolute left-0 top-[26px] hidden h-0.5 w-full bg-gray-200 dark:bg-gray-700 lg:block">
+                        </div>
+                        <div class="grid gap-8 lg:grid-cols-4 lg:gap-4">
+                            <!-- Step 1 -->
+                            <div class="relative flex flex-col gap-4 bg-white dark:bg-surface-dark lg:bg-transparent">
+                                <div class="flex items-center gap-4 lg:block">
+                                    <div
+                                        class="relative z-10 flex size-14 items-center justify-center rounded-full border-4 border-white bg-primary text-white shadow-sm dark:border-surface-dark">
+                                        <span class="material-symbols-outlined">settings_suggest</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-text-main dark:text-white lg:mt-4">Setup</h3>
+                                </div>
+                                <p class="text-sm text-text-sub dark:text-gray-400 pl-[72px] lg:pl-0">
+                                    Platform selection (Impact, ShareASale) & technical integration.
+                                </p>
+                            </div>
+                            <!-- Step 2 -->
+                            <div class="relative flex flex-col gap-4 bg-white dark:bg-surface-dark lg:bg-transparent">
+                                <div class="flex items-center gap-4 lg:block">
+                                    <div
+                                        class="relative z-10 flex size-14 items-center justify-center rounded-full border-4 border-white bg-white text-text-sub ring-1 ring-gray-200 dark:border-surface-dark dark:bg-surface-dark dark:text-gray-400 dark:ring-gray-700">
+                                        <span class="material-symbols-outlined">person_search</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-text-main dark:text-white lg:mt-4">Recruiting</h3>
+                                </div>
+                                <p class="text-sm text-text-sub dark:text-gray-400 pl-[72px] lg:pl-0">
+                                    Targeting niche partners & influencers for your specific vertical.
+                                </p>
+                            </div>
+                            <!-- Step 3 -->
+                            <div class="relative flex flex-col gap-4 bg-white dark:bg-surface-dark lg:bg-transparent">
+                                <div class="flex items-center gap-4 lg:block">
+                                    <div
+                                        class="relative z-10 flex size-14 items-center justify-center rounded-full border-4 border-white bg-white text-text-sub ring-1 ring-gray-200 dark:border-surface-dark dark:bg-surface-dark dark:text-gray-400 dark:ring-gray-700">
+                                        <span class="material-symbols-outlined">forum</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-text-main dark:text-white lg:mt-4">Management</h3>
+                                </div>
+                                <p class="text-sm text-text-sub dark:text-gray-400 pl-[72px] lg:pl-0">
+                                    Handling daily communication, newsletters, and creative asset refreshes.
+                                </p>
+                            </div>
+                            <!-- Step 4 -->
+                            <div class="relative flex flex-col gap-4 bg-white dark:bg-surface-dark lg:bg-transparent">
+                                <div class="flex items-center gap-4 lg:block">
+                                    <div
+                                        class="relative z-10 flex size-14 items-center justify-center rounded-full border-4 border-white bg-white text-text-sub ring-1 ring-gray-200 dark:border-surface-dark dark:bg-surface-dark dark:text-gray-400 dark:ring-gray-700">
+                                        <span class="material-symbols-outlined">monitoring</span>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-text-main dark:text-white lg:mt-4">Scaling</h3>
+                                </div>
+                                <p class="text-sm text-text-sub dark:text-gray-400 pl-[72px] lg:pl-0">
+                                    Optimizing commissions and scaling top performers with custom offers.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="content-right" style="padding-top: 40px;">
-                    <div class="content-block" style="padding: 40px;">
-                        <h3 style="color: var(--accent-color); margin-bottom: 20px;">The Initial Audit</h3>
-                        <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
-                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
-                                <i class="fas fa-check-circle" style="color: var(--accent-color);"></i>
-                                <span style="font-size: 1.1rem;">High CPC due to broad match keywords.</span>
+            </section>
+
+            <!-- Performance Highlight & Deliverables -->
+            <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                <div class="grid gap-12 lg:grid-cols-2">
+                    <!-- Performance Highlight -->
+                    <div class="flex flex-col gap-6">
+                        <div
+                            class="rounded-2xl bg-surface-light p-8 shadow-xl border border-gray-100 dark:border-gray-700 dark:bg-surface-dark">
+                            <div class="mb-6 flex items-center justify-between">
+                                <span
+                                    class="rounded-full bg-green-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-green-700 dark:bg-green-900/30 dark:text-green-400">
+                                    Case Study
+                                </span>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-400">Last 90 Days</span>
+                            </div>
+                            <h3 class="mb-2 text-3xl font-black text-text-main dark:text-white">280 Sales</h3>
+                            <p class="mb-8 text-text-sub dark:text-gray-300">Generated in the first 3 months of a newly
+                                launched program for a SaaS client.</p>
+                            <!-- Visual Chart Representation -->
+                            <div class="relative h-48 w-full">
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-2 h-full px-2">
+                                    <div class="w-full bg-primary/20 rounded-t h-[20%]"></div>
+                                    <div class="w-full bg-primary/30 rounded-t h-[35%]"></div>
+                                    <div class="w-full bg-primary/40 rounded-t h-[45%]"></div>
+                                    <div class="w-full bg-primary/50 rounded-t h-[30%]"></div>
+                                    <div class="w-full bg-primary/60 rounded-t h-[55%]"></div>
+                                    <div class="w-full bg-primary/70 rounded-t h-[75%]"></div>
+                                    <div class="w-full bg-primary/80 rounded-t h-[65%]"></div>
+                                    <div class="w-full bg-primary rounded-t h-[90%] relative group">
+                                        <div
+                                            class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                            Peak
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deliverables -->
+                    <div class="flex flex-col justify-center gap-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-text-main dark:text-white">What We Deliver</h2>
+                            <p class="mt-4 text-text-sub dark:text-gray-300">A comprehensive suite of services designed
+                                to get your program running and profitable.</p>
+                        </div>
+                        <ul class="flex flex-col gap-4">
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                                    <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-text-main dark:text-white">Platform Setup &
+                                        Integration</span>
+                                    <span class="text-sm text-text-sub dark:text-gray-400">Impact, ShareASale,
+                                        PartnerStack, or custom solutions.</span>
+                                </div>
                             </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
-                                <i class="fas fa-check-circle" style="color: var(--accent-color);"></i>
-                                <span style="font-size: 1.1rem;">Missing geographical bid modifiers.</span>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                                    <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-text-main dark:text-white">Creative Assets for
+                                        Affiliates</span>
+                                    <span class="text-sm text-text-sub dark:text-gray-400">Banners, email swipe copy,
+                                        and social media kits.</span>
+                                </div>
                             </li>
-                            <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
-                                <i class="fas fa-check-circle" style="color: var(--accent-color);"></i>
-                                <span style="font-size: 1.1rem;">No conversion tracking for phone calls.</span>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                                    <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-text-main dark:text-white">Monthly Performance
+                                        Audits</span>
+                                    <span class="text-sm text-text-sub dark:text-gray-400">Detailed reporting on clicks,
+                                        conversions, and partner quality.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div
+                                    class="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                                    <span class="material-symbols-outlined text-sm font-bold">check</span>
+                                </div>
+                                <div>
+                                    <span class="block font-bold text-text-main dark:text-white">Fraud Prevention</span>
+                                    <span class="text-sm text-text-sub dark:text-gray-400">Proactive monitoring to block
+                                        suspicious traffic sources.</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- 02. STRATEGY & GRAPH 1 -->
-            <div class="content-grid"
-                style="align-items: center; margin-bottom: 120px; grid-template-columns: 1fr 1.3fr;">
-                <div class="content-left">
-                    <span
-                        style="color: var(--accent-color); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">02.
-                        Strategy</span>
-                    <h2 style="margin-top: 10px; font-size: 2.5rem;">Data-Driven Optimization</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary);">We completely restructured the keyword
-                        hierarchy. By moving from broad search terms to "Long-Tail" and "Exact Match" keywords, we
-                        ensured maximum ROI.</p>
+        </main>
 
-                    <div class="content-block"
-                        style="background: var(--accent-light); border: 1px dashed var(--accent-color); margin-top: 30px;">
-                        <p style="margin-bottom: 5px; color: var(--text-primary); font-weight: bold;">Keywords we
-                            optimized for:</p>
-                        <div class="element-tags" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
-                            <span
-                                style="background: var(--accent-color); color: var(--primary-bg); padding: 5px 15px; border-radius: 50px; font-size: 0.9rem;">Mega
-                                Yacht Rental Miami</span>
-                            <span
-                                style="background: var(--secondary-bg); color: var(--text-secondary); padding: 5px 15px; border-radius: 50px; font-size: 0.9rem;">Private
-                                Yacht Charter</span>
-                            <span
-                                style="background: var(--secondary-bg); color: var(--text-secondary); padding: 5px 15px; border-radius: 50px; font-size: 0.9rem;">Boat
-                                Rental Near Me</span>
+        <!-- Standardized Footer -->
+        <div class="grax_tm_section">
+            <div class="grax_tm_copyright">
+
+                <div class="container">
+                    <div class="copyright_inner">
+                        <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                            <span class="footer-logo">Zainab Samnan</span>
                         </div>
-                    </div>
-                    <p style="margin-top: 15px; font-size: 0.9rem; color: var(--accent-color);"><i
-                            class="fas fa-info-circle"></i> Click the dashboard to zoom in.</p>
-                </div>
-                <div class="content-right" style="padding-left: 40px;">
-                    <div class="image-card" onclick="openZoom(this)"
-                        style="height: auto; background: #000; border: 1px solid var(--border-color); overflow: hidden; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                        <img src="../../images/Boat Rental Company in Miami/Boat Rental Company Graph 1.png"
-                            alt="Google Ads Keyword Performance" style="width: 100%; height: auto; display: block;">
-                        <div
-                            style="padding: 15px; background: rgba(0,0,0,0.05); border-top: 1px solid var(--border-color); text-align: center;">
-                            <span style="color: var(--accent-color); font-weight: bold; font-size: 0.9rem;"><i
-                                    class="fas fa-chart-area" style="margin-right: 8px;"></i> Keyword Performance
-                                Dashboard</span>
+
+                        <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <ul class="footer-nav-menu">
+                                <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                    <a href="../../index.html" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                    <a href="../../index.html#about" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="title">About</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                    <a href="../../index.html#portfolio" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                                        <span class="title">Portfolio</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                    <a href="../../index.html#contact" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                        <span class="title">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- 03. RESULTS & GRAPH 2 -->
-            <div class="content-grid"
-                style="align-items: center; margin-bottom: 120px; grid-template-columns: 1.3fr 1fr;">
-                <div class="content-left">
-                    <div class="image-card" onclick="openZoom(this)"
-                        style="height: auto; background: #000; border: 1px solid var(--border-color); overflow: hidden; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-                        <img src="../../images/Boat Rental Company in Miami/Boat Rental Company Graph 2.png"
-                            alt="Google Ads Results Dashboard" style="width: 100%; height: auto; display: block;">
-                        <div
-                            style="padding: 15px; background: rgba(0,0,0,0.05); border-top: 1px solid var(--border-color); text-align: center;">
-                            <span style="color: var(--text-muted); font-weight: bold; font-size: 0.9rem;"><i
-                                    class="fas fa-search-plus" style="margin-right: 8px;"></i> Search Query Results
-                                Dashboard</span>
+                        <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                            <p>&copy; Copyright 2026 by Zainab Samnan</p>
                         </div>
-                    </div>
-                </div>
-                <div class="content-right" style="padding-left: 60px;">
-                    <span
-                        style="color: var(--text-muted); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">03.
-                        Success</span>
-                    <h2 style="margin-top: 10px; font-size: 2.5rem;">The Winning Results</h2>
-                    <p style="font-size: 1.1rem; color: var(--text-secondary);">The conversion tracking revealed a surge
-                        in direct bookings. As shown in the graph, our search queries became laser-focused.</p>
-
-                    <div class="stats-grid"
-                        style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                        <div class="stat-item"
-                            style="background: var(--accent-light); border: 1px solid var(--border-color); padding: 25px; border-radius: 15px;">
-                            <div class="stat-number"
-                                style="color: var(--accent-color); font-size: 2.5rem; font-weight: 800;">14</div>
-                            <div class="stat-text"
-                                style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px;">
-                                Tracked Calls</div>
-                        </div>
-                        <div class="stat-item"
-                            style="background: var(--accent-light); border: 1px solid var(--border-color); padding: 25px; border-radius: 15px;">
-                            <div class="stat-number"
-                                style="color: var(--accent-color); font-size: 2.5rem; font-weight: 800;">$1.28</div>
-                            <div class="stat-text"
-                                style="color: var(--text-secondary); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px;">
-                                Avg. CPC</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CALL TO ACTION -->
-            <div class="cta-banner"
-                style="background: linear-gradient(135deg, #1e293b 0%, #334155 100%); border: none; padding: 80px; border-radius: 40px; text-align: center;">
-                <h2 style="color: white; font-size: 3rem; margin-bottom: 15px;">Ready to Scale?</h2>
-                <p
-                    style="color: rgba(255,255,255,0.7); font-size: 1.3rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Let's audit your PPC account and find where your budget is being wasted.</p>
-                <div style="display: flex; gap: 20px; justify-content: center;">
-                    <a href="../../index.html#contact" class="cta-btn"
-                        style="background: white; color: #1e293b; border: none; padding: 18px 45px; font-weight: 800; font-size: 1.1rem; border-radius: 50px;">Get
-                        My Free Audit</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Lightbox Modal -->
-    <div id="imageZoomModal" class="image-zoom-modal" onclick="closeZoom()">
-        <span class="image-zoom-close">&times;</span>
-        <img id="zoomedImage" src="" alt="Zoomed Screenshot">
-    </div>
-
-    <!-- Footer -->
-    <div class="grax_tm_section">
-        <div class="grax_tm_copyright" style="padding: 100px 0 50px;">
-            <div class="container">
-                <div class="copyright_inner"
-                    style="border-top: 1px solid var(--border-color); padding-top: 50px; display: flex; justify-content: space-between; align-items: center;">
-                    <div class="logo">
-                        <span class="footer-logo"
-                            style="color: var(--text-primary); font-weight: 800; font-size: 1.8rem;">Zainab
-                            Samnan</span>
-                        <p style="color: var(--text-muted); margin-top: 10px;">Strategic PPC & Lead Generation Expert
-                        </p>
-                    </div>
-                    <div class="copy">
-                        <p style="color: var(--text-muted);">&copy; 2026 Zainab Samnan. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        function openZoom(card) {
-            const img = card.querySelector('img');
-            const modal = document.getElementById('imageZoomModal');
-            const zoomedImg = document.getElementById('zoomedImage');
-            zoomedImg.src = img.src;
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+    <!-- Modals & Scripts -->
 
-        function closeZoom() {
-            const modal = document.getElementById('imageZoomModal');
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    </script>
-    <script src="../../js/digital-m.js/affiliate.js"></script>
+    <div class="tools-modal" id="toolsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="toolsModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-tools"></i></div>
+                <h2>Our Marketing Tools</h2>
+                <p>Professional tools we use to deliver exceptional results</p>
+            </div>
+            <div class="tools-grid" id="toolsGrid"></div>
+        </div>
+    </div>
+
+    <script src="../../js/digital-m.js/social.js"></script>
 </body>
 
 </html>

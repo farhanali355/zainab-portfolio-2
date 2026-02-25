@@ -2,37 +2,238 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Marketing Expert | Professional Email Marketing Services</title>
-    <link rel="stylesheet" href="../../page-css/digital-m.css/email.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Email Marketing Service - Zainab Samnan</title>
+
+    <!-- Standard Project Styles -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Tailwind Design Specifics -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ["class", ".dark-mode"],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#137fec",
+                        "primary-dark": "#0b5bb0",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                        "text-main": "#111418",
+                        "text-sub": "#617589",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        /* Ensure navbar doesn't conflict with tailwind fixed positioning */
+        .navbar {
+            z-index: 100 !important;
+        }
+
+        /* Fix for potential Tailwind/Project font conflicts */
+        .font-display {
+            font-family: 'Manrope', sans-serif !important;
+        }
+
+        /* Robust Dark Mode Overrides for Tailwind Components */
+        .dark-mode .bg-background-light,
+        .dark-mode .bg-gray-50,
+        .dark-mode .bg-gray-100,
+        .dark-mode main {
+            background-color: #101922 !important;
+        }
+
+        .dark-mode .bg-surface-light,
+        .dark-mode .bg-white,
+        .dark-mode .bg-surface-dark {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        .dark-mode .text-text-main,
+        .dark-mode .text-gray-900,
+        .dark-mode .text-black,
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3 {
+            color: #ffffff !important;
+        }
+
+        .dark-mode .text-text-sub,
+        .dark-mode .text-gray-600,
+        .dark-mode .text-gray-500,
+        .dark-mode .text-text-sub {
+            color: #a0aec0 !important;
+        }
+
+        .dark-mode .border-gray-200,
+        .dark-mode .border-gray-100 {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        /* Smooth FAQ Accordion Animation */
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-content-inner {
+            overflow: hidden;
+        }
+
+        .plus-icon {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .plus-icon {
+            transform: rotate(45deg);
+        }
+
+        .dark-mode .bg-blue-50 {
+            background-color: rgba(59, 130, 246, 0.1) !important;
+        }
+
+        /* Ecosystem section line fix */
+        .dark-mode .bg-gray-200 {
+            background-color: #2d3748 !important;
+        }
+
+        /* Fix for White buttons/backgrounds */
+        .dark-mode .bg-white.text-text-sub {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        /* Navigation fix */
+        body.dark-mode .navbar {
+            background: rgba(26, 38, 52, 0.9) !important;
+            border-bottom-color: #2d3748 !important;
+        }
+
+        /* Footer Refinement */
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid #2d3748;
+            padding-top: 40px;
+        }
+
+        /* Hero Mockup Match */
+        .mockup-hero {
+            background-color: #f6f9fc !important;
+            color: #111418 !important;
+        }
+
+        .mockup-hero .breadcrumb {
+            font-size: 0.9rem;
+            color: #617589 !important;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .mockup-hero h1 {
+            color: #111418 !important;
+            font-weight: 900;
+            max-width: 1000px;
+        }
+
+        .mockup-hero p {
+            color: #3d4f5f !important;
+            max-width: 700px;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .dark-mode .mockup-hero {
+            background-color: #101922 !important;
+        }
+
+        .dark-mode .mockup-hero h1 {
+            color: #ffffff !important;
+        }
+
+        .dark-mode .mockup-hero p {
+            color: #a0aec0 !important;
+        }
+
+        .mockup-hero .audit-btn {
+            background-color: #3b82f6 !important;
+            color: white !important;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.2);
+        }
+
+        /* Pricing Card Special Polish */
+        .pricing-tier:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(19, 127, 236, 0.15);
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Navigation - 100% Same -->
+<body class="dark-mode">
+    <!-- Navigation (Standardized) -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <!-- Logo on Left -->
-                <a href="#" class="logo">
-                    <span class="logo-text">Email Marketing</span>
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Zainab Samnan</span>
                     <span class="logo-dot"></span>
                 </a>
 
-                <!-- Right Side Icons -->
                 <div class="nav-right">
                     <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
                         <i class="fas fa-moon"></i>
-                        <span class="tooltip">Dark/Light Mode</span>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <button class="nav-icon tools-btn" id="toolsBtn" title="Our Marketing Tools">
+                        <i class="fas fa-tools"></i>
+                        <span class="tooltip">Our Tools</span>
                     </button>
                     <a href="../../index.html" class="cta-btn">
-                        <span>Back to Home</span>
+                        <span>Home</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -44,288 +245,660 @@
         </div>
     </nav>
 
-    <!-- Images Grid Section (Right Below Navbar) -->
-    <section class="images-section">
-        <div class="container">
+    <div
+        class="relative flex min-h-screen w-full flex-col overflow-x-hidden pt-24 bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+        <main class="flex-grow">
+            <!-- Hero Section (Mockup Accurate) -->
+            <section class="mockup-hero w-full py-20">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col gap-4">
 
-            <div class="images-grid">
-                <!-- Image 1: Email Strategy -->
-                <div class="image-card" data-image="email-strategy">
-                    <div class="image-box">
-                        <img src="../../images/seo/image-1.jpg" alt="Email Marketing Strategy">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-[64px] mb-6">
+                            Email Marketing that Turns <br class="hidden lg:block"> Subscribers into Customers
+                        </h1>
+
+                        <p class="mb-10 text-lg md:text-xl">
+                            Full-funnel email strategy, automated flows, and high-converting <br
+                                class="hidden md:block">
+                            copy to nurture leads and maximize customer lifetime value.
+                        </p>
+
+                        <div class="flex">
+                            <button class="audit-btn transition-all hover:scale-105 active:scale-95">
+                                Get an email audit
+                            </button>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Image 2: Campaign Design -->
-                <div class="image-card" data-image="campaign-design">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Email Campaign Design">
+            <!-- The Strategy (Mockup Accurate) -->
+            <section class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+                <div class="mb-16">
+                    <h2 class="text-4xl font-black text-text-main dark:text-white">The Strategy</h2>
+                </div>
+                <div class="grid gap-10 md:grid-cols-3">
+                    <!-- Flow Strategy -->
+                    <div
+                        class="group flex flex-col items-start rounded-2xl border border-gray-100 bg-white p-8 transition-all hover:shadow-2xl dark:border-gray-700 dark:bg-surface-dark">
+                        <div class="mb-6 text-primary">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="3" width="6" height="4" rx="1" />
+                                <path
+                                    d="M12 7v4M12 11c0 0 0 .5-1 1s-3 2-3 2m4-3c0 0 0 .5 1 1s3 2 3 2m-8 2h3v3h-3zm10 0h3v3h-3z" />
+                            </svg>
+                        </div>
+                        <h3 class="mb-3 text-xl font-bold text-text-main dark:text-white">Flow Strategy</h3>
+                        <p class="text-[0.95rem] leading-relaxed text-text-sub dark:text-gray-400">Mapping the customer
+                            journey with targeted messaging at every stage to drive engagement and conversions.</p>
                     </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
+
+                    <!-- Campaign Execution -->
+                    <div
+                        class="group flex flex-col items-start rounded-2xl border border-gray-100 bg-white p-8 transition-all hover:shadow-2xl dark:border-gray-700 dark:bg-surface-dark">
+                        <div class="mb-6 text-primary">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M4 7V17C4 18.1046 4.89543 19 6 19H18C19.1046 19 20 18.1046 20 17V7M4 7C4 5.89543 4.89543 5 6 5H18C19.1046 5 20 5.89543 20 7M4 7L12 13L20 7" />
+                                <path d="M16 4l4 4" stroke="#10b981" />
+                            </svg>
+                        </div>
+                        <h3 class="mb-3 text-xl font-bold text-text-main dark:text-white">Campaign Execution</h3>
+                        <p class="text-[0.95rem] leading-relaxed text-text-sub dark:text-gray-400">Crafting on-brand
+                            designs
+                            and persuasive copy that resonates with your audience and prompts action.</p>
+                    </div>
+
+                    <!-- List Optimization -->
+                    <div
+                        class="group flex flex-col items-start rounded-2xl border border-gray-100 bg-white p-8 transition-all hover:shadow-2xl dark:border-gray-700 dark:bg-surface-dark">
+                        <div class="mb-6 text-primary">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 6c0 1.657 3.582 3 8 3s8-1.343 8-3-3.582-3-8-3-8 1.343-8 3z" />
+                                <path d="M4 6v6c0 1.657 3.582 3 8 3s8-1.343 8-3V6" />
+                                <path d="M4 12v6c0 1.657 3.582 3 8 3s8-1.343 8-3v-6" />
+                                <circle cx="17" cy="17" r="4" fill="white" stroke="#10b981" />
+                                <path d="M17 15v4m-2-2h4" stroke="#10b981" />
+                            </svg>
+                        </div>
+                        <h3 class="mb-3 text-xl font-bold text-text-main dark:text-white">List Optimization</h3>
+                        <p class="text-[0.95rem] leading-relaxed text-text-sub dark:text-gray-400">Implementing
+                            segmentation
+                            and health monitoring to ensure high deliverability and relevant content.</p>
                     </div>
                 </div>
+            </section>
 
-                <!-- Image 3: Automation -->
-                <div class="image-card" data-image="email-automation">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Email Marketing Automation">
+            <!-- Lifecycle Flows (Mockup Accurate - Arrows & Square Icons) -->
+            <section class="bg-[#fbfcff] py-24 dark:bg-[#101922] border-y border-gray-100 dark:border-gray-800">
+                <div
+                    class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-white/50 dark:bg-white/[0.02] rounded-[40px] py-16 dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                    <div class="mb-16 text-center lg:text-left">
+                        <h2 class="text-4xl font-black tracking-tight text-text-main dark:text-white">The Lifecycle
+                            Flows: Your Core 4</h2>
+                        <p class="mt-4 text-lg text-text-sub dark:text-gray-400">Essential automations that run 24/7 to
+                            scale your revenue.</p>
                     </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
 
-                <!-- Image 4: Newsletter Design -->
-                <div class="image-card" data-image="newsletter-design">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Email Newsletter Design">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 5: Analytics -->
-                <div class="image-card" data-image="email-analytics">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Email Marketing Analytics">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 6: Segmentation -->
-                <div class="image-card" data-image="email-segmentation">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Email List Segmentation">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Email Marketing Content Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <!-- Left Column -->
-                <div class="content-left">
-                    <h2>What is Email Marketing?</h2>
-                    <p class="content-intro">Email marketing is the practice of sending commercial messages to a group
-                        of people using email to promote products, services, or build relationships. It's one of the
-                        most effective digital marketing channels with the highest ROI.</p>
-
-                    <div class="content-block">
-                        <h3><i class="fas fa-chart-line"></i> The Power of Email Marketing</h3>
-                        <p>Email marketing delivers $42 for every $1 spent, making it one of the highest ROI marketing
-                            channels available. It allows direct, personalized communication with your audience.</p>
-
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">4200<span>%</span></div>
-                                <div class="stat-text">ROI - $42 for every $1 spent</div>
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-4">
+                        <!-- Step 1: Welcome -->
+                        <div class="flex flex-col items-center text-center lg:w-1/4">
+                            <div
+                                class="mb-6 flex size-20 items-center justify-center rounded-[24px] bg-[#f0f7ff] text-4xl shadow-sm dark:bg-blue-900/20">
+                                <span>👋🏻</span>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">59<span>%</span></div>
-                                <div class="stat-text">of marketers say email is their biggest ROI source</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">99<span>%</span></div>
-                                <div class="stat-text">of consumers check their email daily</div>
-                            </div>
+                            <h3 class="mb-3 text-xl font-bold text-text-main dark:text-white">Welcome Series</h3>
+                            <p class="text-[0.9rem] leading-relaxed text-text-sub dark:text-gray-400 max-w-[240px]">
+                                Nurture new subscribers, build brand awareness, and set expectations.
+                            </p>
                         </div>
-                    </div>
 
-                    <div class="content-block">
-                        <h3><i class="fas fa-cogs"></i> Key Email Marketing Components</h3>
-                        <p>Successful email marketing combines strategy, compelling content, automation, and analytics
-                            for maximum effectiveness.</p>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>List building and segmentation strategies</span>
+                        <!-- Arrow 1 -->
+                        <div class="hidden lg:block text-gray-300 dark:text-gray-700">
+                            <svg width="60" height="24" viewBox="0 0 60 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 12H58M58 12L48 4M58 12L48 20" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Personalization and automation workflows</span>
+
+                        <!-- Step 2: Cart -->
+                        <div class="flex flex-col items-center text-center lg:w-1/4">
+                            <div
+                                class="mb-6 flex size-20 items-center justify-center rounded-[24px] bg-[#f0f7ff] text-primary shadow-sm dark:bg-blue-900/20">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1" />
+                                    <circle cx="20" cy="21" r="1" />
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-3 text-xl font-bold text-text-main dark:text-white">Abandoned Cart</h3>
+                            <p class="text-[0.9rem] leading-relaxed text-text-sub dark:text-gray-400 max-w-[240px]">
+                                Recover lost sales by reminding shoppers of items left behind.
+                            </p>
                         </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Performance tracking and optimization</span>
+
+                        <!-- Arrow 2 -->
+                        <div class="hidden lg:block text-gray-300 dark:text-gray-700">
+                            <svg width="60" height="24" viewBox="0 0 60 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 12H58M58 12L48 4M58 12L48 20" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <!-- Step 3: Purchase -->
+                        <div class="flex flex-col items-center text-center lg:w-1/4">
+                            <div
+                                class="mb-6 flex size-20 items-center justify-center rounded-[24px] bg-[#f0f7ff] text-[#8b7e6a] shadow-sm dark:bg-blue-900/20">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                                    <path d="M3 6h18" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-3 text-xl font-bold text-text-main dark:text-white">Post-Purchase</h3>
+                            <p class="text-[0.9rem] leading-relaxed text-text-sub dark:text-gray-400 max-w-[240px]">
+                                Enhance customer experience, request reviews, and encourage repeat purchases.
+                            </p>
+                        </div>
+
+                        <!-- Arrow 3 -->
+                        <div class="hidden lg:block text-gray-300 dark:text-gray-700">
+                            <svg width="60" height="24" viewBox="0 0 60 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 12H58M58 12L48 4M58 12L48 20" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        <!-- Step 4: Win-Back -->
+                        <div class="flex flex-col items-center text-center lg:w-1/4">
+                            <div
+                                class="mb-6 flex size-20 items-center justify-center rounded-[24px] bg-[#f0f7ff] text-[#2f5a91] shadow-sm dark:bg-blue-900/20">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <h3 class="mb-3 text-xl font-bold text-text-main dark:text-white">Win-Back/Re-engagement
+                            </h3>
+                            <p class="text-[0.9rem] leading-relaxed text-text-sub dark:text-gray-400 max-w-[240px]">
+                                Re-activate inactive subscribers and clear out unengaged contacts.
+                            </p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- Right Column -->
-                <div class="content-right">
-                    <h2>Email Marketing Types</h2>
+            <!-- Performance Highlight & Deliverables (Mockup Accurate) -->
+            <section class="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+                <div class="grid gap-16 lg:grid-cols-2 lg:items-start">
+                    <!-- Left Column: Numbers & Deliverables -->
+                    <div class="flex flex-col">
+                        <h2 class="mb-12 text-4xl font-black tracking-tight text-text-main dark:text-white">Performance
+                            Highlight: By the Numbers</h2>
 
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-envelope-open-text"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Newsletter Campaigns</h3>
-                            <p>Regular email updates that provide value, build relationships, and keep your brand
-                                top-of-mind with subscribers.</p>
-                            <div class="element-tags">
-                                <span class="tag">Value Content</span>
-                                <span class="tag">Brand Awareness</span>
-                                <span class="tag">Relationship Building</span>
-                                <span class="tag">Consistent Engagement</span>
+                        <div class="flex flex-col gap-10">
+                            <!-- 45% -->
+                            <div class="flex flex-col">
+                                <span class="text-7xl font-black text-text-main dark:text-white">45%</span>
+                                <span class="mt-2 text-xl font-medium text-text-sub dark:text-gray-400">Average Open
+                                    Rate</span>
                             </div>
+
+                            <hr class="border-gray-100 dark:border-gray-800 w-full max-w-xs">
+
+                            <!-- 12% -->
+                            <div class="flex flex-col">
+                                <span class="text-7xl font-black text-text-main dark:text-white">12%</span>
+                                <span class="mt-2 text-xl font-medium text-text-sub dark:text-gray-400">Click-through
+                                    Rate for a <br> coaching business</span>
+                            </div>
+                        </div>
+
+                        <!-- Deliverables -->
+                        <div class="mt-20">
+                            <h3 class="mb-8 text-3xl font-black text-text-main dark:text-white">Deliverables</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-lg font-medium text-text-main dark:text-white">
+                                    <span class="size-2 rounded-full bg-black dark:bg-white"></span>
+                                    Campaign Management
+                                </li>
+                                <li class="flex items-center gap-3 text-lg font-medium text-text-main dark:text-white">
+                                    <span class="size-2 rounded-full bg-black dark:bg-white"></span>
+                                    Automated Flow Setup
+                                </li>
+                                <li class="flex items-center gap-3 text-lg font-medium text-text-main dark:text-white">
+                                    <span class="size-2 rounded-full bg-black dark:bg-white"></span>
+                                    A/B Testing
+                                </li>
+                                <li class="flex items-center gap-3 text-lg font-medium text-text-main dark:text-white">
+                                    <span class="size-2 rounded-full bg-black dark:bg-white"></span>
+                                    Monthly Performance Analytics
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Automation Sequences</h3>
-                            <p>Pre-written email series triggered by specific actions like sign-ups, purchases, or user
-                                behavior.</p>
-                            <div class="element-tags">
-                                <span class="tag">Welcome Series</span>
-                                <span class="tag">Drip Campaigns</span>
-                                <span class="tag">Behavioral Triggers</span>
-                                <span class="tag">Lead Nurturing</span>
+                    <!-- Right Column: Browser Mockup -->
+                    <div class="relative lg:ml-auto max-w-[550px]">
+                        <div
+                            class="overflow-hidden rounded-xl border border-gray-100 bg-white shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] dark:border-gray-800 dark:bg-gray-900">
+                            <!-- Browser Top Bar -->
+                            <div
+                                class="flex items-center gap-2 border-b border-gray-50 bg-[#f6f8fa] px-4 py-3 dark:border-gray-800 dark:bg-gray-800/50">
+                                <div class="size-2.5 rounded-full bg-[#ff5f56]"></div>
+                                <div class="size-2.5 rounded-full bg-[#ffbd2e]"></div>
+                                <div class="size-2.5 rounded-full bg-[#27c93f]"></div>
+                                <div class="ml-4 h-4 w-32 rounded bg-gray-200 dark:bg-gray-700"></div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Promotional Campaigns</h3>
-                            <p>Sales-focused emails designed to drive immediate action, conversions, and revenue
-                                generation.</p>
-                            <div class="element-tags">
-                                <span class="tag">Sales Offers</span>
-                                <span class="tag">Limited Time Promotions</span>
-                                <span class="tag">Product Launches</span>
-                                <span class="tag">Conversion Focused</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Analytics & Optimization</h3>
-                            <p>Tracking performance metrics and using data to continuously improve email marketing
-                                results.</p>
-                            <div class="element-tags">
-                                <span class="tag">Performance Tracking</span>
-                                <span class="tag">A/B Testing</span>
-                                <span class="tag">ROI Measurement</span>
-                                <span class="tag">Continuous Optimization</span>
+                            <!-- Email Content Wrapper -->
+                            <div class="p-6">
+                                <div
+                                    class="mx-auto max-w-[380px] rounded-lg border border-gray-50 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-800">
+                                    <!-- Email Branding -->
+                                    <div class="flex items-center justify-center py-6">
+                                        <div class="flex items-center gap-2">
+                                            <div class="size-6 text-teal-500">
+                                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                                    <path d="M12 2L4.5 20.29L5.21 21L12 18L18.79 21L19.5 20.29L12 2Z" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-sm font-bold tracking-tight">Coaching Business</span>
+                                        </div>
+                                    </div>
+                                    <!-- Hero Image -->
+                                    <div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+                                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600"
+                                            alt="Coach in yellow shirt" class="h-full w-full object-cover">
+                                    </div>
+                                    <!-- Email Text -->
+                                    <div class="p-6 text-center">
+                                        <h4 class="mb-3 text-xl font-black text-text-main dark:text-white">Unlock Your
+                                            Potential</h4>
+                                        <p class="mb-4 text-xs leading-relaxed text-text-sub dark:text-gray-400">
+                                            Focus is specialized towards each experience. We have implemented expert
+                                            studies for each domain to give our users the premium experience they
+                                            deserve.
+                                        </p>
+                                        <button
+                                            class="w-full rounded-md bg-[#2d918b] py-2.5 text-xs font-bold text-white shadow-lg transition-all hover:bg-[#247570]">
+                                            JOIN THE PROGRAM!
+                                        </button>
+                                    </div>
+                                    <!-- Dark Footer -->
+                                    <div class="bg-[#1a1c1e] p-6 text-center">
+                                        <div class="mb-4 flex justify-center gap-4 text-white">
+                                            <i class="fab fa-facebook-f text-xs"></i>
+                                            <i class="fab fa-instagram text-xs"></i>
+                                            <i class="fab fa-linkedin-in text-xs"></i>
+                                        </div>
+                                        <div
+                                            class="flex justify-center gap-4 text-[10px] font-medium text-gray-400 uppercase tracking-widest">
+                                            <span>Courses</span>
+                                            <span>Resources</span>
+                                            <span>Contact</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-
-
-    <!-- Footer - 100% Same -->
-    <div class="grax_tm_section">
-        <div class="grax_tm_copyright">
-            <div class="my_wave">
-                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <defs></defs>
-                    <path id="wave_img" data-color="#fff"
-                        d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-
-            <div class="container">
-                <div class="copyright_inner">
-                    <!-- Left: Logo -->
-                    <div class="logo wow fadeInLeft" data-wow-duration="1s">
-                        <span class="footer-logo">Zainab Samnan</span>
+            <!-- FAQ Section (Refined: Larger & Smooth) -->
+            <section
+                class="bg-[#fdfdfb] py-24 sm:py-32 dark:bg-[#101922] border-t border-gray-100 dark:border-gray-800">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="mb-20 text-center">
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">FAQS</span>
+                        <h2 class="mt-4 text-4xl font-black tracking-tight text-[#1a1c1e] dark:text-white sm:text-6xl">
+                            Frequently asked questions</h2>
                     </div>
 
-                    <!-- Center: Navigation Menu -->
-                    <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <ul class="footer-nav-menu">
-                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
-                                <a href="../../index.html" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Home</span>
-                                </a>
-                            </li>
-                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
-                                <a href="../../index.html#about" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="person-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">About</span>
-                                </a>
-                            </li>
-                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
-                                <a href="../../index.html#portfolio" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="briefcase-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Portfolio</span>
-                                </a>
-                            </li>
-                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
-                                <a href="../../index.html#contact" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="mail-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Contact</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <div class="mx-auto max-w-4xl divide-y divide-gray-100 dark:divide-gray-800">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item group py-8 first:pt-0">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Are
+                                    email design services included in all Zainab Samnan subscriptions?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            Our email design services are tailored to each client's specific needs. We
+                                            offer various subscription tiers and custom plans to ensure you get the
+                                            exact level of support your brand requires.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- Right: Copyright Text -->
-                    <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-                        <p>&copy; Copyright 2026 by Zainab Samnan All rights reserved.</p>
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                    type of customers use our email design services?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            We work with a wide range of businesses, from high-growth e-commerce brands
+                                            and tech startups to established coaching businesses and professional
+                                            services looking to elevate their customer retention.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Why
+                                    is our service better than other email design services?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            We combine data-driven conversion strategies with premium aesthetics. Every
+                                            design is mobile-optimized, A/B tested, and focused on delivering a
+                                            ROI-positive experience for your subscribers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Do
+                                    you do custom email design plans?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            Yes! We understand that one size doesn't fit all. We can build custom plans
+                                            that focus on specific flows, campaign cadences, or platform migrations
+                                            depending on your goals.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                    are the benefits of great email design?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            Great design increases brand trust, improves click-through rates, and
+                                            reduces unsubscribe rates. It ensures your message is easy to consume and
+                                            act upon across all devices.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 6 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                    is email graphic design?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            Email graphic design is the specialized field of creating visual content
+                                            specifically for email clients. This includes considering accessibility,
+                                            dark mode rendering, and file size optimization.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 7 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                    makes for a good email design?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            A good email design is balanced, readable, and focused. It uses clear
+                                            hierarchy, strong CTAs, and optimized imagery to guide the user towards a
+                                            specific conversion goal.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 8 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                    billing options do you offer?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            We typically offer monthly retainer-based billing for ongoing support, or
+                                            project-based billing for one-time flow setups and audits. Contact us for a
+                                            detailed quote.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                function toggleFAQ(button) {
+                    const item = button.closest('.faq-item');
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current item
+                    item.classList.toggle('active');
+                }
+            </script>
+
+            <!-- Final CTA -->
+            <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+                <div
+                    class="relative overflow-hidden rounded-[40px] bg-[#1a1a1a] dark:bg-[#101922] p-8 md:p-16 text-center text-white dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] border dark:border-white/5">
+                    <div class="relative z-10 mx-auto max-w-2xl">
+                        <h2 class="text-4xl font-black md:text-5xl leading-tight">Ready to Grow? Talk to Zainab</h2>
+                        <p class="mt-6 text-lg text-gray-300">Let's build a high-impact email marketing machine for your
+                            brand.</p>
+                        <div class="mt-10 flex justify-center">
+                            <a href="../../index.html#contact"
+                                class="inline-flex h-14 items-center justify-center rounded-2xl bg-primary px-10 text-lg font-bold text-white transition-all hover:scale-105 hover:bg-primary-dark shadow-xl shadow-primary/20">
+                                Schedule a Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Standardized Footer -->
+        <div class="grax_tm_section">
+            <div class="grax_tm_copyright">
+                <div class="container">
+                    <div class="copyright_inner">
+                        <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                            <span class="footer-logo">Zainab Samnan</span>
+                        </div>
+
+                        <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <ul class="footer-nav-menu">
+                                <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                    <a href="../../index.html" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                    <a href="../../index.html#about" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="title">About</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                    <a href="../../index.html#portfolio" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                                        <span class="title">Portfolio</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                    <a href="../../index.html#contact" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                        <span class="title">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                            <p>&copy; Copyright 2026 by Zainab Samnan</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Image Modal - Simple Image Viewer -->
-    <div class="image-modal" id="imageModal">
+    <!-- Modals & Scripts -->
+    <div class="tools-modal" id="toolsModal">
         <div class="modal-overlay"></div>
-        <div class="image-modal-container">
-            <button class="modal-close" id="imageModalClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="image-modal-content">
-                <img id="modalImage" src="" alt="Full Size Image">
+        <div class="modal-container">
+            <button class="modal-close" id="toolsModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-tools"></i></div>
+                <h2>Our Marketing Tools</h2>
+                <p>Professional tools we use to deliver exceptional results</p>
             </div>
+            <div class="tools-grid" id="toolsGrid"></div>
         </div>
     </div>
 
-    <script src="../../js/digital-m.js/email.js"></script>
+    <script src="../../js/digital-m.js/social.js"></script>
 </body>
 
 </html>

@@ -4,24 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Marketing Expert | Professional SMM Services</title>
+    <title>Social Media Marketing | Professional Digital Solutions</title>
     <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Robust Dark Mode Overrides for Footer */
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+        }
+
+        /* Branding consistency */
+        .navbar .logo-text {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Navigation - 100% Same -->
+<body class="dark-mode">
+    <!-- Navigation (1000% Same as Digital Marketing) -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
                 <!-- Logo on Left -->
-                <a href="#" class="logo">
-                    <span class="logo-text">Social Media Marketing</span>
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Zainab Samnan</span>
                     <span class="logo-dot"></span>
                 </a>
 
@@ -29,10 +49,14 @@
                 <div class="nav-right">
                     <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
                         <i class="fas fa-moon"></i>
-                        <span class="tooltip">Dark/Light Mode</span>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <button class="nav-icon tools-btn" id="toolsBtn" title="Our Marketing Tools">
+                        <i class="fas fa-tools"></i>
+                        <span class="tooltip">Our Tools</span>
                     </button>
                     <a href="../../index.html" class="cta-btn">
-                        <span>Back to Home</span>
+                        <span>Home</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -44,200 +68,58 @@
         </div>
     </nav>
 
-    <!-- Images Grid Section (Right Below Navbar) -->
-    <section class="images-section">
+    <!-- Page Title Section -->
+    <section class="page-title-section">
         <div class="container">
-
-
-            <div class="images-grid">
-                <!-- Image 1: Social Media Strategy -->
-                <div class="image-card" data-image="social-strategy">
-                    <div class="image-box">
-                        <img src="../../images/digital-marketing/Instagram B2.jpg"
-                            alt="Social Media Marketing Strategy">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 2: Content Creation -->
-                <div class="image-card" data-image="content-creation">
-                    <div class="image-box">
-                        <img src="../../images/digital-marketing/Instagram B3.jpg" alt="Social Media Content Creation">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 3: Community Management -->
-                <div class="image-card" data-image="community-management">
-                    <div class="image-box">
-                        <img src="../../images/digital-marketing/Instagram B4.jpg"
-                            alt="Social Media Community Management">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 4: Paid Advertising -->
-                <div class="image-card" data-image="paid-advertising">
-                    <div class="image-box">
-                        <img src="../../images/digital-marketing/Instagram1.jpg" alt="Social Media Paid Advertising">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 5: Analytics & Insights -->
-                <div class="image-card" data-image="social-analytics">
-                    <div class="image-box">
-                        <img src="../../images/digital-marketing/Instagram2.jpg" alt="Social Media Analytics">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 6: Influencer Marketing -->
-                <div class="image-card" data-image="influencer-marketing">
-                    <div class="image-box">
-                        <img src="../../images/digital-marketing/Instagram3.jpg"
-                            alt="Social Media Influencer Marketing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-            </div>
+            <h1 class="main-page-title">Social Media <br>Marketing</h1>
         </div>
     </section>
 
-    <!-- Social Media Marketing Content Section -->
-    <section class="content-section">
+    <!-- Hero Collage Section -->
+    <!-- <section class="hero-collage">
         <div class="container">
-            <div class="content-grid">
-                <!-- Left Column -->
-                <div class="content-left">
-                    <h2>What is Social Media Marketing?</h2>
-                    <p class="content-intro">Social media marketing is the practice of using social media platforms to
-                        connect with your audience, build your brand, increase sales, and drive website traffic through
-                        engaging content and strategic campaigns.</p>
+            <div class="collage-container">
+                <div class="collage-item item-1">
+                    <img src="../../images/digital-marketing/Affiliate Marketing.jpg" alt="Affiliate Dashboard">
+                </div>
+                <div class="collage-item item-2">
+                    <img src="../../images/digital-marketing/affiliate-marketing.webp" alt="Affiliate Strategy">
+                </div>
+                <div class="collage-item item-3">
+                    <img src="../../images/digital-marketing/affiliate.webp" alt="Affiliate App">
+                </div>
+                <div class="collage-item item-4">
+                    <img src="../../images/digital-marketing/card-image.webp" alt="Affiliate Stats">
+                </div>
+            </div>
+        </div>
+    </section> -->
 
-                    <div class="content-block">
-                        <h3><i class="fas fa-chart-line"></i> Why Social Media Marketing Matters</h3>
-                        <p>With 4.9 billion social media users worldwide, social platforms offer unparalleled reach,
-                            engagement opportunities, and data for businesses of all sizes to connect with their target
-                            audiences.</p>
-
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">4.9<span>B</span></div>
-                                <div class="stat-text">social media users worldwide</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">2<span>H 29M</span></div>
-                                <div class="stat-text">average daily social media usage per user</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">71<span>%</span></div>
-                                <div class="stat-text">of consumers who've had good social media service recommend brand
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="content-block">
-                        <h3><i class="fas fa-users"></i> Core Social Media Marketing Components</h3>
-                        <p>Successful social media marketing combines strategic planning, engaging content creation,
-                            community management, and data-driven optimization.</p>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Platform-specific strategy development</span>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Content calendar and scheduling</span>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Community engagement and management</span>
-                        </div>
+    <!-- Definition Section -->
+    <section class="definition-section">
+        <div class="container">
+            <div class="definition-grid">
+                <div class="definition-content">
+                    <h2 class="section-title">What is Social Media Marketing?</h2>
+                    <div class="definition-text">
+                        <p>Social media marketing is the strategic use of social platforms to connect with your
+                            audience,
+                            build your brand, and drive meaningful business results through engaging content and
+                            targeted
+                            advertising.</p>
+                        <p>By leveraging the power of Instagram, Facebook, LinkedIn, and more, we help you create a
+                            consistent brand voice that resonates with your followers and converts them into loyal
+                            customers.</p>
                     </div>
                 </div>
-
-                <!-- Right Column -->
-                <div class="content-right">
-                    <h2>Key Social Media Marketing Services</h2>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Content Strategy & Creation</h3>
-                            <p>Developing platform-specific content strategies and creating engaging posts, videos,
-                                stories, and reels that resonate with target audiences.</p>
-                            <div class="element-tags">
-                                <span class="tag">Content Planning</span>
-                                <span class="tag">Visual Creation</span>
-                                <span class="tag">Video Production</span>
-                                <span class="tag">Content Calendar</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-ad"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Paid Social Advertising</h3>
-                            <p>Creating and managing targeted ad campaigns across social platforms to reach specific
-                                demographics, interests, and behaviors.</p>
-                            <div class="element-tags">
-                                <span class="tag">Facebook/Instagram Ads</span>
-                                <span class="tag">LinkedIn Advertising</span>
-                                <span class="tag">TikTok Ads</span>
-                                <span class="tag">Twitter/X Promotions</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Community Management</h3>
-                            <p>Building and nurturing online communities, engaging with followers, responding to
-                                comments, and managing brand reputation.</p>
-                            <div class="element-tags">
-                                <span class="tag">Audience Engagement</span>
-                                <span class="tag">Customer Service</span>
-                                <span class="tag">Brand Reputation</span>
-                                <span class="tag">Relationship Building</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Analytics & Reporting</h3>
-                            <p>Tracking performance metrics, analyzing campaign results, and providing data-driven
-                                insights for continuous improvement.</p>
-                            <div class="element-tags">
-                                <span class="tag">Performance Tracking</span>
-                                <span class="tag">ROI Measurement</span>
-                                <span class="tag">Audience Insights</span>
-                                <span class="tag">Campaign Optimization</span>
-                            </div>
+                <div class="definition-image">
+                    <div class="megaphone-wrapper">
+                        <img src="../../images/digital-marketing/Digital-Marketing.png" alt="Affiliate Illustration">
+                        <div class="social-icons-floating">
+                            <span class="float-icon fb"><i class="fab fa-facebook-f"></i></span>
+                            <span class="float-icon ig"><i class="fab fa-instagram"></i></span>
+                            <span class="float-icon li"><i class="fab fa-linkedin-in"></i></span>
+                            <span class="float-icon tk"><i class="fab fa-tiktok"></i></span>
                         </div>
                     </div>
                 </div>
@@ -245,19 +127,184 @@
         </div>
     </section>
 
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-heading-centered">Why Social Media Matters</h2>
+            <div class="why-grid">
+                <!-- Why 1 -->
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-users"></i></div>
+                    <div class="why-number">4.9<span>B</span></div>
+                    <p class="why-text">active social users</p>
+                    <p class="why-subtext">Reach a global audience where they spend their most time daily.</p>
+                </div>
 
+                <!-- Why 2 -->
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-heart"></i></div>
+                    <div class="why-number">71<span>%</span></div>
+                    <p class="why-text">purchase influence</p>
+                    <p class="why-subtext">Consumers are more likely to buy from brands they follow on social.</p>
+                </div>
 
-    <!-- Footer - 100% Same -->
+                <!-- Why 3 -->
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-comments"></i></div>
+                    <div class="why-number">3<span>X</span></div>
+                    <p class="why-text">higher engagement</p>
+                    <p class="why-subtext">Social platforms offer direct, real-time engagement with customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services-grid-section">
+        <div class="container">
+            <h2 class="section-heading-centered">Key Social Media Marketing Services</h2>
+            <div class="services-modern-grid">
+                <!-- Service 1 -->
+                <div class="modern-service-card">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Content Strategy & Planning</h3>
+                            <p class="card-desc">Developing platform-specific content calendars and creative strategies
+                                that align with your brand voice and business objectives.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Content Calendar</span>
+                            <span class="card-tag">Brand Voice</span>
+                            <span class="card-tag">Creative Direction</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/digital-marketing/Instagram B3.jpg" alt="Content Strategy">
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="modern-service-card">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-ad"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Social Paid Advertising</h3>
+                            <p class="card-desc">Highly targeted ad campaigns across Meta, TikTok, and LinkedIn to reach
+                                your ideal customers and drive measurable ROI.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Meta Ads</span>
+                            <span class="card-tag">TikTok Ads</span>
+                            <span class="card-tag">Retargeting</span>
+                            <span class="card-tag">A/B Testing</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/digital-marketing/Instagram1.jpg" alt="Paid Advertising">
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="modern-service-card">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-comments"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Community Management</h3>
+                            <p class="card-desc">Active engagement with your audience, managing comments, messages, and
+                                building lasting brand loyalty through human interaction.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Engagement</span>
+                            <span class="card-tag">Customer Support</span>
+                            <span class="card-tag">Brand Identity</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/digital-marketing/Instagram B4.jpg" alt="Community Management">
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="modern-service-card">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-chart-area"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Analytics & Listening</h3>
+                            <p class="card-desc">Monitoring brand mentions and analyzing performance metrics to refine
+                                strategies and uncover new growth opportunities.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Performance Tracking</span>
+                            <span class="card-tag">Social Listening</span>
+                            <span class="card-tag">ROI Analysis</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/digital-marketing/Instagram2.jpg" alt="Analytics">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results" id="results">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Proven Results</div>
+                <h2 class="section-title">Our Social Media Success Stories</h2>
+                <p class="section-subtitle">Real growth generated through strategic social media campaigns</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="result-number" data-count="320">0</div>
+                    <h3 class="result-title">Revenue Growth</h3>
+                    <p class="result-desc">For e-commerce brand in 6 months</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="result-number" data-count="45" data-suffix="%">0%</div>
+                    <h3 class="result-title">Partner Retention</h3>
+                    <p class="result-desc">High-performing quality partners</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="result-number" data-count="280">0</div>
+                    <h3 class="result-title">New Customer Acq.</h3>
+                    <p class="result-desc">Generated via affiliate networks</p>
+                </div>
+
+                <div class="result-card" data-aos="fade-up">
+                    <div class="result-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="result-number" data-count="95">0</div>
+                    <h3 class="result-title">Client Satisfaction</h3>
+                    <p class="result-desc">Long-term affiliate success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-banner">
+                <h2 class="cta-title">Ready to Boost Your Social Presence?</h2>
+                <p class="cta-desc">Let's build a high-impact social media presence for your brand today.</p>
+                <div class="cta-actions">
+                    <a href="../../index.html#contact" class="cta-btn main">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (1000% Same as Digital Marketing) -->
     <div class="grax_tm_section">
         <div class="grax_tm_copyright">
-            <div class="my_wave">
-                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <defs></defs>
-                    <path id="wave_img" data-color="#fff"
-                        d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
 
             <div class="container">
                 <div class="copyright_inner">
@@ -306,26 +353,35 @@
 
                     <!-- Right: Copyright Text -->
                     <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-                        <p>&copy; Copyright 2026 by Zainab Samnan All rights reserved.</p>
+                        <p>&copy; Copyright 2026 by Zainab Samnan</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Image Modal - Simple Image Viewer -->
-    <div class="image-modal" id="imageModal">
+
+    <!-- Tools Modal -->
+    <div class="tools-modal" id="toolsModal">
         <div class="modal-overlay"></div>
-        <div class="image-modal-container">
-            <button class="modal-close" id="imageModalClose">
+        <div class="modal-container">
+            <button class="modal-close" id="toolsModalClose">
                 <i class="fas fa-times"></i>
             </button>
-            <div class="image-modal-content">
-                <img id="modalImage" src="" alt="Full Size Image">
+
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h2>Our Social Media Marketing Tools</h2>
+                <p>Professional tools we use to deliver exceptional results</p>
             </div>
+
+            <div class="tools-grid" id="toolsGrid"></div>
         </div>
     </div>
 
+    <!-- JavaScript file -->
     <script src="../../js/digital-m.js/social.js"></script>
 </body>
 
