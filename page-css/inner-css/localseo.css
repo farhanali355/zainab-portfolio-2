@@ -97,20 +97,6 @@ h1 {
 h2 {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    position: relative;
-    padding-left: 20px;
-}
-
-h2::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    background: var(--accent-color);
-    border-radius: 50%;
 }
 
 h3 {
@@ -947,7 +933,7 @@ p {
     background: var(--secondary-bg) !important;
     background-color: var(--secondary-bg) !important;
     padding: 100px 0 40px !important;
-    margin-top: 100px !important;
+    margin-top: 0 !important;
     width: 100%;
     overflow: hidden;
 }

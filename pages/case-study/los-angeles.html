@@ -10,6 +10,43 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: ['class', '.dark-mode'],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: "#3b82f6",
+                            dark: "#2563eb",
+                        },
+                        base: {
+                            50: "#f8fafc",
+                            100: "#f1f5f9",
+                            200: "#e2e8f0",
+                            300: "#cbd5e1",
+                            400: "#94a3b8",
+                            500: "#64748b",
+                            600: "#475569",
+                            700: "#334155",
+                            800: "#1e293b",
+                            900: "#0f172a",
+                        },
+                    },
+                    fontFamily: {
+                        heading: ["Manrope", "sans-serif"],
+                        body: ["Noto Sans", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
@@ -21,7 +58,7 @@
             <div class="nav-content">
                 <!-- Logo on Left -->
                 <a href="#" class="logo">
-                    <span class="logo-text">SEO Case Study</span>
+                    <span class="logo-text">Case Study Los Angeles</span>
                     <span class="logo-dot"></span>
                 </a>
 
@@ -44,305 +81,562 @@
         </div>
     </nav>
 
-    <!-- Hero Image Section -->
-    <section class="hero-image-section">
-        <div class="container">
-            <div class="hero-image-container">
-                <img src="../../images/seo/los-angeles.jpg" alt="Security Company Case Study" class="hero-image">
+    <!-- New Tailwind Hero Section -->
+    <section class="pt-32 pb-16 px-4 bg-gradient-to-b from-blue-50/50 to-white dark:from-slate-900 dark:to-slate-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 font-semibold text-sm mb-6">
+                SEO Case Study
+            </div>
+            <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6 font-heading tracking-tight">
+                Dominating Local Search: From Invisible to #1 in Los Angeles
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto">
+                How a tailored SEO strategy drove a 182% increase in site sessions and secured top rankings for
+                high-intent keywords.
+            </p>
+
+            <!-- Stat Cards Row -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <!-- Stat Card 1 -->
+                <div
+                    class="group relative px-8 py-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] transition-all flex flex-col items-center min-w-[180px]">
+                    <div
+                        class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <span class="text-3xl font-extrabold text-slate-900 dark:text-white font-heading">+182%</span>
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Traffic Growth</span>
+                </div>
+                <!-- Stat Card 2 -->
+                <div
+                    class="group relative px-8 py-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] transition-all flex flex-col items-center min-w-[180px]">
+                    <div
+                        class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <span class="text-3xl font-extrabold text-slate-900 dark:text-white font-heading">60%</span>
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Keywords Improved</span>
+                </div>
+                <!-- Stat Card 3 -->
+                <div
+                    class="group relative px-8 py-5 bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgb(59,130,246,0.1)] transition-all flex flex-col items-center min-w-[180px]">
+                    <div
+                        class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <span class="text-3xl font-extrabold text-slate-900 dark:text-white font-heading">Top 3</span>
+                    <span class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">Ranking for Core
+                        Terms</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Case Study Heading -->
-    <section class="case-study-heading">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Case Study</div>
-                <h1 class="section-title">Security Company in Los Angeles</h1>
-                <p class="section-subtitle">How we helped a security services provider dominate local search rankings
-                </p>
+    <!-- Main Content Body -->
+    <main class="py-16 px-4 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-6xl mx-auto space-y-24">
+
+            <!-- The Client & The Challenge Section -->
+            <section>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-10 font-heading">The Client & The
+                    Challenge</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                    <!-- Left Column: Text -->
+                    <div class="flex flex-col h-full py-4">
+                        <!-- The Client (Aligns with top image) -->
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-6">The Client
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed">
+                                Security Company in Los Angeles is a leading provider of armed and unarmed security
+                                services, facing fierce local competition and struggling with online visibility.
+                            </p>
+                        </div>
+
+                        <!-- Middle Decorative Box -->
+                        <div class="flex-grow flex items-center justify-center py-8 lg:py-10 relative">
+                            <div
+                                class="hidden lg:block absolute left-10 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-slate-200 dark:via-slate-700 to-transparent">
+                            </div>
+                            <div
+                                class="w-full bg-gradient-to-br from-blue-50 to-indigo-50/50 dark:from-slate-800 dark:to-slate-800/50 rounded-2xl p-6 md:p-8 border border-blue-100/50 dark:border-slate-700 relative overflow-hidden shadow-sm">
+                                <div
+                                    class="absolute right-0 bottom-0 opacity-5 transform translate-x-1/4 translate-y-1/4">
+                                    <svg class="w-40 h-40 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 2L1 21h22L12 2zm0 3.99L18.53 19H5.47L12 5.99zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z" />
+                                    </svg>
+                                </div>
+                                <div class="relative z-10 flex flex-col sm:flex-row gap-5 items-start">
+                                    <div
+                                        class="bg-white dark:bg-slate-700 rounded-2xl p-4 shadow-sm border border-slate-100 dark:border-slate-600/50 shrink-0 text-blue-600 dark:text-blue-400">
+                                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">The Core
+                                            Objective</h4>
+                                        <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed">Reverse
+                                            the downward visibility trend and establish a dominant, lead-generating
+                                            online presence in a highly competitive Los Angeles market.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Challenge (Aligns with bottom image) -->
+                        <div class="pb-4">
+                            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-6">The Challenge
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed">
+                                Initial analysis revealed poor search visibility (rankings in the 40-50 range),
+                                technical site errors, content gaps, and an underutilized GMB profile, leading to low
+                                organic traffic.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Image Cards -->
+                    <div class="space-y-6">
+                        <!-- Before Snapshot -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-xl p-2 relative overflow-hidden group">
+                            <div
+                                class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-red-200 to-transparent">
+                            </div>
+                            <h4 class="text-center text-sm font-bold text-slate-900 dark:text-white py-3 pb-4">The
+                                Audit: Before Snapshot</h4>
+                            <div
+                                class="rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 relative">
+                                <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page4).png"
+                                    alt="Audit Snapshot"
+                                    class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                                <div
+                                    class="absolute inset-0 bg-red-500/10 dark:bg-red-500/20 mix-blend-multiply pointer-events-none">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Analysis Chart -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-xl p-2 relative overflow-hidden group">
+                            <div
+                                class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent">
+                            </div>
+                            <h4 class="text-center text-sm font-bold text-slate-900 dark:text-white py-3 pb-4">Audit
+                                Graph Analysis</h4>
+                            <div
+                                class="rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 relative">
+                                <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page4) Graph.png"
+                                    alt="Audit Graph Analysis"
+                                    class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our 4-Phased Approach Section -->
+            <section class="max-w-5xl mx-auto pt-8">
+                <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-16 font-heading">Our
+                    4-Phased Approach</h2>
+
+                <div class="relative">
+                    <!-- Horizontal Line (Desktop) -->
+                    <div class="hidden md:block absolute top-4 left-0 w-full h-0.5 bg-slate-200 dark:bg-slate-700">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative text-center">
+
+                        <!-- Phase 1 -->
+                        <div class="relative flex flex-col items-center">
+                            <!-- Mobile Line connecting nodes -->
+                            <div
+                                class="md:hidden absolute top-4 left-[50%] w-0.5 h-full bg-slate-200 dark:bg-slate-700 -z-10">
+                            </div>
+
+                            <div
+                                class="bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-semibold text-sm px-4 py-1.5 rounded-full border-2 border-white dark:border-slate-900 shadow-sm z-10 mb-6">
+                                Phase 1
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3">Technical Fixes</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed px-2">
+                                Resolved broken links, crawl errors, and optimized site speed for enhanced performance.
+                            </p>
+                        </div>
+
+                        <!-- Phase 2 -->
+                        <div class="relative flex flex-col items-center">
+                            <div
+                                class="md:hidden absolute top-4 left-[50%] w-0.5 h-full bg-slate-200 dark:bg-slate-700 -z-10">
+                            </div>
+
+                            <div
+                                class="bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-semibold text-sm px-4 py-1.5 rounded-full border-2 border-white dark:border-slate-900 shadow-sm z-10 mb-6">
+                                Phase 2
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3">Content Gap Strategy
+                            </h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed px-2">
+                                Created service-specific and seasonal blog content targeting high-value keywords.
+                            </p>
+                        </div>
+
+                        <!-- Phase 3 -->
+                        <div class="relative flex flex-col items-center">
+                            <div
+                                class="md:hidden absolute top-4 left-[50%] w-0.5 h-full bg-slate-200 dark:bg-slate-700 -z-10">
+                            </div>
+
+                            <div
+                                class="bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-semibold text-sm px-4 py-1.5 rounded-full border-2 border-white dark:border-slate-900 shadow-sm z-10 mb-6">
+                                Phase 3
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3">GMB Optimization</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed px-2">
+                                Fully optimized the Google My Business profile and built authoritative local citations.
+                            </p>
+                        </div>
+
+                        <!-- Phase 4 -->
+                        <div class="relative flex flex-col items-center">
+                            <div
+                                class="bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-semibold text-sm px-4 py-1.5 rounded-full border-2 border-white dark:border-slate-900 shadow-sm z-10 mb-6">
+                                Phase 4
+                            </div>
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3">Link Acquisition</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed px-2">
+                                Secured 30+ quality backlinks from relevant industry and local domains.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Strategy Images -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-2 overflow-hidden group">
+                        <div class="rounded-xl overflow-hidden h-full">
+                            <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page5) Graph 1.png"
+                                alt="Strategy Graph 1"
+                                class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-2 overflow-hidden group">
+                        <div class="rounded-xl overflow-hidden h-full">
+                            <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page5) Graph 2.png"
+                                alt="Strategy Graph 2"
+                                class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-2 overflow-hidden group">
+                        <div class="rounded-xl overflow-hidden border border-slate-100 dark:border-slate-700 h-full">
+                            <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page5).png"
+                                alt="Approach Overview"
+                                class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Results Section -->
+            <section>
+                <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12 font-heading">The
+                    Results: Significant Growth in Visibility & Traffic</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6 mb-6">
+                    <!-- Left: Keyword Performance Table -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-lg shadow-slate-200/50 dark:shadow-none p-6 md:p-8">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Keyword Performance Table</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse min-w-[500px]">
+                                <thead>
+                                    <tr class="bg-slate-50 dark:bg-slate-700">
+                                        <th
+                                            class="py-4 px-4 font-bold text-sm text-slate-900 dark:text-white border-b border-t border-slate-200 dark:border-slate-600 rounded-tl-lg">
+                                            Keyword</th>
+                                        <th
+                                            class="py-4 px-4 font-bold text-sm text-slate-900 dark:text-white border-b border-t border-slate-200 dark:border-slate-600 text-center">
+                                            Initial Rank</th>
+                                        <th
+                                            class="py-4 px-4 font-bold text-sm text-slate-900 dark:text-white border-b border-t border-slate-200 dark:border-slate-600 text-center">
+                                            Current Rank</th>
+                                        <th
+                                            class="py-4 px-4 font-bold text-sm text-slate-900 dark:text-white border-b border-t border-slate-200 dark:border-slate-600 text-center rounded-tr-lg">
+                                            Growth Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr
+                                        class="border-b border-slate-100 dark:border-slate-700 last:border-0 hover:bg-slate-50/50 dark:hover:bg-slate-700/50 transition-colors">
+                                        <td class="py-4 px-4 text-sm font-medium text-slate-700 dark:text-slate-300">
+                                            Agricultural security los angeles</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-600 dark:text-slate-400 text-center font-semibold">
+                                            #14</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-900 dark:text-white text-center font-bold">
+                                            #1</td>
+                                        <td class="py-4 px-4 text-center">
+                                            <span
+                                                class="inline-flex items-center justify-center p-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-slate-100 dark:border-slate-700 last:border-0 hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+                                        <td class="py-4 px-4 text-sm font-medium text-slate-700 dark:text-slate-300">New
+                                            year security guard los angeles</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-600 dark:text-slate-400 text-center font-semibold">
+                                            #36</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-900 dark:text-white text-center font-bold">
+                                            #1</td>
+                                        <td class="py-4 px-4 text-center">
+                                            <span
+                                                class="inline-flex items-center justify-center p-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-slate-100 dark:border-slate-700 last:border-0 hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+                                        <td class="py-4 px-4 text-sm font-medium text-slate-700 dark:text-slate-300">
+                                            Security guard company los angeles</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-600 dark:text-slate-400 text-center font-semibold">
+                                            >100</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-900 dark:text-white text-center font-bold">
+                                            #11</td>
+                                        <td class="py-4 px-4 text-center">
+                                            <span
+                                                class="inline-flex items-center justify-center p-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-slate-100 dark:border-slate-700 last:border-0 hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+                                        <td class="py-4 px-4 text-sm font-medium text-slate-700 dark:text-slate-300">
+                                            Event security services LA</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-600 dark:text-slate-400 text-center font-semibold">
+                                            #28</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-900 dark:text-white text-center font-bold">
+                                            #3</td>
+                                        <td class="py-4 px-4 text-center">
+                                            <span
+                                                class="inline-flex items-center justify-center p-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        class="border-b border-slate-100 dark:border-slate-700 last:border-0 hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+                                        <td class="py-4 px-4 text-sm font-medium text-slate-700 dark:text-slate-300">
+                                            Armed security guards</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-600 dark:text-slate-400 text-center font-semibold">
+                                            #45</td>
+                                        <td
+                                            class="py-4 px-4 text-sm text-slate-900 dark:text-white text-center font-bold">
+                                            #7</td>
+                                        <td class="py-4 px-4 text-center">
+                                            <span
+                                                class="inline-flex items-center justify-center p-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Right: Search Visibility Share (Chart) -->
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-lg shadow-slate-200/50 dark:shadow-none p-6 md:p-8 flex flex-col items-center justify-center">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-8 self-start w-full">Search
+                            Visibility Share</h3>
+
+                        <div class="relative w-48 h-48 rounded-full flex items-center justify-center"
+                            style="background: conic-gradient(#3b82f6 0% 45%, #42b883 45% 75%, #10b981 75% 100%);">
+                            <!-- Inner white circle for donut effect -->
+                            <div class="absolute w-24 h-24 bg-white dark:bg-slate-800 rounded-full"></div>
+
+                            <!-- Chart Labels positioning -->
+                            <div class="absolute text-center text-white text-xs font-bold leading-tight"
+                                style="top: 25%; right: 5%;">Top 5<br>(45%)</div>
+                            <div class="absolute text-center text-white text-xs font-bold leading-tight"
+                                style="bottom: 12%; left: 35%;">Top 10<br>(30%)</div>
+                            <div class="absolute text-center text-white text-xs font-bold leading-tight"
+                                style="top: 25%; left: 8%;">Top 50<br>(25%)</div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Growth Graph Images -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mb-10 max-w-5xl mx-auto px-4 lg:px-0">
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-2 overflow-hidden group">
+                <div class="rounded-xl overflow-hidden h-full">
+                    <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page6) Graph 1.png"
+                        alt="Ranking Progress Graph 1"
+                        class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+                </div>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-2 overflow-hidden group">
+                <div class="rounded-xl overflow-hidden h-full">
+                    <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page6) Graph 2.png"
+                        alt="Ranking Progress Graph 2"
+                        class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Content Section -->
-    <section class="case-study-content">
-        <div class="container">
-            <!-- What is SEO Section -->
-            <div class="content-section">
-                <h2><i class="fas fa-search"></i> What is SEO?</h2>
-                <div class="content-block">
-                    <p>SEO, or Search Engine Optimization, is the process of improving a website's visibility in organic
-                        (unpaid) search results on engines like Google. Unlike paid ads, which require ongoing spending,
-                        SEO builds long-term traffic by optimizing content, structure, and authority to rank higher for
-                        relevant keywords.</p>
-                    <p>For local businesses like security companies, effective SEO can drive targeted leads, increase
-                        brand awareness, and boost conversions, often resulting in 5-10x ROI over time through
-                        consistent, high-quality traffic.</p>
+        <!-- 3 Bottom Achievement Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4 lg:px-0">
+            <!-- Achievement 1 -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-6">
+                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h4 class="text-base font-bold text-slate-900 dark:text-white mb-2">Top Ranking Achievement</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400">"Agricultural facility security los
+                    angeles" moved from #14 to #1.</p>
+            </div>
+
+            <!-- Achievement 2 -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-6">
+                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h4 class="text-base font-bold text-slate-900 dark:text-white mb-2">Seasonal Success</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400">"New year security guard los angeles"
+                    achieved #1 position from #36.</p>
+            </div>
+
+            <!-- Achievement 3 -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-6">
+                <div class="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h4 class="text-base font-bold text-slate-900 dark:text-white mb-2">Broad Term Growth</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400">"Security guard company los angeles"
+                    climbed to #11 from outside the top 100.</p>
+            </div>
+        </div>
+        </section>
+
+        <!-- Beyond the Traffic Section -->
+        <section class="max-w-5xl mx-auto text-center pt-10 pb-8">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-3 font-heading">Beyond the Traffic: Real
+                Business Value</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-12">We focus on real business growth with measurable
+                outcomes.</p>
+
+            <div
+                class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md py-8 px-6">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-3 divide-y-2 md:divide-y-0 md:divide-x-2 divide-slate-100 dark:divide-slate-700">
+                    <!-- Metric 1 -->
+                    <div class="py-4 md:py-0 flex flex-col items-center justify-center">
+                        <span
+                            class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-2 font-heading">204</span>
+                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Organic
+                            Sessions/Month</span>
+                    </div>
+
+                    <!-- Metric 2 -->
+                    <div class="py-4 md:py-0 flex flex-col items-center justify-center">
+                        <span
+                            class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-2 font-heading">100%</span>
+                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Trackable ROI</span>
+                    </div>
+
+                    <!-- Metric 3 -->
+                    <div class="py-4 md:py-0 flex flex-col items-center justify-center">
+                        <span
+                            class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-2 font-heading">88/100</span>
+                        <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Health Score</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- The Client Section -->
-            <div class="content-section">
-                <h2><i class="fas fa-user-tie"></i> The Client: Security Company in Los Angeles</h2>
-                <div class="content-block">
-                    <p>Security Company in Los Angeles is a leading provider of security guard services in the LA area,
-                        offering armed and unarmed guards, event security, fire watch, and specialized protection for
-                        industries like healthcare, retail, transportation, and entertainment.</p>
-                    <p>Facing stiff competition in a saturated market, they struggled with low online visibility. Their
-                        website received minimal organic traffic, and key search terms like "security company los
-                        angeles" ranked poorly (e.g., outside the top 10-20 initially). They approached us after
-                        realizing Google restrictions and outdated optimization were limiting their reach to potential
-                        clients searching for reliable security solutions.</p>
+            <!-- Traffic Growth Graph Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 mt-10 max-w-5xl mx-auto px-4 lg:px-0">
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-2 overflow-hidden group">
+                    <div class="rounded-xl overflow-hidden h-full">
+                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page7) Graph 1.png"
+                            alt="Traffic Growth Graph 1"
+                            class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-md p-2 overflow-hidden group">
+                    <div class="rounded-xl overflow-hidden h-full">
+                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page7) Graph 2.png"
+                            alt="Traffic Growth Graph 2"
+                            class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500">
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- The Audit Section -->
-            <div class="content-section">
-                <h2>The Audit: Uncovering the Issues</h2>
-                <div class="content-block">
-                    <div class="content-side-layout">
-                        <div class="side-text">
-                            <p>Our initial SEO audit revealed several critical problems:</p>
-                            <ul>
-                                <li><b>Technical Issues:</b> Broken links, crawl errors, slow page speeds, and poor
-                                    mobile optimization hindered indexing.</li>
-                                <li><b>On-Page Deficiencies:</b> Missing meta tags, thin content, and unoptimized
-                                    headings for high-value keywords.</li>
-                                <li><b>Content Gaps:</b> Limited blog posts or service pages targeting long-tail
-                                    keywords.</li>
-                                <li><b>Local SEO Weaknesses:</b> Underutilized GMB profile, few reviews, and
-                                    inconsistent NAP citations.</li>
-                                <li><b>Backlink Profile:</b> Low domain authority with unhealthy links.</li>
-                            </ul>
-                            <h3>These issues resulted in average positions around 40-50 and very low search visibility
-                                initially.</h3>
-                        </div>
+        <!-- Final CTA Section -->
+        <section class="text-center pt-8 pb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8 font-heading">Get a custom
+                SEO audit for your business.</h2>
+            <a href="../../index.html#contact"
+                class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 shadow-lg shadow-blue-600/30">
+                Talk to Zainab
+            </a>
+        </section>
 
-                        <div class="side-image">
-                            <div class="image-stack">
-                                <div class="content-image-container">
-                                    <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page4) Graph.png"
-                                        alt="Audit Graph Analysis">
-                                </div>
-                                <div class="content-image-container">
-                                    <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page4).png"
-                                        alt="Security Audit Overview">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Our Approach Section -->
-                <div class="content-section">
-                    <h2>Our Approach: A Comprehensive SEO Strategy</h2>
-                    <div class="content-block">
-                        <div class="content-side-layout reverse">
-                            <div class="side-text">
-                                <p>We implemented a tailored SEO plan over four months (August to November 2025):</p>
-                                <ul>
-                                    <li><b>Keyword Research:</b> Identified 75+ high-intent keywords targeting core LA
-                                        security terms.</li>
-                                    <li><b>Technical SEO:</b> Resolved crawl errors and optimized site speed for all
-                                        priority pages.</li>
-                                    <li><b>Content Strategy:</b> Created service-specific blogs targeting "security
-                                        guards for events" and "seasonal protection."</li>
-                                    <li><b>Local Integration:</b> Fully optimized the GMB profile and built
-                                        authoritative local citations.</li>
-                                    <li><b>Link Acquisition:</b> Secured 30+ quality backlinks from relevant industry
-                                        and local domains.</li>
-                                </ul>
-                            </div>
-
-                            <div class="side-image">
-                                <div class="image-stack">
-                                    <div class="content-image-container">
-                                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page5) Graph 1.png"
-                                            alt="Strategy Graph 1">
-                                    </div>
-                                    <div class="content-image-container">
-                                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page5) Graph 2.png"
-                                            alt="Strategy Graph 2">
-                                    </div>
-                                    <div class="content-image-container">
-                                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page5).png"
-                                            alt="Approach Overview">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The Results Section -->
-                <div class="content-section">
-                    <h2>The Results: Significant Growth in Visibility & Traffic</h2>
-                    <div class="content-block">
-                        <div class="content-side-layout">
-                            <div class="side-text">
-                                <p>The campaign delivered impressive improvements across key metrics:</p>
-                                <ul>
-                                    <li><b>Top Ranking Achievement:</b> "Agricultural facility security los angeles"
-                                        moved from #14 to #1.</li>
-                                    <li><b>Seasonal Success:</b> "New year security guard los angeles" achieved #1
-                                        position from #36.</li>
-                                    <li><b>High Intent Terms:</b> "Banks security guards los angeles" secured the top
-                                        spot #1 from #31.</li>
-                                    <li><b>Broad Terms:</b> "Security guard company los angeles" climbed to #11 from
-                                        outside the top 100.</li>
-                                </ul>
-                                <h3>Out of 75 tracked keywords, 60% improved by at least 5 positions.</h3>
-                            </div>
-
-                            <div class="side-image">
-                                <div class="image-stack">
-                                    <div class="content-image-container">
-                                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page6) Graph 1.png"
-                                            alt="Ranking Progress Graph 1">
-                                    </div>
-                                    <div class="content-image-container">
-                                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page6) Graph 2.png"
-                                            alt="Ranking Progress Graph 2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Traffic Statistics Section -->
-                <div class="content-section">
-                    <div class="content-block">
-                        <div class="content-side-layout reverse">
-                            <div class="side-text">
-                                <div class="traffic-stats">
-                                    <h3>Traffic & Engagement</h3>
-                                    <div class="stats-grid">
-                                        <div class="stat-card">
-                                            <div class="stat-number">190</div>
-                                            <div class="stat-label">Organic Sessions (Aug)</div>
-                                            <div class="stat-desc">47 clicks, 46.6K impressions</div>
-                                        </div>
-
-                                        <div class="stat-card">
-                                            <div class="stat-number">294</div>
-                                            <div class="stat-label">Organic Sessions (Sep)</div>
-                                            <div class="stat-desc">+55%, 83 clicks, 25.1K impressions</div>
-                                        </div>
-
-                                        <div class="stat-card">
-                                            <div class="stat-number">204</div>
-                                            <div class="stat-label">Organic Sessions (Oct)</div>
-                                            <div class="stat-desc">67 clicks, 21.3K impressions</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="side-image">
-                                <div class="image-stack">
-                                    <div class="content-image-container">
-                                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page7) Graph 1.png"
-                                            alt="Traffic Growth Graph 1">
-                                    </div>
-                                    <div class="content-image-container">
-                                        <img src="../../images/Case Study  Security Company in Los Angeles/Case Study 1 (Page7) Graph 2.png"
-                                            alt="Traffic Growth Graph 2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="overall-impact-stats">
-                            <div class="overall-stats">
-                                <h4>Overall Impact</h4>
-                                <ul>
-                                    <li>Site sessions increased from 636 (Aug) to 1,794 (Nov)
-                                        <strong>(+182%)</strong>
-                                    </li>
-                                    <li>3-month total clicks: <strong>252</strong></li>
-                                    <li>3-month total impressions: <strong>88.9K</strong></li>
-                                    <li>Ahrefs reported 448 organic keywords by August</li>
-                                    <li>Organic traffic value: <strong>$215</strong></li>
-                                    <li>Health score: <strong>88</strong></li>
-                                </ul>
-                            </div>
-
-                            <div class="conclusion">
-                                <p>These results demonstrate how targeted SEO turned low visibility into dominant local
-                                    rankings, driving more qualified leads.</p>
-                            </div>
-                        </div>
-
-                        <!-- Why Choose Us Section -->
-                        <div class="content-section">
-                            <h2><i class="fas fa-star"></i> Why Choose Us for Your SEO Needs?</h2>
-                            <div class="content-block">
-                                <p>With years of experience in local SEO for service-based businesses, our team at
-                                    Synaryverse
-                                    specializes in competitive markets like security services. We've helped dozens of
-                                    clients
-                                    achieve top rankings and sustainable growth, backed by data-driven strategies and
-                                    ongoing
-                                    optimization.</p>
-
-                                <div class="expertise-grid">
-                                    <div class="expertise-card">
-                                        <div class="expertise-icon">
-                                            <i class="fas fa-chart-line"></i>
-                                        </div>
-                                        <h4>Data-Driven Strategies</h4>
-                                        <p>We base our approach on comprehensive data analysis and proven methodologies.
-                                        </p>
-                                    </div>
-
-                                    <div class="expertise-card">
-                                        <div class="expertise-icon">
-                                            <i class="fas fa-clock"></i>
-                                        </div>
-                                        <h4>Ongoing Optimization</h4>
-                                        <p>SEO is not one-and-done; we continuously monitor and adjust strategies.</p>
-                                    </div>
-
-                                    <div class="expertise-card">
-                                        <div class="expertise-icon">
-                                            <i class="fas fa-trophy"></i>
-                                        </div>
-                                        <h4>Proven Results</h4>
-                                        <p>Track record of helping businesses achieve top rankings in competitive
-                                            markets.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Expert Advice Section -->
-                        <div class="content-section">
-                            <h2>Expert Advice: Navigating SEO Challenges</h2>
-                            <div class="content-block">
-                                <p>SEO isn't one-and-done; Google's algorithms evolve, and local competition is fierce.
-                                    Focus on
-                                    user intent, mobile optimization, and fresh content. For seasonal services like
-                                    event
-                                    security,
-                                    plan ahead with timely keywords. Regular audits prevent penalties and maintain
-                                    momentum.
-                                </p>
-
-                                <ul>
-                                    <li>Focus on user intent and search relevance.</li>
-                                    <li>Prioritize mobile optimization for local searchers.</li>
-                                    <li>Create fresh, valuable local content regularly.</li>
-                                    <li>Plan for seasonal keywords like "event security" in advance.</li>
-                                    <li>Conduct regular SEO audits to prevent ranking drops.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-    </section>
+        </div>
+    </main>
 
     <!-- Footer -->
     <div class="grax_tm_section">
