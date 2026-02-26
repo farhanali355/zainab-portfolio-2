@@ -134,6 +134,29 @@
             border-top: 1px solid #2d3748;
             padding-top: 40px;
         }
+
+        /* Smooth FAQ Accordion Animation */
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-content-inner {
+            overflow: hidden;
+        }
+
+        .plus-icon {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .plus-icon {
+            transform: rotate(45deg);
+        }
     </style>
 </head>
 
@@ -143,7 +166,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="../../index.html" class="logo">
-                    <span class="logo-text">Zainab Samnan</span>
+                    <span class="logo-text">Affiliate Marketing</span>
                     <span class="logo-dot"></span>
                 </a>
 
@@ -421,6 +444,165 @@
                 </div>
             </section>
 
+            <!-- FAQ Section -->
+            <section
+                class="bg-[#fdfdfb] py-24 sm:py-32 dark:bg-[#101922] border-t border-gray-100 dark:border-gray-800">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="mb-20 text-center">
+                        <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">FAQS</span>
+                        <h2 class="mt-4 text-4xl font-black tracking-tight text-[#1a1c1e] dark:text-white sm:text-6xl">
+                            Frequently asked questions</h2>
+                    </div>
+
+                    <div class="mx-auto max-w-4xl divide-y divide-gray-100 dark:divide-gray-800">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item group py-8 first:pt-0">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Which
+                                    affiliate networks do you work with?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            We integrate with top-tier networks such as Impact, ShareASale, CJ
+                                            Affiliate, and PartnerStack, among others, to find the best fit for your
+                                            business model.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">How
+                                    do you find and recruit affiliates?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            We use a proactive approach by identifying high-performing content creators,
+                                            bloggers, media buyers, and influencers in your specific niche who align
+                                            with your brand values.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                    is affiliate fraud, and how do you prevent it?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            Affiliate fraud involves generating fake clicks or sales to earn unmerited
+                                            commissions. We use advanced tracking, rigorous partner vetting, and
+                                            constant monitoring to protect your brand and budget.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Who
+                                    handles the communication with affiliates?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            Our team manages all daily communication, updates, newsletters, and
+                                            negotiations with your partners, acting as an extension of your own brand.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="faq-item group py-8">
+                            <button class="flex w-full items-center justify-between text-left focus:outline-none"
+                                onclick="toggleFAQ(this)">
+                                <span
+                                    class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">How
+                                    long does it take to build a profitable affiliate program?</span>
+                                <span class="ml-6 flex-shrink-0">
+                                    <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="faq-content-wrapper">
+                                <div class="faq-content-inner">
+                                    <div class="pt-6 pr-12">
+                                        <p
+                                            class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                            Setting up the technical integration and initial recruitment typically takes
+                                            30-60 days. Scaling the program and seeing significant ROI usually occurs
+                                            within months 3 to 6.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <!-- Standardized Footer -->
@@ -485,6 +667,22 @@
             <div class="tools-grid" id="toolsGrid"></div>
         </div>
     </div>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        }
+    </script>
 
     <script src="../../js/digital-m.js/social.js"></script>
 </body>

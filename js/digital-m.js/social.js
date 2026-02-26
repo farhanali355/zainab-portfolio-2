@@ -14,9 +14,19 @@ const zoomedImage = document.getElementById('zoomedImage');
 // Social Media Tools Data
 const socialTools = [
     {
+        name: 'Meta Business Suite',
+        description: 'Manage Facebook and Instagram marketing from one place',
+        icon: 'fab fa-meta'
+    },
+    {
+        name: 'TikTok Ads Manager',
+        description: 'Create and optimize viral video ad campaigns',
+        icon: 'fab fa-tiktok'
+    },
+    {
         name: 'Hootsuite',
         description: 'Comprehensive social media management dashboard',
-        icon: 'fab fa-owly'
+        icon: 'fas fa-hashtag'
     },
     {
         name: 'Buffer',
@@ -34,24 +44,14 @@ const socialTools = [
         icon: 'fas fa-leaf'
     },
     {
+        name: 'LinkedIn Campaign',
+        description: 'Targeted B2B advertising platform for professionals',
+        icon: 'fab fa-linkedin'
+    },
+    {
         name: 'BuzzSumo',
         description: 'Content discovery and influencer research tool',
-        icon: 'fas fa-search-plus'
-    },
-    {
-        name: 'Later',
-        description: 'Visual social media scheduler for Instagram & Pinterest',
-        icon: 'fas fa-calendar-check'
-    },
-    {
-        name: 'SocialBee',
-        description: 'Evergreen social media management and automation',
-        icon: 'fas fa-bee'
-    },
-    {
-        name: 'Brand24',
-        description: 'Real-time media monitoring and reputation management',
-        icon: 'fas fa-eye'
+        icon: 'fas fa-chart-line'
     }
 ];
 

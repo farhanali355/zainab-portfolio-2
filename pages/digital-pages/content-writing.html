@@ -2,37 +2,224 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Writing SEO Expert | Professional Content Writing Services</title>
-    <link rel="stylesheet" href="../../page-css/digital-m.css/content-writing.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Content Writing Service - Zainab Samnan</title>
+
+    <!-- Standard Project Styles -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Tailwind Design Specifics -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ["class", ".dark-mode"],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#137fec",
+                        "primary-dark": "#0b5bb0",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                        "text-main": "#111418",
+                        "text-sub": "#617589",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        /* Ensure navbar doesn't conflict with tailwind fixed positioning */
+        .navbar {
+            z-index: 100 !important;
+        }
+
+        /* Fix for potential Tailwind/Project font conflicts */
+        .font-display {
+            font-family: 'Manrope', sans-serif !important;
+        }
+
+        /* Robust Dark Mode Overrides for Tailwind Components */
+        .dark-mode .bg-background-light,
+        .dark-mode .bg-gray-50,
+        .dark-mode .bg-gray-100,
+        .dark-mode main {
+            background-color: #101922 !important;
+        }
+
+        .dark-mode .bg-surface-light,
+        .dark-mode .bg-white,
+        .dark-mode .bg-surface-dark {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        .dark-mode .text-text-main,
+        .dark-mode .text-gray-900,
+        .dark-mode .text-black,
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3 {
+            color: #ffffff !important;
+        }
+
+        .dark-mode .text-text-sub,
+        .dark-mode .text-gray-600,
+        .dark-mode .text-gray-500,
+        .dark-mode .text-text-sub {
+            color: #a0aec0 !important;
+        }
+
+        .dark-mode .border-gray-200,
+        .dark-mode .border-gray-100 {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .dark-mode .bg-blue-50 {
+            background-color: rgba(59, 130, 246, 0.1) !important;
+        }
+
+        /* Ecosystem section line fix */
+        .dark-mode .bg-gray-200 {
+            background-color: #2d3748 !important;
+        }
+
+        /* Fix for White buttons/backgrounds */
+        .dark-mode .bg-white.text-text-sub {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        /* Navigation fix */
+        body.dark-mode .navbar {
+            background: rgba(26, 38, 52, 0.9) !important;
+            border-bottom-color: #2d3748 !important;
+        }
+
+        /* Footer Refinement */
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid #2d3748;
+            padding-top: 40px;
+        }
+
+        /* Fix layout overrides from the provided code */
+        .layout-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Custom override for dark mode specifically for the provided code blocks */
+        .dark-mode .dark\:bg-slate-900 {
+            background-color: #1a2634 !important;
+        }
+
+        .dark-mode .dark\:bg-slate-800 {
+            background-color: #2a3748 !important;
+        }
+
+        .dark-mode .dark\:text-slate-300 {
+            color: #d2d6dc !important;
+        }
+
+        .dark-mode .dark\:text-slate-400 {
+            color: #a0aec0 !important;
+        }
+
+        .dark-mode .dark\:border-slate-800 {
+            border-color: #2d3748 !important;
+        }
+
+        .dark-mode .dark\:border-slate-700 {
+            border-color: #4a5568 !important;
+        }
+
+        .dark-mode .dark\:bg-slate-800\/50 {
+            background-color: rgba(42, 55, 72, 0.5) !important;
+        }
+
+        .dark-mode .text-slate-900 {
+            color: #ffffff !important;
+        }
+
+        /* Smooth FAQ Accordion Animation */
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-content-inner {
+            overflow: hidden;
+        }
+
+        .plus-icon {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .plus-icon {
+            transform: rotate(45deg);
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Navigation - 100% Same -->
+<body class="dark-mode">
+    <!-- Navigation (Standardized) -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <!-- Logo on Left -->
-                <a href="#" class="logo">
+                <a href="../../index.html" class="logo">
                     <span class="logo-text">Content Writing</span>
                     <span class="logo-dot"></span>
                 </a>
 
-                <!-- Right Side Icons -->
                 <div class="nav-right">
                     <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
                         <i class="fas fa-moon"></i>
-                        <span class="tooltip">Dark/Light Mode</span>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <button class="nav-icon tools-btn" id="toolsBtn" title="Our Marketing Tools">
+                        <i class="fas fa-tools"></i>
+                        <span class="tooltip">Our Tools</span>
                     </button>
                     <a href="../../index.html" class="cta-btn">
-                        <span>Back to Home</span>
+                        <span>Home</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -44,288 +231,548 @@
         </div>
     </nav>
 
-    <!-- Images Grid Section (Right Below Navbar) -->
-    <section class="images-section">
-        <div class="container">
+    <div
+        class="relative flex min-h-screen w-full flex-col overflow-x-hidden pt-24 bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+        <main class="flex-grow">
+            <!-- User Content Embedded -->
+            <div class="flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 px-4 sm:px-10">
+
+                    <!-- Breadcrumb -->
+                    <div class="flex flex-wrap gap-2 px-4 pt-4">
+                        <a class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary"
+                            href="../../index.html">Services</a>
+                        <span class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal">/</span>
+                        <span class="text-slate-900 dark:text-white text-sm font-medium leading-normal">Content
+                            Writing</span>
+                    </div>
+
+                    <!-- Hero Section -->
+                    <div class="@container">
+                        <div class="@[480px]:p-4">
+                            <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10 relative overflow-hidden"
+                                data-alt="Close up of a person writing in a notebook with a laptop nearby"
+                                style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDF7LTUcvxUv4GZPs0fyFPoEFk5Z-_AVWUMQoabq9Uvguvi56lJ1jNWRaz_z9xZ5wbHMFgzhYM_kZmAgQDUqaggCfKDpxlddJQ3a6w7OFph_htcjpb_t19DmXi1ZGXcSr0v2Z8jeqer54RaBlmR5BaQ41_5HEXN1ZM7ZRTpu19_BQggcqqGrbF8tw2WvAOGrlg8CWTNU0mk41547YmdxIritfa4xAEV7cCWq20Vkr7G1pPfKUCrMmMqmFUVxPdgrAaHRvD0nYB60MoR");'>
+                                <div class="flex flex-col gap-2 text-left z-10 max-w-[700px]">
+                                    <h1
+                                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:leading-[1.1]">
+                                        High-Quality Content That Builds Authority &amp; Trust
+                                    </h1>
+                                    <h2
+                                        class="text-slate-200 text-base font-normal leading-relaxed @[480px]:text-lg mt-2">
+                                        Expertly written blog posts, website copy, and newsletters designed to engage
+                                        your audience and improve search engine visibility.
+                                    </h2>
+                                </div>
+                                <button
+                                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-blue-600 transition-colors z-10 shadow-lg shadow-blue-900/20">
+                                    <span class="truncate">Request a sample</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Band -->
+                    <div class="px-4 py-8">
+                        <div
+                            class="flex flex-col md:flex-row gap-6 md:gap-12 bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm items-center justify-center">
+                            <div class="flex flex-col items-center md:items-start gap-1">
+                                <div class="flex items-center gap-2 text-primary font-bold text-3xl">
+                                    <span class="material-symbols-outlined text-4xl">trending_up</span>
+                                    <span>85%</span>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Increase in organic
+                                    traffic for a SaaS client</p>
+                            </div>
+                            <div class="w-full md:w-px h-px md:h-12 bg-slate-200 dark:bg-slate-600"></div>
+                            <div class="flex flex-col items-center md:items-start gap-1">
+                                <div class="flex items-center gap-2 text-primary font-bold text-3xl">
+                                    <span class="material-symbols-outlined text-4xl">schedule</span>
+                                    <span>4 mins</span>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm font-medium">Average read time
+                                    across blog articles</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Strategy -->
+                    <div class="flex flex-col gap-6 px-4 py-10">
+                        <div class="flex flex-col gap-3">
+                            <h2
+                                class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">
+                                The Strategy</h2>
+                            <p class="text-slate-600 dark:text-slate-400 text-base font-normal max-w-[720px]">We create
+                                content that resonates with your audience and ranks on search engines.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Card 1 -->
+                            <div
+                                class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 flex-col hover:border-primary/50 transition-colors duration-300">
+                                <div
+                                    class="size-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary mb-2">
+                                    <span class="material-symbols-outlined text-[28px]">person_search</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Audience
+                                        Research</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Understanding
+                                        exactly who we are writing for to maximize relevance and engagement.</p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 flex-col hover:border-primary/50 transition-colors duration-300">
+                                <div
+                                    class="size-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary mb-2">
+                                    <span class="material-symbols-outlined text-[28px]">ads_click</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">SEO
+                                        Optimization</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Weaving in
+                                        high-value keywords naturally to boost search visibility without sacrificing
+                                        readability.</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 flex-col hover:border-primary/50 transition-colors duration-300">
+                                <div
+                                    class="size-12 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-primary mb-2">
+                                    <span class="material-symbols-outlined text-[28px]">record_voice_over</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Tone of
+                                        Voice</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Matching your
+                                        brand's unique personality for authentic communication across all channels.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Writing Formats -->
+                    <div class="px-4 py-10 bg-slate-50 dark:bg-slate-800/50 rounded-xl my-6">
+                        <div class="mb-8">
+                            <h2
+                                class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">
+                                Writing Formats</h2>
+                            <p class="text-slate-600 dark:text-slate-400 mt-2">Versatile content solutions tailored to
+                                your platform needs.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="flex flex-col gap-4">
+                                <div
+                                    class="h-40 w-full rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700 relative">
+                                    <div class="absolute inset-0 bg-cover bg-center"
+                                        data-alt="Laptop with coffee on a wooden desk"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBan0wMzezY1EigxGJKu_aRAruq08jFC4th6aCVIaW_mIcvGsyJxPMwZGuKpnXXzqO1pyg6cd8Zu44smvcjUlymVOhHhqToEfgMlm4cmmw7nwYqwwpTjyURkkO1L4CXlkre4Qniuv0NGL8O9_cm1jClrQTioS8LMbqD3t0Ok0194tV2tqqM0a-UhlEZcVMwoT5u7tGu6dqCXJUgSooHQg-xhyP-HgzVaISyrXiqx6Eyl6RQuQaQwgaDhbXXGHYZAwxnFp7sNRRisc0g");'>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-slate-900 dark:text-white font-bold text-lg mb-2">Blog Posts &amp;
+                                        Articles</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Educational,
+                                        long-form content designed to educate your audience and capture organic search
+                                        traffic.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div
+                                    class="h-40 w-full rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700 relative">
+                                    <div class="absolute inset-0 bg-cover bg-center"
+                                        data-alt="Close up of typing on a keyboard"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDofDFhztU94MU6dNn1vNnAbcWk469ptlJBPlt4u2Nfg289qxMD4h3AlBo5j9VQlRznjWEQbQk0hloRwjSGFBnzuv4-XkXtpTnr6u4I7qvYlKmaQGweHTrIdq2P7vvAU7KcDlhYPBWU8BwggiaBUCc-lMursKP7vYhaWaT1WKsNhld9COmFL3pl-EAAdvVsEC9cUXQAgPC_AgZJ1m6jkQGIxr2yVZ5H_aQlULCbau4rjs2xWl07wBjMcgVJB86mUFcBsIg32UYT2W1U");'>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-slate-900 dark:text-white font-bold text-lg mb-2">Website &amp; Copy
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Clear,
+                                        persuasive landing page copy that guides visitors toward taking action.</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-4">
+                                <div
+                                    class="h-40 w-full rounded-lg overflow-hidden bg-slate-200 dark:bg-slate-700 relative">
+                                    <div class="absolute inset-0 bg-cover bg-center"
+                                        data-alt="Clean minimal envelope and letter"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb4xyuyanodvUcsKp6rGoPXTl4hYMlJ1V5EO3SoQ-D-IFiFF7h5WsdgGA7iQt7I7Tr7YKTPrvh9MNQOq_CJrvm-M01SIt0GHbPHlT3WZAxFrMXnZEH5614Yv_LWzd4eMMm3JmX0FrjfGy7WGw3O7C2yyvx4DyMAgCNZkeWv6A87hgrG6wnHqHUmJjkOIoWU0ZwC3mHPnZWbiKRybEhfQIakGysEH7Lwe87zlmmIzp_TQoP9x8kup8Xp7PZShmQvfKoRp4EklBo_nRA");'>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-slate-900 dark:text-white font-bold text-lg mb-2">Newsletters &amp;
+                                        Lead Magnets</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Nurturing
+                                        emails and valuable downloadable resources to build your subscriber list.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Process Section -->
+                    <div class="flex flex-col lg:flex-row gap-12 px-4 py-12 items-center">
+                        <div class="flex-1 flex flex-col gap-8 w-full">
+                            <h2
+                                class="text-slate-900 dark:text-white text-[28px] font-bold leading-tight tracking-[-0.015em]">
+                                The Writing Process</h2>
+                            <div class="flex flex-col gap-6 relative">
+                                <!-- Connecting Line -->
+                                <div class="absolute left-[19px] top-4 bottom-4 w-0.5 bg-slate-200 dark:bg-slate-700">
+                                </div>
+                                <!-- Step 1 -->
+                                <div class="flex gap-4 relative z-10">
+                                    <div
+                                        class="size-10 rounded-full bg-white dark:bg-slate-800 border-2 border-primary flex items-center justify-center text-primary font-bold shrink-0">
+                                        1</div>
+                                    <div class="pt-2">
+                                        <h4 class="text-slate-900 dark:text-white font-bold text-base">Deep Research
+                                        </h4>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Analyzing
+                                            competitors, keywords, and subject matter.</p>
+                                    </div>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="flex gap-4 relative z-10">
+                                    <div
+                                        class="size-10 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 font-bold shrink-0">
+                                        2</div>
+                                    <div class="pt-2">
+                                        <h4 class="text-slate-900 dark:text-white font-bold text-base">Strategic
+                                            Drafting</h4>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Structuring arguments
+                                            and writing compelling copy.</p>
+                                    </div>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="flex gap-4 relative z-10">
+                                    <div
+                                        class="size-10 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 font-bold shrink-0">
+                                        3</div>
+                                    <div class="pt-2">
+                                        <h4 class="text-slate-900 dark:text-white font-bold text-base">Editing &amp;
+                                            Optimization</h4>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Refining flow,
+                                            checking facts, and adding SEO meta data.</p>
+                                    </div>
+                                </div>
+                                <!-- Step 4 -->
+                                <div class="flex gap-4 relative z-10">
+                                    <div
+                                        class="size-10 rounded-full bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 font-bold shrink-0">
+                                        4</div>
+                                    <div class="pt-2">
+                                        <h4 class="text-slate-900 dark:text-white font-bold text-base">Final Delivery
+                                        </h4>
+                                        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Delivered in your
+                                            preferred format (Google Doc, Notion, CMS).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Visual representation of doc -->
+                        <div class="flex-1 w-full max-w-[500px]">
+                            <div
+                                class="bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                                <div
+                                    class="bg-blue-50 dark:bg-slate-900 px-4 py-3 border-b border-slate-100 dark:border-slate-700 flex items-center gap-2">
+                                    <div class="size-3 rounded-full bg-red-400"></div>
+                                    <div class="size-3 rounded-full bg-yellow-400"></div>
+                                    <div class="size-3 rounded-full bg-green-400"></div>
+                                </div>
+                                <div class="p-8 flex flex-col gap-4">
+                                    <div class="h-6 w-3/4 bg-slate-200 dark:bg-slate-700 rounded animate-pulse"></div>
+                                    <div class="space-y-2">
+                                        <div class="h-3 w-full bg-slate-100 dark:bg-slate-700/50 rounded"></div>
+                                        <div class="h-3 w-full bg-slate-100 dark:bg-slate-700/50 rounded"></div>
+                                        <div class="h-3 w-5/6 bg-slate-100 dark:bg-slate-700/50 rounded"></div>
+                                    </div>
+                                    <div
+                                        class="p-4 bg-blue-50 dark:bg-blue-900/10 rounded-lg border border-blue-100 dark:border-blue-900/30 flex gap-3">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-sm mt-0.5">check_circle</span>
+                                        <div class="flex flex-col gap-1">
+                                            <div class="h-2 w-24 bg-blue-200 dark:bg-blue-800 rounded"></div>
+                                            <div class="h-2 w-32 bg-blue-100 dark:bg-blue-800/50 rounded"></div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="h-3 w-full bg-slate-100 dark:bg-slate-700/50 rounded"></div>
+                                        <div class="h-3 w-4/6 bg-slate-100 dark:bg-slate-700/50 rounded"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-            <div class="images-grid">
-                <!-- Image 1: Blog Writing -->
-                <div class="image-card" data-image="blog-writing">
-                    <div class="image-box">
-                        <img src="../../images/seo/image-1.jpg" alt="Professional Blog Writing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
+                    <!-- FAQ Section -->
+                    <section
+                        class="bg-[#fdfdfb] py-24 sm:py-32 dark:bg-[#101922] border-t border-gray-100 dark:border-gray-800">
+                        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                            <div class="mb-20 text-center">
+                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">FAQS</span>
+                                <h2
+                                    class="mt-4 text-4xl font-black tracking-tight text-[#1a1c1e] dark:text-white sm:text-6xl">
+                                    Frequently asked questions</h2>
+                            </div>
 
-                <!-- Image 2: SEO Content -->
-                <div class="image-card" data-image="seo-content">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="SEO-Optimized Content Writing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
+                            <div class="mx-auto max-w-4xl divide-y divide-gray-100 dark:divide-gray-800">
+                                <!-- FAQ Item 1 -->
+                                <div class="faq-item group py-8 first:pt-0">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                            type of content do you write?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    We specialize in SEO-optimized blog posts, authoritative pillar
+                                                    pages, lead magnets (eBooks, checklists), and engaging landing page
+                                                    copy tailored to your target audience.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- Image 3: Copywriting -->
-                <div class="image-card" data-image="copywriting">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Professional Copywriting">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
+                                <!-- FAQ Item 2 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">How
+                                            do you ensure the content ranks on Google?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    By conducting deep keyword research, structuring content with best
+                                                    on-page SEO practices (H1/H2 tags, meta descriptions), and
+                                                    thoroughly answering the specific user search intent.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- Image 4: Technical Writing -->
-                <div class="image-card" data-image="technical-writing">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Technical Content Writing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
+                                <!-- FAQ Item 3 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Do
+                                            you handle uploading and publishing?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    Yes. We can upload articles directly to your CMS (like WordPress or
+                                                    Webflow) along with proper formatting and featured graphics, so you
+                                                    don't have to lift a finger.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- Image 5: Content Strategy -->
-                <div class="image-card" data-image="content-strategy">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Content Strategy Development">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
+                                <!-- FAQ Item 4 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">How
+                                            long until I see increased traffic?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    SEO and organic content are long-term investments. Meaningful
+                                                    traction and rankings typically start building around months 3 to 6,
+                                                    with traffic compounding over time.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <!-- Image 6: Editing & Proofreading -->
-                <div class="image-card" data-image="editing-proofreading">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Editing & Proofreading">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
+                                <!-- FAQ Item 5 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Do
+                                            I get to review the content before it's live?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    Absolutely. You'll always have full approval rights. We provide
+                                                    drafts for your review and happily incorporate revisions to ensure
+                                                    the content matches your brand voice.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Footer CTA -->
+                    <div class="py-10 px-4 mt-8 mb-10 text-center bg-slate-50 dark:bg-slate-800/50 rounded-2xl mx-4">
+                        <div class="max-w-xl mx-auto flex flex-col items-center gap-6">
+                            <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white">Ready to elevate
+                                your content?</h2>
+                            <p class="text-slate-600 dark:text-slate-400">Let's discuss how we can turn your ideas into
+                                authority-building assets.</p>
+                            <button
+                                class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-base font-bold leading-normal hover:scale-105 transition-transform">
+                                <span class="truncate">Talk to Zainab</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </main>
 
-    <!-- Content Writing SEO Content Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <!-- Left Column -->
-                <div class="content-left">
-                    <h2>What is Professional Content Writing?</h2>
-                    <p class="content-intro">Professional Content Writing is the art and science of creating valuable,
-                        engaging, and SEO-optimized written content that attracts target audiences, builds brand
-                        authority, and drives measurable business results.</p>
-
-                    <div class="content-block">
-                        <h3><i class="fas fa-pen-nib"></i> Why Quality Content Matters</h3>
-                        <p>Content is the foundation of digital marketing success. High-quality content drives 3x more
-                            leads than paid search advertising and costs 62% less while delivering lasting value.</p>
-
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">70<span>%</span></div>
-                                <div class="stat-text">of marketers actively invest in content marketing</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">6<span>×</span></div>
-                                <div class="stat-text">higher conversion rates for content marketing adopters</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">97<span>%</span></div>
-                                <div class="stat-text">more inbound links for websites with blogs</div>
-                            </div>
+        <!-- Standardized Footer -->
+        <div class="grax_tm_section">
+            <div class="grax_tm_copyright">
+                <div class="container">
+                    <div class="copyright_inner">
+                        <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                            <span class="footer-logo">Zainab Samnan</span>
                         </div>
-                    </div>
 
-                    <div class="content-block">
-                        <h3><i class="fas fa-search-plus"></i> SEO Content Writing Principles</h3>
-                        <p>Effective SEO content writing balances search engine optimization with human readability,
-                            creating content that ranks well while providing genuine value to readers.</p>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Keyword research and strategic placement</span>
+                        <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <ul class="footer-nav-menu">
+                                <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                    <a href="../../index.html" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                    <a href="../../index.html#about" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="title">About</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                    <a href="../../index.html#portfolio" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                                        <span class="title">Portfolio</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                    <a href="../../index.html#contact" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                        <span class="title">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Readability and user experience optimization</span>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Structured content with proper heading hierarchy</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Right Column -->
-                <div class="content-right">
-                    <h2>Key Elements of Content Writing</h2>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-blog"></i>
+                        <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                            <p>&copy; Copyright 2026 by Zainab Samnan</p>
                         </div>
-                        <div class="element-content">
-                            <h3>Blog & Article Writing</h3>
-                            <p>Creating informative, engaging blog posts and articles that establish thought leadership,
-                                drive organic traffic, and engage target audiences.</p>
-                            <div class="element-tags">
-                                <span class="tag">Thought Leadership</span>
-                                <span class="tag">Educational Content</span>
-                                <span class="tag">Industry Insights</span>
-                                <span class="tag">Reader Engagement</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-magic"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Copywriting & Conversion</h3>
-                            <p>Writing persuasive copy that drives action, converts visitors into customers, and
-                                communicates brand value effectively.</p>
-                            <div class="element-tags">
-                                <span class="tag">Persuasive Writing</span>
-                                <span class="tag">Call-to-Action</span>
-                                <span class="tag">Brand Voice</span>
-                                <span class="tag">Sales Conversion</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Technical & B2B Writing</h3>
-                            <p>Creating complex technical documentation, whitepapers, case studies, and B2B content that
-                                communicates specialized information clearly.</p>
-                            <div class="element-tags">
-                                <span class="tag">Technical Documentation</span>
-                                <span class="tag">Case Studies</span>
-                                <span class="tag">Whitepapers</span>
-                                <span class="tag">Industry Reports</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-edit"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Editing & Proofreading</h3>
-                            <p>Polishing content for clarity, accuracy, grammar, and style while maintaining brand voice
-                                and ensuring error-free publication.</p>
-                            <div class="element-tags">
-                                <span class="tag">Grammar Correction</span>
-                                <span class="tag">Style Consistency</span>
-                                <span class="tag">Fact Checking</span>
-                                <span class="tag">Quality Assurance</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer - 100% Same -->
-    <div class="grax_tm_section">
-        <div class="grax_tm_copyright">
-            <div class="my_wave">
-                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <defs></defs>
-                    <path id="wave_img" data-color="#fff"
-                        d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-
-            <div class="container">
-                <div class="copyright_inner">
-                    <!-- Left: Logo -->
-                    <div class="logo wow fadeInLeft" data-wow-duration="1s">
-                        <span class="footer-logo">Zainab Samnan</span>
-                    </div>
-
-                    <!-- Center: Navigation Menu -->
-                    <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <ul class="footer-nav-menu">
-                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
-                                <a href="../../index.html" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Home</span>
-                                </a>
-                            </li>
-                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
-                                <a href="../../index.html#about" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="person-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">About</span>
-                                </a>
-                            </li>
-                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
-                                <a href="../../index.html#portfolio" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="briefcase-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Portfolio</span>
-                                </a>
-                            </li>
-                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
-                                <a href="../../index.html#contact" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="mail-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Contact</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Right: Copyright Text -->
-                    <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-                        <p>&copy; Copyright 2026 by Zainab Samnan All rights reserved.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Image Modal - Simple Image Viewer -->
-    <div class="image-modal" id="imageModal">
+    <!-- Modals & Scripts -->
+    <div class="tools-modal" id="toolsModal">
         <div class="modal-overlay"></div>
-        <div class="image-modal-container">
-            <button class="modal-close" id="imageModalClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="image-modal-content">
-                <img id="modalImage" src="" alt="Full Size Image">
+        <div class="modal-container">
+            <button class="modal-close" id="toolsModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-tools"></i></div>
+                <h2>Our Marketing Tools</h2>
+                <p>Professional tools we use to deliver exceptional results</p>
             </div>
+            <div class="tools-grid" id="toolsGrid"></div>
         </div>
     </div>
 
-    <script src="../../js/digital-m.js/content-writing.js"></script>
+    <script src="../../js/digital-m.js/social.js"></script>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        }
+    </script>
 </body>
 
 </html>

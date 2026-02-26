@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Copy Writing - Zainab Samnan</title>
+
+    <!-- Standard Project Styles -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Design Specifics -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ["class", ".dark-mode"],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#E87030", // Custom Orange from the reference image
+                        "primary-dark": "#c95a22",
+                        "primary-light": "#fef5f0", // Very light orange for icon backgrounds
+                        "background-light": "#fdfdfb", // warm off-white from image
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                        "text-main": "#111418",
+                        "text-sub": "#617589",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        /* Ensure navbar doesn't conflict with tailwind fixed positioning */
+        .navbar {
+            z-index: 100 !important;
+        }
+
+        /* Fix for potential Tailwind/Project font conflicts */
+        .font-display {
+            font-family: 'Manrope', sans-serif !important;
+        }
+
+        /* Robust Dark Mode Overrides for Tailwind Components */
+        .dark-mode .bg-background-light,
+        .dark-mode .bg-gray-50,
+        .dark-mode .bg-gray-100,
+        .dark-mode main {
+            background-color: #101922 !important;
+        }
+
+        .dark-mode .bg-surface-light,
+        .dark-mode .bg-white,
+        .dark-mode .bg-surface-dark {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        .dark-mode .text-text-main,
+        .dark-mode .text-gray-900,
+        .dark-mode .text-black,
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3 {
+            color: #ffffff !important;
+        }
+
+        .dark-mode .text-text-sub,
+        .dark-mode .text-gray-600,
+        .dark-mode .text-gray-500,
+        .dark-mode .text-text-sub {
+            color: #a0aec0 !important;
+        }
+
+        .dark-mode .border-gray-200,
+        .dark-mode .border-gray-100 {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .dark-mode .bg-primary-light {
+            background-color: rgba(232, 112, 48, 0.1) !important;
+        }
+
+        /* Navigation fix */
+        body.dark-mode .navbar {
+            background: rgba(26, 38, 52, 0.9) !important;
+            border-bottom-color: #2d3748 !important;
+        }
+
+        /* Footer Refinement */
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid #2d3748;
+            padding-top: 40px;
+        }
+
+        .layout-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Custom Dashboard Chart Animations */
+        @keyframes fillBar {
+            from {
+                width: 0;
+            }
+        }
+
+        /* Smooth FAQ Accordion Animation */
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-content-inner {
+            overflow: hidden;
+        }
+
+        .plus-icon {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .plus-icon {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <!-- Navigation (Standardized) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Copy Writing</span>
+                    <span class="logo-dot"></span>
+                </a>
+
+                <div class="nav-right">
+                    <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <button class="nav-icon tools-btn" id="toolsBtn" title="Our Marketing Tools">
+                        <i class="fas fa-tools"></i>
+                        <span class="tooltip">Our Tools</span>
+                    </button>
+                    <a href="../../index.html" class="cta-btn">
+                        <span>Home</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div
+        class="relative flex min-h-screen w-full flex-col overflow-x-hidden pt-24 bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+        <main class="flex-grow">
+            <!-- User Content Embedded -->
+            <div class="flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[1280px] flex-1 px-4 sm:px-10">
+
+                    <!-- Breadcrumb -->
+
+
+                    <!-- HERO SECTION -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center py-12">
+                        <!-- Left Hero Content -->
+                        <div class="flex flex-col gap-6 max-w-[600px] z-10">
+                            <h1
+                                class="text-slate-900 dark:text-white text-5xl sm:text-6xl font-black leading-[1.1] tracking-[-0.03em]">
+                                Copy that turns<br />clicks into<br />
+                                <span class="text-primary">customers</span>
+                            </h1>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mt-2">
+                                High-converting sales pages, landing pages, and ad copy built on deep customer research
+                                and psychological triggers, not guesswork.
+                            </p>
+                            <div class="mt-4">
+                                <a href="../../index.html#contact"
+                                    class="inline-flex cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
+                                    Book a copy audit &rarr;
+                                </a>
+                            </div>
+                            <!-- Social Proof -->
+                            <div class="flex items-center gap-4 mt-8">
+                                <div class="flex -space-x-3">
+                                    <img class="w-10 h-10 rounded-full border-2 border-background-light dark:border-background-dark object-cover"
+                                        src="https://i.pravatar.cc/100?img=1" alt="Avatar">
+                                    <img class="w-10 h-10 rounded-full border-2 border-background-light dark:border-background-dark object-cover"
+                                        src="https://i.pravatar.cc/100?img=5" alt="Avatar">
+                                    <img class="w-10 h-10 rounded-full border-2 border-background-light dark:border-background-dark object-cover"
+                                        src="https://i.pravatar.cc/100?img=9" alt="Avatar">
+                                </div>
+                                <span class="text-sm font-medium text-slate-500 dark:text-slate-400">Trusted by 50+
+                                    scaling brands</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Hero Image with Floating Card -->
+                        <div
+                            class="relative w-full aspect-[4/3] sm:aspect-video lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+                            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop"
+                                alt="Desk with laptop and plants" class="w-full h-full object-cover">
+                            <!-- Overlay Card -->
+                            <div
+                                class="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 max-w-[400px] bg-white dark:bg-slate-800 rounded-xl p-5 shadow-xl border border-slate-100 dark:border-slate-700 transform hover:-translate-y-1 transition-transform">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="material-symbols-outlined text-primary text-lg">trending_up</span>
+                                    <span class="font-bold text-slate-900 dark:text-white text-sm">Recent Win</span>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm font-medium">"We saw a 45% lift in
+                                    signups within 2 weeks of the new copy going live."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- THE STRATEGY SECTION (3 Columns) -->
+                    <div class="py-20 mt-10">
+                        <div class="max-w-[700px] mb-12">
+                            <h2 class="text-slate-900 dark:text-white text-3xl font-black mb-4">The Strategy</h2>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg">We don't guess. We research,
+                                structure, and test to build a foundation for scalable growth.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Card 1 -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-700">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center text-primary mb-6">
+                                    <span class="material-symbols-outlined">search</span>
+                                </div>
+                                <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-3">Customer Research</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Mining reviews,
+                                    interviews, and surveys to find the authentic voice of your customer and their true
+                                    pain points.</p>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-700">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center text-primary mb-6">
+                                    <span class="material-symbols-outlined">architecture</span>
+                                </div>
+                                <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-3">Persuasion
+                                    Architecture</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Structuring your
+                                    offer and page layout using psychological principles like scarcity and social proof
+                                    for maximum impact.</p>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 dark:border-slate-700">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center text-primary mb-6">
+                                    <span class="material-symbols-outlined">bar_chart</span>
+                                </div>
+                                <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-3">A/B Testing &amp;
+                                    Iteration</h3>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Refining
+                                    headlines, hooks, and calls to action based on real-world data, not just creative
+                                    intuition.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- THE COPY STACK (4 Columns with Orange Border) -->
+                    <div class="py-12">
+                        <div class="flex items-center gap-4 mb-10">
+                            <div class="w-1.5 h-8 bg-primary rounded-full"></div>
+                            <h2 class="text-slate-900 dark:text-white text-2xl font-black">The Copy Stack</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <!-- Stack 1 -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-6 rounded-xl border-l-4 border-l-primary border-t border-r border-b border-slate-100 dark:border-slate-700 shadow-sm relative group">
+                                <span
+                                    class="material-symbols-outlined absolute top-6 right-6 text-slate-300 dark:text-slate-600">description</span>
+                                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Sales Pages</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed pr-6">Long-form
+                                    persuasion designed to handle objections and close deals.</p>
+                            </div>
+                            <!-- Stack 2 -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-6 rounded-xl border-l-4 border-l-primary border-t border-r border-b border-slate-100 dark:border-slate-700 shadow-sm relative group">
+                                <span
+                                    class="material-symbols-outlined absolute top-6 right-6 text-slate-300 dark:text-slate-600">web</span>
+                                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Landing Pages</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed pr-6">Focused lead
+                                    generation pages optimized for specific traffic sources.</p>
+                            </div>
+                            <!-- Stack 3 -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-6 rounded-xl border-l-4 border-l-primary border-t border-r border-b border-slate-100 dark:border-slate-700 shadow-sm relative group">
+                                <span
+                                    class="material-symbols-outlined absolute top-6 right-6 text-slate-300 dark:text-slate-600">campaign</span>
+                                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Ad Copy</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed pr-6">High CTR copy
+                                    for Meta &amp; Google designed to stop the scroll.</p>
+                            </div>
+                            <!-- Stack 4 -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-6 rounded-xl border-l-4 border-l-primary border-t border-r border-b border-slate-100 dark:border-slate-700 shadow-sm relative group">
+                                <span
+                                    class="material-symbols-outlined absolute top-6 right-6 text-slate-300 dark:text-slate-600">mail</span>
+                                <h3 class="text-slate-900 dark:text-white text-lg font-bold mb-2">Email Sequences</h3>
+                                <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed pr-6">Nurturing
+                                    flows that build trust and convert leads into buyers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REAL RESULTS DASHBOARD -->
+                    <div class="py-16">
+                        <div
+                            class="bg-[#1e1c22] rounded-3xl p-8 lg:p-14 text-white relative overflow-hidden flex flex-col lg:flex-row gap-12 lg:gap-8 items-center shadow-2xl">
+                            <!-- Dark Background Decoration -->
+                            <div
+                                class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#2a262e] to-transparent opacity-50">
+                            </div>
+
+                            <!-- Left: Results Text -->
+                            <div class="flex-1 z-10 w-full">
+                                <div
+                                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></div>
+                                    <span class="text-[10px] font-bold tracking-widest uppercase">Case Study
+                                        Highlight</span>
+                                </div>
+                                <h2 class="text-3xl lg:text-4xl font-black mb-10 leading-tight">
+                                    Real Results for Boutique Brands
+                                </h2>
+
+                                <div class="flex flex-col gap-8">
+                                    <!-- Stat 1 -->
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                                            <span class="material-symbols-outlined text-green-400">trending_up</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-black text-green-400">12% Increase</h3>
+                                            <p class="text-slate-400 text-sm mt-1">in landing page conversion rate
+                                                within 30 days.</p>
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-px bg-white/5 my-2"></div>
+                                    <!-- Stat 2 -->
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                                            <span class="material-symbols-outlined text-primary">monetization_on</span>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-black text-primary">2x ROAS</h3>
+                                            <p class="text-slate-400 text-sm mt-1">Doubled Return on Ad Spend for
+                                                Facebook campaigns.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Dashboard Visualization -->
+                            <div class="flex-1 w-full max-w-[500px] z-10">
+                                <div class="bg-[#252229] border border-[#332f38] rounded-2xl p-6 shadow-2xl">
+                                    <div class="flex justify-between items-center mb-8">
+                                        <h4 class="font-bold text-sm">Funnel Performance</h4>
+                                        <span class="text-xs text-slate-500">Last 30 Days</span>
+                                    </div>
+
+                                    <div class="flex flex-col gap-6">
+                                        <!-- Traffic Bar -->
+                                        <div>
+                                            <div class="flex justify-between items-center text-xs text-slate-400 mb-2">
+                                                <span>Traffic</span>
+                                                <span class="font-mono text-white">12,450</span>
+                                            </div>
+                                            <div class="w-full h-2 bg-[#1a1c1e] rounded-full overflow-hidden">
+                                                <div class="h-full bg-slate-500 rounded-full"
+                                                    style="width: 100%; animation: fillBar 1s ease-out;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Leads Bar -->
+                                        <div>
+                                            <div class="flex justify-between items-center text-xs text-slate-400 mb-2">
+                                                <span>Leads</span>
+                                                <span class="font-mono text-white">3,800</span>
+                                            </div>
+                                            <div class="w-full h-2 bg-[#1a1c1e] rounded-full overflow-hidden">
+                                                <div class="h-full bg-primary rounded-full"
+                                                    style="width: 75%; animation: fillBar 1.2s ease-out;"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Sales Bar -->
+                                        <div>
+                                            <div class="flex justify-between items-center text-xs text-slate-400 mb-2">
+                                                <span>Sales</span>
+                                                <span class="font-mono text-green-400 font-bold">482</span>
+                                            </div>
+                                            <div class="w-full h-2 bg-[#1a1c1e] rounded-full overflow-hidden">
+                                                <div class="h-full bg-green-400 rounded-full"
+                                                    style="width: 25%; animation: fillBar 1.4s ease-out;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRICING / PACAKAGES -->
+                    <div class="py-16">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
+
+                            <!-- Tier 1: Deliverables -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-8 rounded-3xl flex flex-col border border-slate-100 dark:border-slate-700 shadow-sm">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">What You Get</h3>
+                                <ul class="flex flex-col gap-5 flex-1">
+                                    <li class="flex items-start gap-3">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                            <span
+                                                class="material-symbols-outlined text-green-600 text-[14px] font-bold">check</span>
+                                        </div>
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">Deep-dive Customer
+                                            Research Report</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                            <span
+                                                class="material-symbols-outlined text-green-600 text-[14px] font-bold">check</span>
+                                        </div>
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">Full Copy Deck (Google
+                                            Doc)</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                            <span
+                                                class="material-symbols-outlined text-green-600 text-[14px] font-bold">check</span>
+                                        </div>
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">Wireframe Suggestions
+                                            for Devs</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                            <span
+                                                class="material-symbols-outlined text-green-600 text-[14px] font-bold">check</span>
+                                        </div>
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">1 Round of
+                                            Collaborative Revisions</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div
+                                            class="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                                            <span
+                                                class="material-symbols-outlined text-green-600 text-[14px] font-bold">check</span>
+                                        </div>
+                                        <span class="text-sm text-slate-600 dark:text-slate-300">Implementation Loom
+                                            Video</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Tier 2: Single Asset -->
+                            <div
+                                class="bg-white dark:bg-slate-800 p-8 rounded-3xl flex flex-col border border-slate-200 dark:border-slate-600 shadow-md transform lg:-translate-y-2">
+                                <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Single
+                                    Asset</span>
+                                <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-3">Sales Asset</h3>
+                                <p
+                                    class="text-sm text-slate-500 mb-8 border-b border-slate-100 dark:border-slate-700 pb-8">
+                                    Perfect for launching a new landing page or refreshing an existing sales page.</p>
+
+                                <ul class="flex flex-col gap-4 flex-1 mb-8">
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-primary mb-0.5"></div>
+                                        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">One Core
+                                            Page (Sales/Landing)</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-primary mb-0.5"></div>
+                                        <span class="text-sm font-medium text-slate-700 dark:text-slate-300">Research
+                                            &amp; Strategy</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-primary mb-0.5"></div>
+                                        <span
+                                            class="text-sm font-medium text-slate-700 dark:text-slate-300">Wireframing</span>
+                                    </li>
+                                </ul>
+                                <button
+                                    class="w-full py-4 rounded-xl border-2 border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">Inquire
+                                    for Price</button>
+                            </div>
+
+                            <!-- Tier 3: Full Funnel (Dark) -->
+                            <div
+                                class="bg-[#1a1c1e] p-8 rounded-3xl flex flex-col shadow-2xl relative overflow-hidden text-white transform lg:-translate-y-4">
+                                <!-- Most Popular Tag -->
+                                <div
+                                    class="absolute top-6 right-0 bg-primary text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-l-md">
+                                    Most Popular
+                                </div>
+                                <span class="text-xs font-bold text-primary uppercase tracking-wider mb-2">Complete
+                                    Package</span>
+                                <h3 class="text-3xl font-black mb-3 text-white">Full Funnel</h3>
+                                <p class="text-sm text-slate-400 mb-8 border-b border-white/10 pb-8">A comprehensive
+                                    overhaul of your entire customer journey from ad to purchase.</p>
+
+                                <ul class="flex flex-col gap-4 flex-1 mb-8 text-white">
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-primary mb-0.5"></div>
+                                        <span class="text-sm font-medium">Ads + Landing Page + Sales Page</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-primary mb-0.5"></div>
+                                        <span class="text-sm font-medium">5-Email Nurture Sequence</span>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <div class="w-1.5 h-1.5 rounded-full bg-primary mb-0.5"></div>
+                                        <span class="text-sm font-medium">Full Funnel Strategy</span>
+                                    </li>
+                                </ul>
+                                <button
+                                    class="w-full py-4 rounded-xl bg-primary text-white font-bold hover:bg-primary-dark transition-colors border border-primary-dark shadow-[0_0_20px_rgba(232,112,48,0.3)]">
+                                    <a href="../../index.html#contact">Talk to Zainab</a>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <section
+                        class="bg-[#fdfdfb] py-24 sm:py-32 dark:bg-[#101922] border-t border-gray-100 dark:border-gray-800">
+                        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                            <div class="mb-20 text-center">
+                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">FAQS</span>
+                                <h2
+                                    class="mt-4 text-4xl font-black tracking-tight text-[#1a1c1e] dark:text-white sm:text-6xl">
+                                    Frequently asked questions</h2>
+                            </div>
+
+                            <div class="mx-auto max-w-4xl divide-y divide-gray-100 dark:divide-gray-800">
+                                <!-- FAQ Item 1 -->
+                                <div class="faq-item group py-8 first:pt-0">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                            makes conversion copywriting different from regular content writing?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    Content writing is about education and engagement. Conversion
+                                                    copywriting uses psychological triggers and customer data
+                                                    specifically designed to persuade the reader to take a single,
+                                                    measurable action—like buying a product or booking a call.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 2 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">How
+                                            long does the research phase take?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    Research is the most critical part of the process. Depending on the
+                                                    size of the project, we typically spend 1-2 weeks mining reviews,
+                                                    auditing competitor messaging, and surveying your existing customers
+                                                    before writing a single word.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 3 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Once
+                                            the copy is delivered, how do we implement it?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    You'll receive a detailed Google Doc (the "Copy Deck") with
+                                                    structural wireframing notes. We also include an implementation Loom
+                                                    video walking your design/dev team through exactly how the copy
+                                                    should physically look on the page.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 4 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Do
+                                            you guarantee specific conversion rates?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    While no copywriter can ethically guarantee a specific numerical
+                                                    result (since product-market fit, traffic quality, and UI/UX play
+                                                    huge roles), we do guarantee that the copy is built on proven
+                                                    psychological frameworks and data-backed research, giving you the
+                                                    absolute highest probability of a positive test lift.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 5 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                            happens if we need changes after the copy is delivered?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    Every package includes one comprehensive round of collaborative
+                                                    revisions. We work directly with you via Google Docs to refine tone,
+                                                    adjust specific claims, and ensure you are 100% confident before the
+                                                    page goes live.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FOOTER CTA -->
+                    <div class="py-20 flex flex-col items-center justify-center text-center gap-6">
+                        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">Ready to convert more
+                            traffic?</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-lg">Let's turn your readers into revenue.</p>
+                        <button
+                            class="mt-4 inline-flex cursor-pointer items-center justify-center rounded-lg h-14 px-10 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary-dark transition-transform hover:scale-105 shadow-xl shadow-primary/20">
+                            <a href="../../index.html#contact">Talk to Zainab</a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- Standardized Footer -->
+        <div class="grax_tm_section">
+            <div class="grax_tm_copyright">
+                <div class="container">
+                    <div class="copyright_inner">
+                        <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                            <span class="footer-logo">Zainab Samnan</span>
+                        </div>
+
+                        <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <ul class="footer-nav-menu">
+                                <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                    <a href="../../index.html" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                    <a href="../../index.html#about" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="title">About</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                    <a href="../../index.html#portfolio" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                                        <span class="title">Portfolio</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                    <a href="../../index.html#contact" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                        <span class="title">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                            <p>&copy; Copyright 2026 by Zainab Samnan. All rights reserved. <span
+                                    class="pl-4 ml-4 border-l border-slate-700">Privacy Policy</span> <span
+                                    class="pl-4">Terms of Service</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals & Scripts -->
+    <div class="tools-modal" id="toolsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="toolsModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-tools"></i></div>
+                <h2>Our Marketing Tools</h2>
+                <p>Professional tools we use to deliver exceptional results</p>
+            </div>
+            <div class="tools-grid" id="toolsGrid"></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        }
+    </script>
+
+    <script src="../../js/digital-m.js/social.js"></script>
+</body>
+
+</html>

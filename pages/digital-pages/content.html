@@ -2,37 +2,224 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Marketing Expert | Professional Content Marketing Services</title>
-    <link rel="stylesheet" href="../../page-css/digital-m.css/content.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Content Marketing Service - Zainab Samnan</title>
+
+    <!-- Standard Project Styles -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Tailwind Design Specifics -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ["class", ".dark-mode"],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#137fec",
+                        "primary-dark": "#0b5bb0",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2634",
+                        "text-main": "#111418",
+                        "text-sub": "#617589",
+                    },
+                    fontFamily: {
+                        display: ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                    },
+                },
+            },
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        /* Ensure navbar doesn't conflict with tailwind fixed positioning */
+        .navbar {
+            z-index: 100 !important;
+        }
+
+        /* Fix for potential Tailwind/Project font conflicts */
+        .font-display {
+            font-family: 'Manrope', sans-serif !important;
+        }
+
+        /* Robust Dark Mode Overrides for Tailwind Components */
+        .dark-mode .bg-background-light,
+        .dark-mode .bg-gray-50,
+        .dark-mode .bg-gray-100,
+        .dark-mode main {
+            background-color: #101922 !important;
+        }
+
+        .dark-mode .bg-surface-light,
+        .dark-mode .bg-white,
+        .dark-mode .bg-surface-dark {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        .dark-mode .text-text-main,
+        .dark-mode .text-gray-900,
+        .dark-mode .text-black,
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3 {
+            color: #ffffff !important;
+        }
+
+        .dark-mode .text-text-sub,
+        .dark-mode .text-gray-600,
+        .dark-mode .text-gray-500,
+        .dark-mode .text-text-sub {
+            color: #a0aec0 !important;
+        }
+
+        .dark-mode .border-gray-200,
+        .dark-mode .border-gray-100 {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .dark-mode .bg-blue-50 {
+            background-color: rgba(59, 130, 246, 0.1) !important;
+        }
+
+        /* Ecosystem section line fix */
+        .dark-mode .bg-gray-200 {
+            background-color: #2d3748 !important;
+        }
+
+        /* Fix for White buttons/backgrounds */
+        .dark-mode .bg-white.text-text-sub {
+            background-color: #1a2634 !important;
+            border-color: #2d3748 !important;
+        }
+
+        /* Navigation fix */
+        body.dark-mode .navbar {
+            background: rgba(26, 38, 52, 0.9) !important;
+            border-bottom-color: #2d3748 !important;
+        }
+
+        /* Footer Refinement */
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid #2d3748;
+            padding-top: 40px;
+        }
+
+        /* Fix layout overrides from the provided code */
+        .layout-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Custom override for dark mode specifically for the provided code blocks */
+        .dark-mode .dark\:bg-slate-900 {
+            background-color: #1a2634 !important;
+        }
+
+        .dark-mode .dark\:bg-slate-800 {
+            background-color: #2a3748 !important;
+        }
+
+        .dark-mode .dark\:text-slate-300 {
+            color: #d2d6dc !important;
+        }
+
+        .dark-mode .dark\:text-slate-400 {
+            color: #a0aec0 !important;
+        }
+
+        .dark-mode .dark\:border-slate-800 {
+            border-color: #2d3748 !important;
+        }
+
+        .dark-mode .dark\:border-slate-700 {
+            border-color: #4a5568 !important;
+        }
+
+        .dark-mode .dark\:bg-slate-800\/50 {
+            background-color: rgba(42, 55, 72, 0.5) !important;
+        }
+
+        .dark-mode .text-slate-900 {
+            color: #ffffff !important;
+        }
+
+        /* Smooth FAQ Accordion Animation */
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-content-inner {
+            overflow: hidden;
+        }
+
+        .plus-icon {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .plus-icon {
+            transform: rotate(45deg);
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Navigation - 100% Same -->
+<body class="dark-mode">
+    <!-- Navigation (Standardized) -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <!-- Logo on Left -->
-                <a href="#" class="logo">
+                <a href="../../index.html" class="logo">
                     <span class="logo-text">Content Marketing</span>
                     <span class="logo-dot"></span>
                 </a>
 
-                <!-- Right Side Icons -->
                 <div class="nav-right">
                     <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
                         <i class="fas fa-moon"></i>
-                        <span class="tooltip">Dark/Light Mode</span>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <button class="nav-icon tools-btn" id="toolsBtn" title="Our Marketing Tools">
+                        <i class="fas fa-tools"></i>
+                        <span class="tooltip">Our Tools</span>
                     </button>
                     <a href="../../index.html" class="cta-btn">
-                        <span>Back to Home</span>
+                        <span>Home</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -44,290 +231,524 @@
         </div>
     </nav>
 
-    <!-- Images Grid Section (Right Below Navbar) -->
-    <section class="images-section">
-        <div class="container">
+    <div
+        class="relative flex min-h-screen w-full flex-col overflow-x-hidden pt-24 bg-background-light dark:bg-background-dark font-display text-text-main antialiased selection:bg-primary/20">
+        <main class="flex-grow">
+            <!-- User Content Embedded -->
+            <div class="flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[1200px] flex-1 px-4 sm:px-10">
+                    <!-- Breadcrumb -->
 
-
-            <div class="images-grid">
-                <!-- Image 1: Content Strategy -->
-                <div class="image-card" data-image="content-strategy">
-                    <div class="image-box">
-                        <img src="../../images/seo/image-1.jpg" alt="Content Marketing Strategy">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 2: SEO Content -->
-                <div class="image-card" data-image="seo-content">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="SEO Content Marketing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 3: Social Media Content -->
-                <div class="image-card" data-image="social-media">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Social Media Content Marketing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 4: Video Content -->
-                <div class="image-card" data-image="video-content">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Video Content Marketing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 5: Email Marketing -->
-                <div class="image-card" data-image="email-marketing">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Email Content Marketing">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-
-                <!-- Image 6: Analytics & Measurement -->
-                <div class="image-card" data-image="content-analytics">
-                    <div class="image-box">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Content Marketing Analytics">
-                    </div>
-                    <div class="image-overlay">
-                        <span class="view-details">View Image</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content Marketing Content Section -->
-    <section class="content-section">
-        <div class="container">
-            <div class="content-grid">
-                <!-- Left Column -->
-                <div class="content-left">
-                    <h2>What is Content Marketing?</h2>
-                    <p class="content-intro">Content marketing is a strategic marketing approach focused on creating and
-                        distributing valuable, relevant, and consistent content to attract and retain a clearly defined
-                        audience — and, ultimately, to drive profitable customer action.</p>
-
-                    <div class="content-block">
-                        <h3><i class="fas fa-chart-line"></i> Why Content Marketing Matters</h3>
-                        <p>Content marketing generates 3x more leads than traditional outbound marketing while costing
-                            62% less. It builds trust, establishes authority, and creates lasting relationships with
-                            your audience.</p>
-
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">82<span>%</span></div>
-                                <div class="stat-text">of marketers actively use content marketing</div>
+                    <!-- Hero Section -->
+                    <div class="@container">
+                        <div
+                            class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row @[864px]:items-center">
+                            <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 flex-1">
+                                <div class="flex flex-col gap-4 text-left">
+                                    <h1
+                                        class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:leading-[1.1]">
+                                        Content that Attracts, Educates, and Converts
+                                    </h1>
+                                    <h2 class="text-slate-600 dark:text-slate-300 text-lg font-normal leading-relaxed">
+                                        SEO-informed blog posts, high-value lead magnets, and strategic landing pages
+                                        designed to build authority and fuel your sales funnel.
+                                    </h2>
+                                </div>
+                                <div class="flex gap-4 flex-wrap">
+                                    <button
+                                        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary-dark transition-transform hover:scale-105 shadow-lg shadow-primary/20">
+                                        <span class="truncate">Book a content audit</span>
+                                    </button>
+                                    <button
+                                        class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 text-base font-bold leading-normal tracking-[0.015em] hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                                        <span class="truncate">View Portfolio</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">3<span>×</span></div>
-                                <div class="stat-text">more leads than paid search advertising</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">62<span>%</span></div>
-                                <div class="stat-text">lower cost per lead than traditional marketing</div>
+                            <div
+                                class="w-full aspect-[4/3] rounded-2xl overflow-hidden @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-1/2 shadow-xl border border-slate-100 dark:border-slate-800">
+                                <img alt="Team analyzing content strategy graphs on laptop"
+                                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUsHXtk7gOsdDjAiFwGK6cYn598l1HEiCp3fN-Ze1QCQrTJ2QXi8ZhEGAoILBfc8Wcu1tIxEp1WUE0NJ8prXa9T1BHiooH5KvlVZX2XuF4Y_7rHHySR-o9iDpdcaX5l8LnX8WsgZ_GtkZk_CQmbgrc0s0TgBABdOpei-MwUPUb5eBdoJYoHwstgjoaNKDIHcCnfyX21EVpqf4qAHCuTSJPI0RN_x3dg_YXgYvBdjMwGidHYTrEcT5652gQViu6jgj6ReTEL_VU1mK" />
                             </div>
                         </div>
                     </div>
+                    <!-- Strategy Section -->
+                    <div
+                        class="flex flex-col gap-10 px-4 py-16 bg-white dark:bg-slate-900 rounded-3xl my-8 border border-slate-100 dark:border-slate-800 shadow-sm">
+                        <div class="flex flex-col gap-4 items-center text-center">
+                            <span class="text-primary font-bold tracking-wider uppercase text-sm">Our Strategy</span>
+                            <h2 class="text-slate-900 dark:text-white text-3xl font-black leading-tight max-w-[720px]">
+                                How We Drive Growth
+                            </h2>
+                            <p
+                                class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal max-w-[600px]">
+                                We don't just write; we strategize. Every piece of content serves a specific purpose
+                                in your customer's journey.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Card 1 -->
+                            <div
+                                class="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 p-6 hover:border-primary/50 transition-colors group">
+                                <div
+                                    class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">person_search</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-slate-900 dark:text-white text-lg font-bold">Audience Research
+                                    </h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                        Identifying pain points and deep search intent to create solutions your
+                                        audience is actually looking for.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 p-6 hover:border-primary/50 transition-colors group">
+                                <div
+                                    class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">view_column</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-slate-900 dark:text-white text-lg font-bold">Content Pillars</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                        Defining key authoritative topics and optimal distribution channels to
+                                        maximize your brand's reach.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 p-6 hover:border-primary/50 transition-colors group">
+                                <div
+                                    class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">trending_up</span>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <h3 class="text-slate-900 dark:text-white text-lg font-bold">SEO Integration</h3>
+                                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                        Rigorous keyword research and on-page optimization to ensure sustainable
+                                        visibility on search engines.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content Funnel Section -->
+                    <div class="px-4 py-16">
+                        <div
+                            class="flex flex-col md:flex-row gap-8 items-center justify-between bg-primary/5 dark:bg-primary/10 rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                            <!-- Background decoration -->
+                            <div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl">
+                            </div>
+                            <div class="w-full md:w-1/3 text-center md:text-left z-10">
+                                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">The Content Funnel
+                                </h3>
+                                <p class="text-slate-600 dark:text-slate-300">A systematic approach to moving
+                                    prospects from awareness to purchase.</p>
+                            </div>
+                            <div class="w-full md:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-4 relative z-10">
+                                <!-- Step 1 -->
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-3">
+                                    <span class="text-primary font-black text-4xl opacity-20">01</span>
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Attract</h4>
+                                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">SEO Blogs
+                                    </p>
+                                </div>
+                                <!-- Arrow mobile only -->
+                                <div class="sm:hidden flex justify-center text-primary/30">
+                                    <span class="material-symbols-outlined">arrow_downward</span>
+                                </div>
+                                <!-- Step 2 -->
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-3">
+                                    <span class="text-primary font-black text-4xl opacity-20">02</span>
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Nurture</h4>
+                                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Lead
+                                        Magnets</p>
+                                </div>
+                                <!-- Arrow mobile only -->
+                                <div class="sm:hidden flex justify-center text-primary/30">
+                                    <span class="material-symbols-outlined">arrow_downward</span>
+                                </div>
+                                <!-- Step 3 -->
+                                <div
+                                    class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700 flex flex-col items-center text-center gap-3">
+                                    <span class="text-primary font-black text-4xl opacity-20">03</span>
+                                    <h4 class="font-bold text-slate-900 dark:text-white">Convert</h4>
+                                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wider">Case Studies
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Results Highlight -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 py-16 items-center">
+                        <div class="flex flex-col gap-6 order-2 lg:order-1">
+                            <span class="text-primary font-bold tracking-wider uppercase text-sm">Proven Results</span>
+                            <h2 class="text-3xl font-black text-slate-900 dark:text-white leading-tight">
+                                Delivering Measurable Business Impact
+                            </h2>
+                            <p class="text-slate-600 dark:text-slate-400">
+                                For our B2B SaaS client, we implemented a 6-month aggressive content pillar strategy
+                                that transformed their organic acquisition channel.
+                            </p>
+                            <div class="grid grid-cols-2 gap-6 mt-4">
+                                <div class="border-l-4 border-primary pl-4">
+                                    <p class="text-4xl font-black text-slate-900 dark:text-white">+150%</p>
+                                    <p class="text-sm font-medium text-slate-500 mt-1">Organic Traffic Growth</p>
+                                </div>
+                                <div class="border-l-4 border-primary pl-4">
+                                    <p class="text-4xl font-black text-slate-900 dark:text-white">25%</p>
+                                    <p class="text-sm font-medium text-slate-500 mt-1">Increase in Lead Gen</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="order-1 lg:order-2 bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg">
+                            <div class="flex items-center justify-between mb-6">
+                                <h4 class="font-bold text-slate-900 dark:text-white">Traffic Overview</h4>
+                                <div class="flex gap-2">
+                                    <div class="size-3 rounded-full bg-slate-200 dark:bg-slate-600"></div>
+                                    <div class="size-3 rounded-full bg-primary"></div>
+                                </div>
+                            </div>
+                            <!-- Abstract Chart Visualization -->
+                            <div class="w-full h-64 flex items-end justify-between gap-2 px-2">
+                                <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-t-sm h-[20%]"></div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-t-sm h-[35%]"></div>
+                                <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-t-sm h-[30%]"></div>
+                                <div class="w-full bg-primary/40 rounded-t-sm h-[45%]"></div>
+                                <div class="w-full bg-primary/60 rounded-t-sm h-[60%]"></div>
+                                <div class="w-full bg-primary/80 rounded-t-sm h-[75%]"></div>
+                                <div
+                                    class="w-full bg-primary rounded-t-sm h-[90%] shadow-[0_0_15px_rgba(19,127,236,0.5)]">
+                                </div>
+                            </div>
+                            <div class="flex justify-between mt-4 text-xs text-slate-400 font-medium uppercase">
+                                <span>Month 1</span>
+                                <span>Month 6</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deliverables Grid -->
+                    <div class="px-4 py-12">
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-8">What You Get</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div
+                                class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">article</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 dark:text-white text-sm">Monthly SEO Blogs
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">Optimized long-form content.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">download</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 dark:text-white text-sm">Custom Lead Magnets
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">E-books &amp; Checklists.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">hub</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 dark:text-white text-sm">Pillar Pages</h4>
+                                    <p class="text-xs text-slate-500 mt-1">Centralized topic clusters.</p>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white dark:bg-slate-800 p-5 rounded-lg border border-slate-200 dark:border-slate-700 flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">monitoring</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 dark:text-white text-sm">Performance Tracking
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1">Monthly KPI reports.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="content-block">
-                        <h3><i class="fas fa-search-plus"></i> Content Marketing vs Traditional Marketing</h3>
-                        <p>Unlike traditional advertising that interrupts, content marketing attracts by providing value
-                            first. It's a pull strategy rather than a push strategy.</p>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Builds trust and credibility over time</span>
+
+
+
+                    <!-- FAQ Section -->
+                    <section
+                        class="bg-[#fdfdfb] py-24 sm:py-32 dark:bg-[#101922] border-t border-gray-100 dark:border-gray-800">
+                        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                            <div class="mb-20 text-center">
+                                <span class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">FAQS</span>
+                                <h2
+                                    class="mt-4 text-4xl font-black tracking-tight text-[#1a1c1e] dark:text-white sm:text-6xl">
+                                    Frequently asked questions</h2>
+                            </div>
+
+                            <div class="mx-auto max-w-4xl divide-y divide-gray-100 dark:divide-gray-800">
+                                <!-- FAQ Item 1 -->
+                                <div class="faq-item group py-8 first:pt-0">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">What
+                                            type of content do you write?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    We specialize in SEO-optimized blog posts, authoritative pillar
+                                                    pages, lead magnets (eBooks, checklists), and engaging landing page
+                                                    copy tailored to your target audience.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 2 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">How
+                                            do you ensure the content ranks on Google?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    By conducting deep keyword research, structuring content with best
+                                                    on-page SEO practices (H1/H2 tags, meta descriptions), and
+                                                    thoroughly answering the specific user search intent.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 3 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Do
+                                            you handle uploading and publishing?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    Yes. We can upload articles directly to your CMS (like WordPress or
+                                                    Webflow) along with proper formatting and featured graphics, so you
+                                                    don't have to lift a finger.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 4 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">How
+                                            long until I see increased traffic?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    SEO and organic content are long-term investments. Meaningful
+                                                    traction and rankings typically start building around months 3 to 6,
+                                                    with traffic compounding over time.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- FAQ Item 5 -->
+                                <div class="faq-item group py-8">
+                                    <button
+                                        class="flex w-full items-center justify-between text-left focus:outline-none"
+                                        onclick="toggleFAQ(this)">
+                                        <span
+                                            class="text-xl md:text-2xl font-black tracking-tight text-[#1a1c1e] dark:text-white transition-colors group-hover:text-primary">Do
+                                            I get to review the content before it's live?</span>
+                                        <span class="ml-6 flex-shrink-0">
+                                            <svg class="plus-icon h-8 w-8 text-gray-400" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="faq-content-wrapper">
+                                        <div class="faq-content-inner">
+                                            <div class="pt-6 pr-12">
+                                                <p
+                                                    class="text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                                                    Absolutely. You'll always have full approval rights. We provide
+                                                    drafts for your review and happily incorporate revisions to ensure
+                                                    the content matches your brand voice.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Creates lasting value that compounds</span>
-                        </div>
-                        <div class="feature-box">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Educates rather than sells directly</span>
-                        </div>
+                    </section>
+
+
+
+
+
+
+                    <!-- Footer Call to Action -->
+                    <div class="flex flex-col items-center justify-center py-20 px-4 text-center ">
+                        <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6">
+                            Ready to grow with <span class="text-primary">Content Marketing?</span>
+                        </h2>
+                        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mb-8 text-lg">
+                            Let's build a content engine that works for you 24/7.
+                        </p>
+                        <a href="../../index.html#contact"
+                            class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-8 bg-primary text-white text-lg font-bold hover:bg-primary-dark transition-all shadow-lg shadow-primary/30">
+                            Book Your Audit
+                        </a>
                     </div>
                 </div>
+        </main>
 
-                <!-- Right Column -->
-                <div class="content-right">
-                    <h2>Key Components of Content Marketing</h2>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-bullseye"></i>
+        <!-- Standardized Footer -->
+        <div class="grax_tm_section">
+            <div class="grax_tm_copyright">
+                <div class="container">
+                    <div class="copyright_inner">
+                        <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                            <span class="footer-logo">Zainab Samnan</span>
                         </div>
-                        <div class="element-content">
-                            <h3>Content Strategy</h3>
-                            <p>Developing comprehensive content plans aligned with business goals, audience needs, and
-                                distribution channels for maximum impact.</p>
-                            <div class="element-tags">
-                                <span class="tag">Audience Research</span>
-                                <span class="tag">Content Planning</span>
-                                <span class="tag">Editorial Calendar</span>
-                                <span class="tag">Goal Setting</span>
-                            </div>
+
+                        <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <ul class="footer-nav-menu">
+                                <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                    <a href="../../index.html" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                    <a href="../../index.html#about" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="title">About</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                    <a href="../../index.html#portfolio" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                                        <span class="title">Portfolio</span>
+                                    </a>
+                                </li>
+                                <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                    <a href="../../index.html#contact" class="footer-nav-link">
+                                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                        <span class="title">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-pencil-alt"></i>
+                        <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                            <p>&copy; Copyright 2026 by Zainab Samnan</p>
                         </div>
-                        <div class="element-content">
-                            <h3>Content Creation</h3>
-                            <p>Producing high-quality, valuable content across multiple formats including blogs, videos,
-                                podcasts, infographics, and more.</p>
-                            <div class="element-tags">
-                                <span class="tag">Blog Posts</span>
-                                <span class="tag">Video Content</span>
-                                <span class="tag">Infographics</span>
-                                <span class="tag">Podcasts</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-share-alt"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Content Distribution</h3>
-                            <p>Strategically sharing content across multiple channels to reach target audiences where
-                                they already spend time online.</p>
-                            <div class="element-tags">
-                                <span class="tag">Social Media</span>
-                                <span class="tag">Email Marketing</span>
-                                <span class="tag">SEO</span>
-                                <span class="tag">Paid Promotion</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="element-card">
-                        <div class="element-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="element-content">
-                            <h3>Measurement & Analytics</h3>
-                            <p>Tracking content performance, analyzing metrics, and optimizing strategies based on
-                                data-driven insights.</p>
-                            <div class="element-tags">
-                                <span class="tag">ROI Tracking</span>
-                                <span class="tag">Performance Analysis</span>
-                                <span class="tag">A/B Testing</span>
-                                <span class="tag">Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Footer - 100% Same -->
-    <div class="grax_tm_section">
-        <div class="grax_tm_copyright">
-            <div class="my_wave">
-                <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <defs></defs>
-                    <path id="wave_img" data-color="#fff"
-                        d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-
-            <div class="container">
-                <div class="copyright_inner">
-                    <!-- Left: Logo -->
-                    <div class="logo wow fadeInLeft" data-wow-duration="1s">
-                        <span class="footer-logo">Zainab Samnan</span>
-                    </div>
-
-                    <!-- Center: Navigation Menu -->
-                    <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <ul class="footer-nav-menu">
-                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
-                                <a href="../../index.html" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="home-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Home</span>
-                                </a>
-                            </li>
-                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
-                                <a href="../../index.html#about" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="person-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">About</span>
-                                </a>
-                            </li>
-                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
-                                <a href="../../index.html#portfolio" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="briefcase-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Portfolio</span>
-                                </a>
-                            </li>
-                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
-                                <a href="../../index.html#contact" class="footer-nav-link">
-                                    <span class="icon">
-                                        <ion-icon name="mail-outline"></ion-icon>
-                                    </span>
-                                    <span class="title">Contact</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Right: Copyright Text -->
-                    <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-                        <p>&copy; Copyright 2026 by Zainab Samnan All rights reserved.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Image Modal - Simple Image Viewer -->
-    <div class="image-modal" id="imageModal">
+    <!-- Modals & Scripts -->
+    <div class="tools-modal" id="toolsModal">
         <div class="modal-overlay"></div>
-        <div class="image-modal-container">
-            <button class="modal-close" id="imageModalClose">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="image-modal-content">
-                <img id="modalImage" src="" alt="Full Size Image">
+        <div class="modal-container">
+            <button class="modal-close" id="toolsModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fas fa-tools"></i></div>
+                <h2>Our Marketing Tools</h2>
+                <p>Professional tools we use to deliver exceptional results</p>
             </div>
+            <div class="tools-grid" id="toolsGrid"></div>
         </div>
     </div>
 
-    <script src="../../js/digital-m.js/content.js"></script>
+    <script src="../../js/digital-m.js/social.js"></script>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        }
+    </script>
 </body>
 
 </html>
