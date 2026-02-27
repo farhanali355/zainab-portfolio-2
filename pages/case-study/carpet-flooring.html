@@ -21,7 +21,7 @@
             <div class="nav-content">
                 <!-- Logo on Left -->
                 <a href="#" class="logo">
-                    <span class="logo-text">SEO Case Study</span>
+                    <span class="logo-text">Carpet & Flooring</span>
                     <span class="logo-dot"></span>
                 </a>
 
@@ -44,240 +44,787 @@
         </div>
     </nav>
 
-    <!-- Hero Image Section -->
-    <section class="hero-image-section">
-        <div class="container">
-            <div class="hero-image-container">
-                <img src="../../images/seo/carpet.jpg" alt="Security Company Case Study" class="hero-image">
+
+
+    <!-- Internal Styles specific to this redesign to avoid breaking other pages -->
+    <style>
+        .seo-hero-wrapper {
+            padding: 120px 20px 40px;
+            width: 100%;
+        }
+
+        .seo-content-wrapper {
+            padding: 20px 20px 60px;
+            width: 100%;
+        }
+
+        .seo-container {
+            font-family: 'Inter', sans-serif;
+            color: #1a202c;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Top Hero */
+        .seo-tag {
+            background-color: #f0f7ff;
+            color: #3b82f6;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            display: inline-block;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .seo-title {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .seo-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        /* Metrics Row */
+        .seo-metrics-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            /* allow wrapping on mobile */
+        }
+
+        .seo-metric-card-wrapper {
+            position: relative;
+            width: 240px;
+            height: 100px;
+            border-radius: 12px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+        }
+
+        .seo-metric-card-inner {
+            position: absolute;
+            top: 1.5px;
+            left: 1.5px;
+            right: 1.5px;
+            bottom: 1.5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Box 1 */
+        .seo-box-1 {
+            background: #b5c8dd;
+            /* Border blue */
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .seo-box-1 .seo-metric-card-inner {
+            background: #f0f5fa;
+            /* Light blue bg */
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-radius: 10.5px;
+        }
+
+        /* Box 2 */
+        .seo-box-2 {
+            background: #b4dccf;
+            /* Border teal */
+            clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+            border-radius: 0;
+        }
+
+        .seo-box-2 .seo-metric-card-inner {
+            background: #eefaf7;
+            /* Light teal bg */
+            clip-path: polygon(15% 0, 100% 0, 85% 100%, 0 100%);
+            border-radius: 0;
+        }
+
+        /* Box 3 */
+        .seo-box-3 {
+            background: #bce3c5;
+            /* Border green */
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .seo-box-3 .seo-metric-card-inner {
+            background: #effcf2;
+            /* Light green bg */
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-radius: 10.5px;
+        }
+
+        .seo-metric-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .seo-box-2 .seo-metric-value,
+        .seo-box-2 .seo-metric-label {
+            padding-left: 10px;
+        }
+
+        .seo-box-3 .seo-metric-value,
+        .seo-box-3 .seo-metric-label {
+            padding-left: 20px;
+        }
+
+        .seo-metric-label {
+            font-size: 0.9rem;
+            color: #475569;
+            font-weight: 500;
+        }
+
+        .seo-section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 25px;
+        }
+
+        /* General Grid / Flex layouts */
+        .seo-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        /* Initial Challenges */
+        .seo-challenge-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .seo-challenge-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .seo-challenge-text {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Strategic Timeline */
+        .seo-timeline-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            position: relative;
+            margin-bottom: 50px;
+            gap: 40px;
+        }
+
+        .seo-timeline-step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+            z-index: 2;
+            background: #fff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 35px 20px 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .seo-timeline-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -40px;
+            width: 40px;
+            height: 1.5px;
+            background: #bfdbfe;
+            z-index: 1;
+        }
+
+        .seo-timeline-step:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -24px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1.5px solid #bfdbfe;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+
+        .seo-timeline-step.blue-step {
+            background: #f0f7ff;
+            border-color: #bfdbfe;
+        }
+
+        .seo-timeline-step.blue-step::after {
+            background: #bfdbfe;
+        }
+
+        .seo-timeline-step.blue-step::before {
+            border-color: #bfdbfe;
+        }
+
+        .seo-timeline-step.green-step {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+
+        .seo-timeline-step.green-step::after {
+            background: #bbf7d0;
+        }
+
+        .seo-timeline-step.green-step::before {
+            border-color: #bbf7d0;
+        }
+
+        .seo-step-number {
+            width: 32px;
+            height: 32px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 4;
+        }
+
+        .seo-timeline-step.green-step .seo-step-number {
+            background: #10b981;
+        }
+
+        .seo-step-title {
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .seo-step-desc {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Wins Table */
+        .seo-wins-table-wrapper {
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .seo-table-header {
+            background: #f8fafc;
+            padding: 15px 20px;
+            font-weight: 700;
+            border-bottom: 1px solid #e2e8f0;
+            color: #0f172a;
+        }
+
+        .seo-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .seo-table th,
+        .seo-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.95rem;
+        }
+
+        .seo-table th {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .seo-table td {
+            color: #475569;
+        }
+
+        .seo-rank-up {
+            color: #166534;
+            background: #dcfae6;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .seo-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 50px 0;
+        }
+
+        .seo-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .seo-list li::before {
+            content: "•";
+            color: #3b82f6;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .seo-list li b {
+            color: #0f172a;
+        }
+
+        /* Images / Visual Proof */
+        .seo-visual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .seo-image-card {
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .seo-image-card img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* Bottom Text / CTA */
+        .seo-cta-section {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .seo-cta-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 20px;
+        }
+
+        .seo-cta-btn {
+            background: #3b82f6;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .seo-cta-btn:hover {
+            background: #2563eb;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .seo-grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .seo-timeline-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .seo-timeline-step {
+                width: 100%;
+            }
+
+            .seo-timeline-line {
+                display: none;
+            }
+
+            .seo-visual-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .seo-metrics-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .seo-metric-line {
+                display: none;
+            }
+        }
+
+        /* Dark Mode Settings (Image 3 Theme) */
+        body.dark-mode .seo-redesign {
+            color: #f1f5f9 !important;
+        }
+
+        body.dark-mode .seo-tag {
+            background-color: #1e293b !important;
+            color: #3b82f6 !important;
+        }
+
+        body.dark-mode .seo-title,
+        body.dark-mode .seo-section-title,
+        body.dark-mode .seo-cta-title {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .seo-subtitle {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode .seo-metric-card-wrapper,
+        body.dark-mode .seo-box-1,
+        body.dark-mode .seo-box-2,
+        body.dark-mode .seo-box-3,
+        body.dark-mode .seo-challenge-card,
+        body.dark-mode .seo-timeline-step,
+        body.dark-mode .seo-wins-table-wrapper,
+        body.dark-mode .seo-image-card {
+            background: #334155 !important;
+            border-color: #334155 !important;
+            box-shadow: none !important;
+        }
+
+        body.dark-mode .seo-metric-card-inner {
+            background: #1e293b !important;
+        }
+
+        body.dark-mode .seo-metric-value {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .seo-metric-label {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-mode .seo-timeline-line,
+        body.dark-mode .seo-cta-section {
+            background: #334155 !important;
+        }
+
+        body.dark-mode .seo-timeline-step:not(:last-child)::after {
+            background: #334155 !important;
+        }
+
+        body.dark-mode .seo-timeline-step:not(:last-child)::before {
+            border-color: #334155 !important;
+            background: #1e293b !important;
+        }
+
+        body.dark-mode .seo-cta-section {
+            background: transparent !important;
+            border-top-color: #334155 !important;
+        }
+
+        body.dark-mode .seo-challenge-title,
+        body.dark-mode .seo-step-title {
+            color: #f8fafc !important;
+        }
+
+        body.dark-mode .seo-challenge-text,
+        body.dark-mode .seo-step-desc {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-mode .seo-table-header {
+            background: #0f172a !important;
+            color: #ffffff !important;
+            border-bottom-color: #334155 !important;
+        }
+
+        body.dark-mode .seo-table th,
+        body.dark-mode .seo-table td {
+            border-bottom-color: #334155 !important;
+        }
+
+        body.dark-mode .seo-table th {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode .seo-table td {
+            color: #94a3b8 !important;
+        }
+
+        body.dark-mode .seo-rank-up {
+            color: #6ee7b7 !important;
+            background: #064e3b !important;
+        }
+
+        body.dark-mode .seo-list li {
+            color: #cbd5e1 !important;
+        }
+
+        body.dark-mode .seo-list li b {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .seo-cta-btn {
+            background: #3b82f6 !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .seo-cta-btn:hover {
+            background: #2563eb !important;
+        }
+
+        /* Enforce theme background over general .dark-mode */
+        body.dark-mode .seo-hero-wrapper {
+            background-color: #0f172a !important;
+        }
+
+        body.dark-mode .seo-content-wrapper {
+            background-color: rgba(15, 23, 42, 0.5) !important;
+        }
+
+        body.dark-mode .seo-container {
+            color: #f1f5f9;
+        }
+    </style>
+
+    <div class="seo-hero-wrapper">
+        <div class="seo-container">
+
+            <!-- Hero Section -->
+            <div style="text-align: center;">
+                <div class="seo-tag">SEO Case Study</div>
+                <h1 class="seo-title">From Obscurity to Dominance:<br>Flooring the Competition</h1>
+                <p class="seo-subtitle">How a localized SEO strategy for a Carpet & Flooring agency drove 86% keyword
+                    improvement and 2,280 monthly interactions. Operating primarily in Georgia locales, the agency faced
+                    challenges in a competitive local market where online discoverability was key.</p>
             </div>
         </div>
-    </section>
+    </div> <!-- End Hero Wrapper -->
 
-    <!-- Case Study Heading -->
-    <section class="case-study-heading">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Case Study</div>
-                <h1 class="section-title">A Carpet
-                    and Flooring SEO Success Story</h1>
-                </p>
+    <div class="seo-content-wrapper">
+        <div class="seo-container">
+
+            <!-- Metrics Row -->
+            <div class="seo-metrics-row">
+                <div class="seo-metric-card-wrapper seo-box-1">
+                    <div class="seo-metric-card-inner">
+                        <div class="seo-metric-value">86%</div>
+                        <div class="seo-metric-label">Keywords Improved</div>
+                    </div>
+                </div>
+                <div class="seo-metric-card-wrapper seo-box-2">
+                    <div class="seo-metric-card-inner">
+                        <div class="seo-metric-value">2,280</div>
+                        <div class="seo-metric-label">Monthly Views</div>
+                    </div>
+                </div>
+                <div class="seo-metric-card-wrapper seo-box-3">
+                    <div class="seo-metric-card-inner">
+                        <div class="seo-metric-value">186</div>
+                        <div class="seo-metric-label">Organic Users</div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Initial Challenges -->
+            <h2 class="seo-section-title">Initial Challenges</h2>
+            <div class="seo-grid-3">
+                <div class="seo-challenge-card">
+                    <div class="seo-challenge-title">📉 Visibility Gaps</div>
+                    <div class="seo-challenge-text">Core keywords like "professional carpet cleaning" were either buried
+                        beyond the top 10 or not ranking in the top 200.</div>
+                </div>
+                <div class="seo-challenge-card">
+                    <div class="seo-challenge-title">📊 Stagnant Traffic</div>
+                    <div class="seo-challenge-text">Website analytics showed inconsistent organic traffic, with low user
+                        acquisition from search engines.</div>
+                </div>
+                <div class="seo-challenge-card">
+                    <div class="seo-challenge-title">📍 Underutilized GMB</div>
+                    <div class="seo-challenge-text">The Google Business Profile (GBP) received minimal interactions,
+                        views,
+                        and conversions.</div>
+                </div>
+            </div>
+
+            <!-- Optional: Place Graphs 1 and 2 here for text context -->
+            <div class="seo-visual-grid">
+                <div class="seo-image-card">
+                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page1) Graph 1.png"
+                        alt="Client Footprint Graph">
+                </div>
+                <div class="seo-image-card">
+                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page1) Graph 2.png"
+                        alt="Initial Visibility Issues">
+                </div>
+            </div>
+
+            <!-- Strategic Overhaul -->
+            <h2 class="seo-section-title" style="margin-top: 20px;">Strategic Overhaul</h2>
+            <div class="seo-timeline-container">
+                <div class="seo-timeline-step blue-step">
+                    <div class="seo-step-number">1</div>
+                    <div class="seo-step-title">Targeted Optimization</div>
+                    <div class="seo-step-desc">Researched and integrated 35+ geo-specific keywords for high-intent
+                        searches.
+                    </div>
+                </div>
+                <div class="seo-timeline-step green-step">
+                    <div class="seo-step-number">2</div>
+                    <div class="seo-step-title">Backlink & Local SEO</div>
+                    <div class="seo-step-desc">Secured 187 quality backlinks and revamped the GBP with optimized
+                        listings.
+                    </div>
+                </div>
+                <div class="seo-timeline-step blue-step">
+                    <div class="seo-step-number">3</div>
+                    <div class="seo-step-title">Performance Tracking</div>
+                    <div class="seo-step-desc">Monitored via Analytics and insights, iterating based on data for
+                        sustained
+                        momentum.</div>
+                </div>
+            </div>
+
+            <!-- Optional: Place Graphs 3 and 4 here -->
+            <div class="seo-visual-grid">
+                <div class="seo-image-card">
+                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page3) Graph 3.png"
+                        alt="Keyword Strategy Graph">
+                </div>
+                <div class="seo-image-card">
+                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page3) Graph 4.png"
+                        alt="Backlink Progress Graph">
+                </div>
+            </div>
+
+            <!-- Measurable Wins -->
+            <h2 class="seo-section-title" style="margin-top: 20px;">Measurable Wins</h2>
+            <div class="seo-wins-table-wrapper">
+                <div class="seo-table-header">Keyword Growth Table</div>
+                <table class="seo-table">
+                    <thead>
+                        <tr>
+                            <th>Keyword name</th>
+                            <th>Before</th>
+                            <th>After</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Professional Carpet Cleaning Dacula</td>
+                            <td>Not in 200</td>
+                            <td class="seo-rank-up">↑ Top 5</td>
+                        </tr>
+                        <tr>
+                            <td>Luxury Vinyl Plank Installation Snellville</td>
+                            <td>Not in 200</td>
+                            <td class="seo-rank-up">↑ Top 5</td>
+                        </tr>
+                        <tr>
+                            <td>Overall Tracked Keywords</td>
+                            <td>Buried</td>
+                            <td class="seo-rank-up">↑ 51% in Top 10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Remaining Text Points -->
+            <ul class="seo-list">
+                <li><b>Traffic Growth:</b> Organic search accounted for 186 users (74.7% of total), driving consistent
+                    traffic.</li>
+                <li><b>Conversion Impact:</b> Increased local visibility led to a significant rise in direct inquiries
+                    and
+                    quote requests for flooring projects.</li>
+                <li><b>Market Dominance:</b> The agency now holds top positions for high-intent keywords, outperforming
+                    major local competitors.</li>
+                <li><b>Sustainable Growth:</b> The improved SEO foundation continues to drive monthly traffic increases
+                    with
+                    minimal additional spend.</li>
+                <li><b>Brand Authority:</b> Enhanced local map presence has established the client as the go-to
+                    authority
+                    for flooring services.</li>
+            </ul>
+
+            <!-- Visual Proof (Graphs 5, 6, 7) -->
+            <h2 class="seo-section-title">Visual Proof</h2>
+            <div class="seo-visual-grid">
+                <div class="seo-image-card">
+                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page4) Graph 5.png"
+                        alt="Ranking Growth Graph">
+                </div>
+                <div class="seo-image-card">
+                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page4) Graph 6.png"
+                        alt="Traffic Growth Analysis">
+                </div>
+            </div>
+            <div class="seo-visual-grid" style="grid-template-columns: 1fr;">
+                <div class="seo-image-card">
+                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page4) Graph 7.png"
+                        alt="GBP Performance Graph">
+                </div>
+            </div>
+
+            <!-- CTA / Footer part -->
+            <div class="seo-cta-section">
+                <div class="seo-cta-title">Ready for your digital transformation?</div>
+                <p class="seo-subtitle" style="margin-bottom: 20px;">Ready to elevate your carpet and flooring business?
+                    Let's discuss a free consultation to tailor an SEO strategy that drives real results.</p>
+                <a href="../../index.html#contact" class="seo-cta-btn">Book a free consultation</a>
+            </div>
+
         </div>
-    </section>
-
-    <!-- Content Section -->
-    <section class="case-study-content">
-        <div class="container">
-            <!-- Client Overview Section with Graph 1 -->
-            <div class="content-section">
-                <h2> Client Overview: Carpet and Flooring Services Agency in USA</h2>
-                <div class="content-block">
-                    <div class="content-side-layout reverse">
-                        <div class="side-text">
-                            <p>Carpet and Flooring Services Agency in the USA specializes in transforming
-                                homes and businesses with expert carpet cleaning, flooring installation, repair,
-                                stretching, and odor removal services. Operating primarily in Georgia locales
-                                such as Dacula, Snellville, Duluth, Buford, Loganville, and Lawrenceville, the
-                                agency faced challenges in a competitive local market where online
-                                discoverability was key to attracting clients.</p>
-                            <p>Before our partnership, their digital footprint was limited, with many service-related
-                                searches yielding poor results or no visibility at all.</p>
-                        </div>
-                        <div class="side-image">
-                            <div class="content-image-container">
-                                <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page1) Graph 1.png"
-                                    alt="Client Footprint Graph">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Initial Challenges Section with Graph 2 -->
-            <div class="content-section">
-                <h2> Initial Challenges and Opportunities</h2>
-                <div class="content-block">
-                    <div class="content-side-layout reverse">
-                        <div class="side-text">
-                            <p>Upon engagement, a thorough audit highlighted several barriers to growth:</p>
-                            <li>
-                                <p>Visibility Gaps: Core keywords like "professional carpet cleaning Dacula"
-                                    and "luxury vinyl plank installation Snellville" were either buried beyond the
-                                    top 10 or not ranking in the top 200 as of May 2025.</p>
-                            </li>
-                            <li>
-                                <p>Traffic and Engagement Issues: Website analytics showed inconsistent organic
-                                    traffic, with low user acquisition from search engines.</p>
-                            </li>
-                            <li>
-                                <p>Local Profile Underutilization: The Google Business Profile (GBP) received
-                                    minimal interactions, views, and conversions.</p>
-                            </li>
-                        </div>
-                        <div class="side-image">
-                            <div class="content-image-container">
-                                <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page1) Graph 2.png"
-                                    alt="Initial Visibility Issues">
-                            </div>
-                        </div>
-                    </div>
-                    <h3>
-                        These factors resulted in missed leads, as potential customers turned to
-                        competitors with stronger online strategies.
-                    </h3>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-            <!-- Strategic Overhaul Section with Graphs 3 and 4 -->
-            <div class="content-section">
-                <h2> Strategic Overhaul: Our Customized Plan</h2>
-                <div class="content-block">
-                    <div class="content-side-layout">
-                        <div class="side-text">
-                            <p>From May to December 2025, we deployed a multi-faceted SEO initiative
-                                tailored to the agency's local focus:</p>
-                            <li>
-                                <p><b>Targeted Keyword Optimization: </b> Researched and integrated 35+ keywords,
-                                    emphasizing geo-specific terms to capture high-intent searches.</p>
-                            </li>
-                            <li>
-                                <p><b>Backlink Building & Local SEO:</b> Secured 187 quality backlinks and revamped
-                                    the GBP with regular updates and optimized listings to improve map visibility.</p>
-                            </li>
-                            <li>
-                                <p><b>Performance Tracking:</b> Monitored via Google Analytics and GBP insights,
-                                    iterating based on data for sustained momentum.</p>
-                            </li>
-                        </div>
-                        <div class="side-image">
-                            <div class="image-stack">
-                                <div class="content-image-container">
-                                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page3) Graph 3.png"
-                                        alt="Keyword Strategy Graph">
-                                </div>
-                                <div class="content-image-container">
-                                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page3) Graph 4.png"
-                                        alt="Backlink Progress Graph">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Measurable Wins Section with Graphs 5, 6, and 7 -->
-            <div class="content-section">
-                <h2> Measurable Wins: From Obscurity to Dominance</h2>
-                <div class="content-block">
-                    <div class="content-side-layout reverse">
-                        <div class="side-image">
-                            <div class="image-stack">
-                                <div class="content-image-container">
-                                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page4) Graph 5.png"
-                                        alt="Ranking Growth Graph">
-                                </div>
-                                <div class="content-image-container">
-                                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page4) Graph 6.png"
-                                        alt="Traffic Growth Analysis">
-                                </div>
-                                <div class="content-image-container">
-                                    <img src="../../images/Case Study Carpet and Flooring Services Agency in USA/Case Study 4 (Page4) Graph 7.png"
-                                        alt="GBP Performance Graph">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="side-text">
-                            <p>The efforts yielded clear, data-backed progress by December 12, 2025:</p>
-                            <li>
-                                <p><b>Ranking Surge: </b>86% of tracked keywords improved, with 51% entering the
-                                    top 10.</p>
-                            </li>
-                            <li>
-                                <p><b>Traffic Growth:</b> Organic search accounted for 186 users (74.7% of total).</p>
-                            </li>
-                            <li>
-                                <p><b>GBP Performance:</b> 2,280 views and 123 interactions in November.</p>
-                            </li>
-                            <li>
-                                <p><b>Conversion Impact:</b> Increased local visibility led to a significant rise in
-                                    direct inquiries and quote requests for flooring projects.</p>
-                            </li>
-                            <li>
-                                <p><b>Market Dominance:</b> The agency now holds top positions for high-intent keywords,
-                                    outperforming major local competitors.</p>
-                            </li>
-                            <li>
-                                <p><b>Sustainable Growth:</b> The improved SEO foundation continues to drive monthly
-                                    traffic increases with minimal additional spend.</p>
-                            </li>
-                            <li>
-                                <p><b>Brand Authority:</b> Enhanced local map presence has established the client
-                                    as the go-to authority for flooring services.</p>
-                            </li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-            <!-- The Audit Section -->
-            <div class="content-section">
-                <div class="content-block">
-                    <h2>Lessons Learned and Path Forward</h2>
-
-
-                    <div class="audit-points">
-                        <div class="audit-point">
-
-                            <div class="point-content">
-                                <p>Key takeaways include the power of localized content and
-                                    consistent backlinking in competitive niches. Moving ahead, we
-                                    recommend ongoing content refreshes, seasonal campaigns (e.g.,
-                                    holiday cleaning tips), and advanced analytics integration to
-                                    sustain momentum.</p>
-                            </div>
-                        </div>
-
-
-
-                        <h2>Partner with Us for Your Digital
-                            Transformation</h2>
-
-
-                        <div class="audit-points">
-                            <div class="audit-point">
-
-                                <div class="point-content">
-                                    <p>Ready to elevate your carpet and flooring business? Let's discuss a
-                                        free consultation to tailor an SEO strategy that drives real results</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-
-                </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <div class="grax_tm_section">

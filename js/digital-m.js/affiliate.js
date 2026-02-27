@@ -12,47 +12,47 @@ const imageModal = document.getElementById('imageModal');
 const imageModalClose = document.getElementById('imageModalClose');
 const modalImage = document.getElementById('modalImage');
 
-// Email Marketing Tools Data
-const emailTools = [
+// Affiliate Marketing Tools Data
+const affiliateTools = [
     {
-        name: 'Klaviyo',
-        description: 'Advanced email marketing automation and SMS platform',
-        icon: 'fas fa-envelope-open-text'
+        name: 'Impact',
+        description: 'Partnership management and affiliate tracking platform',
+        icon: 'fas fa-handshake'
     },
     {
-        name: 'Mailchimp',
-        description: 'All-in-one marketing platform for small businesses',
-        icon: 'fas fa-envelope'
+        name: 'ShareASale',
+        description: 'Reliable affiliate marketing network for merchants and affiliates',
+        icon: 'fas fa-share-alt'
     },
     {
-        name: 'ActiveCampaign',
-        description: 'Customer experience automation and CRM',
-        icon: 'fas fa-paper-plane'
+        name: 'CJ Affiliate',
+        description: 'Global affiliate marketing network for driving conversions',
+        icon: 'fas fa-globe'
     },
     {
-        name: 'HubSpot',
-        description: 'Inbound marketing, sales, and service software',
-        icon: 'fas fa-hubspot'
+        name: 'Awin',
+        description: 'Affiliate network connecting advertisers with publishers',
+        icon: 'fas fa-project-diagram'
     },
     {
-        name: 'Litmus',
-        description: 'Email testing, builder, and analytics platform',
-        icon: 'fas fa-vial'
+        name: 'Rakuten Advertising',
+        description: 'High-quality affiliate network and performance marketing',
+        icon: 'fas fa-shopping-bag'
     },
     {
-        name: 'Omnisend',
-        description: 'Ecommerce email marketing and SMS platform',
-        icon: 'fas fa-shopping-cart'
+        name: 'PartnerStack',
+        description: 'B2B SaaS partnership and affiliate management platform',
+        icon: 'fas fa-layer-group'
     },
     {
-        name: 'Sender',
-        description: 'Affordable and easy-to-use email marketing tool',
-        icon: 'fas fa-paper-plane'
-    },
-    {
-        name: 'Campaign Monitor',
-        description: 'Easy-to-use email marketing and automation',
+        name: 'Everflow',
+        description: 'Partner marketing and performance tracking platform',
         icon: 'fas fa-chart-line'
+    },
+    {
+        name: 'Refersion',
+        description: 'Affiliate and influencer marketing platform for ecommerce',
+        icon: 'fas fa-bullhorn'
     }
 ];
 
@@ -177,7 +177,7 @@ function openToolsModal() {
 
     toolsGrid.innerHTML = '';
 
-    emailTools.forEach(tool => {
+    affiliateTools.forEach(tool => {
         const toolCard = document.createElement('div');
         toolCard.className = 'tool-card';
         toolCard.innerHTML = `

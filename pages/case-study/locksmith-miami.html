@@ -12,6 +12,43 @@
         rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ["class", ".dark-mode"],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#6366F1", // Indigo-500
+                        secondary: "#FCD34D", // Amber-300 
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#0c101a", // Matching the dark mode content bg
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1e293b", // Matching the slate cards
+                        "border-light": "#E5E7EB",
+                        "border-dark": "#334155", // Matching the slate borders
+                        "text-light": "#1F2937",
+                        "text-dark": "#F3F4F6",
+                        "muted-light": "#6B7280",
+                        "muted-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                        'xl': "1rem",
+                        '2xl': "1.5rem",
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 
     <style>
         /* Ensuring Modal Close Button is visible and prominent */
@@ -37,6 +74,27 @@
             background: #fff !important;
             color: #ff4a57 !important;
             transform: scale(1.1) rotate(90deg) !important;
+        }
+
+        .stitched-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        body.dark-mode .stitched-pattern {
+            background-image: radial-gradient(#374151 1px, transparent 1px);
+        }
+
+        /* Enforcing correct background colors for the new structure */
+        body.dark-mode .bg-background-light {
+            background-color: #0c101a !important;
+            /* Theme content background */
+        }
+
+        body.dark-mode .bg-surface-light {
+            background-color: #1e293b !important;
+            /* Theme card background */
+            border-color: #334155 !important;
         }
     </style>
 </head>
@@ -71,152 +129,420 @@
         </div>
     </nav>
 
-    <!-- Hero Image Section -->
-    <section class="hero-image-section">
-        <div class="container">
-            <div class="hero-image-container">
-                <img src="../../images/seo/car-lookset.jpg" alt="Security Company Case Study" class="hero-image">
-            </div>
-        </div>
-    </section>
+    <!-- Main Content Wrapper (Tailwind converted to fit site structure) -->
+    <main class="w-full transition-colors duration-300">
 
-    <!-- Case Study Heading -->
-    <section class="case-study-heading">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Case Study</div>
-                <h1 class="section-title"> CAR LOCKSMITH
-                    SERVICE IN MIAMI</h1>
-                <p class="section-subtitle">Unlocking Digital Success:An SEO
-                    Journey for Car Locksmith Services
-                </p>
-            </div>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <div class="seo-hero-wrapper" style="background-color: #ffffff; padding-top: 120px; padding-bottom: 40px;">
+            <!-- Note: Dark mode hero override using standard theme CSS if needed -->
+            <style>
+                body.dark-mode .seo-hero-wrapper {
+                    background-color: #0f172a !important;
+                }
 
-    <!-- Content Section -->
-    <section class="case-study-content">
-        <div class="container">
-            <!-- Client Profile Section -->
-            <div class="content-section">
-                <h2><i class="fas fa-user-tie"></i> Client Profile: Car Locksmith Service Miami</h2>
-                <div class="content-block">
-                    <p>Car Locksmith Service Miami is a specialized provider of automotive locksmith
+                body.dark-mode .seo-content-wrapper {
+                    background-color: #0c101a !important;
+                }
+            </style>
+
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-12">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-8">
+                        <div
+                            class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary uppercase tracking-wider">
+                            SEO Case Study
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-text-light dark:text-text-dark leading-tight"
+                            style="color: inherit;">
+                            CAR LOCKSMITH <span class="text-primary">SERVICE IN MIAMI</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-muted-light dark:text-muted-dark max-w-2xl leading-relaxed">
+                            Unlocking Digital Success: An SEO Journey for Car Locksmith Services
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+                            <div
+                                class="p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-soft">
+                                <div class="text-3xl font-bold text-primary">+156%</div>
+                                <div class="text-sm font-medium text-muted-light dark:text-muted-dark mt-1">Call Volume
+                                </div>
+                            </div>
+                            <div
+                                class="p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-soft">
+                                <div class="text-3xl font-bold text-primary">Top 5</div>
+                                <div class="text-sm font-medium text-muted-light dark:text-muted-dark mt-1">Rankings for
+                                    20+ Keywords</div>
+                            </div>
+                            <div
+                                class="p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark shadow-soft">
+                                <div class="text-3xl font-bold text-primary">48+</div>
+                                <div class="text-sm font-medium text-muted-light dark:text-muted-dark mt-1">New
+                                    Interactions Weekly</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+                        </div>
+                        <div
+                            class="relative bg-surface-light dark:bg-surface-dark rounded-2xl p-2 ring-1 ring-border-light dark:ring-border-dark shadow-2xl overflow-hidden">
+                            <div
+                                class="h-[400px] w-full rounded-xl relative overflow-hidden group-hover:scale-[1.02] transition duration-500">
+                                <img src="../../images/seo/car-lookset.jpg" alt="Miami Car Locksmith case study"
+                                    class="absolute inset-0 w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6 right-6 text-center">
+                                    <h3 class="text-white font-bold text-2xl mb-1 shadow-sm">CASE STUDY</h3>
+                                    <p class="text-yellow-300 font-bold text-lg shadow-sm">MIAMI CAR LOCKSMITH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="seo-content-wrapper" style="background-color: #fafafa; padding-top: 60px;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 lg:space-y-24">
+
+                <!-- Client Profile -->
+                <section
+                    class="max-w-4xl mx-auto bg-surface-light dark:bg-surface-dark rounded-2xl p-8 border border-border-light dark:border-border-dark shadow-sm">
+                    <h2 class="text-2xl font-bold mb-4 text-text-light dark:text-white flex items-center gap-3">
+                        <i class="fas fa-user-tie text-primary text-3xl"></i> Client Profile
+                    </h2>
+                    <p
+                        class="text-lg text-muted-light dark:text-muted-dark leading-relaxed pl-4 border-l-4 border-primary">
+                        Car Locksmith Service Miami is a specialized provider of automotive locksmith
                         solutions in the Miami area, offering emergency car unlocking, key duplication,
-                        ignition repair, key programming, and lost key replacement.</p>
-                    <p>Operating in a fast-paced, competitive local market, the service aimed to enhance online
-                        visibility to attract more urgent calls and on-site requests. Before our engagement, rankings
-                        for key terms were often outside the top 70 or non-existent, limiting customer reach during
-                        critical lockout situations.</p>
-                </div>
-            </div>
+                        ignition repair, key programming, and lost key replacement. Operating in a
+                        fast-paced, competitive local market, the service aimed to enhance online visibility
+                        to attract more urgent calls and on-site requests. Before our engagement, rankings
+                        for key terms were often outside the top 70 or non-existent, limiting customer reach
+                        during critical lockout situations.
+                    </p>
+                </section>
 
-            <!-- Identifying Core Challenges Section -->
-            <div class="content-section">
-                <h2><i class="fas fa-exclamation-triangle"></i> Identifying Core Challenges</h2>
-                <div class="content-block">
-                    <div class="content-side-layout">
-                        <div class="side-text">
-                            <p>Our initial audit uncovered several critical roadblocks hindering their growth:</p>
-                            <ul>
-                                <li><b>Ranking Deficits:</b> Core keywords like "Miami car locksmith service" were
-                                    consistently outside the top 70.</li>
-                                <li><b>Traffic Limitations:</b> Organic search contributed minimally to overall visits,
-                                    limiting user acquisition.</li>
-                                <li><b>Local Engagement Gaps:</b> GBP interactions (calls, clicks) were underperforming.
-                                </li>
-                            </ul>
-                            <h3>These challenges resulted in missed opportunities for immediate customer conversions in
-                                critical situations.</h3>
+                <!-- Challenges Section -->
+                <section
+                    class="bg-surface-light dark:bg-surface-dark rounded-3xl p-8 lg:p-12 shadow-sm border border-border-light dark:border-border-dark relative overflow-hidden">
+                    <div class="stitched-pattern absolute top-0 right-0 w-64 h-64 opacity-50 pointer-events-none"></div>
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <div>
+                            <div class="flex items-center gap-2 mb-6 text-primary">
+                                <span class="material-icons-outlined">warning</span>
+                                <span class="text-sm font-bold uppercase tracking-wide">The Challenge</span>
+                            </div>
+                            <h2 class="text-3xl font-bold mb-6 text-text-light dark:text-white">Identifying Core
+                                Challenges</h2>
+                            <p class="text-muted-light dark:text-muted-dark mb-8 leading-relaxed">
+                                The initial assessment revealed several obstacles to growth:
+                            </p>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+                                        <span class="material-icons-outlined text-xl">trending_down</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1 text-text-light dark:text-white">Ranking
+                                            Deficits</h3>
+                                        <p class="text-sm text-muted-light dark:text-muted-dark">Competitive keywords
+                                            like "Miami car locksmith service" and "emergency car locksmith Miami"
+                                            started at positions as high as 60 or not in the top 70, reducing search
+                                            engine exposure.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+                                        <span class="material-icons-outlined text-xl">block</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1 text-text-light dark:text-white">Traffic
+                                            Limitations</h3>
+                                        <p class="text-sm text-muted-light dark:text-muted-dark">Early analytics showed
+                                            low user acquisition, with organic search contributing minimally to overall
+                                            visits.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+                                        <span class="material-icons-outlined text-xl">person_off</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1 text-text-light dark:text-white">Local
+                                            Engagement Gaps</h3>
+                                        <p class="text-sm text-muted-light dark:text-muted-dark">Google Business Profile
+                                            (GBP) interactions, including calls, website clicks, and direction requests,
+                                            were underperforming, missing opportunities for immediate customer
+                                            conversions.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600 dark:text-red-400">
+                                        <span class="material-icons-outlined text-xl">link_off</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1 text-text-light dark:text-white">Content and
+                                            Link
+                                            Shortfalls</h3>
+                                        <p class="text-sm text-muted-light dark:text-muted-dark">Insufficient backlinks
+                                            and activities hindered authority building in a niche where quick, local
+                                            results are essential.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="side-image">
-                            <div class="content-image-container">
-                                <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page2) Graph 1.png"
-                                    alt="Baseline Performance Audit">
+                        <div class="relative self-center">
+                            <div
+                                class="bg-white dark:bg-surface-dark rounded-xl shadow-lg border border-border-light dark:border-border-dark overflow-hidden">
+                                <div
+                                    class="bg-gray-50 dark:bg-gray-800 px-4 py-3 border-b border-border-light dark:border-border-dark flex items-center justify-between">
+                                    <span
+                                        class="text-xs font-semibold uppercase text-muted-light dark:text-muted-dark">Initial
+                                        Audit Data</span>
+                                    <div class="flex gap-1.5">
+                                        <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                                        <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page2) Graph 1.png"
+                                        alt="Baseline Performance Audit"
+                                        class="w-full rounded border border-border-light dark:border-border-dark cursor-pointer open-modal aspect-video object-cover object-top">
+                                </div>
+                            </div>
+                            <div class="absolute -z-10 -bottom-4 -right-4 w-full h-full bg-primary/20 rounded-xl"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Strategy Section -->
+                <section>
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <div
+                            class="inline-flex items-center px-3 py-1 mb-4 rounded-full text-xs font-semibold bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 uppercase tracking-wider">
+                            The Strategy
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4 text-text-light dark:text-white">Strategic Implementation
+                            Plan</h2>
+                        <p class="text-muted-light dark:text-muted-dark hover:text-white transition">We executed a
+                            multi-faceted SEO and GBP strategy over four months to dominate local search.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl border border-border-light dark:border-border-dark hover:shadow-lg transition duration-300 group">
+                            <div
+                                class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 group-hover:scale-110 transition duration-300">
+                                <span class="material-icons-outlined">saved_search</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-text-light dark:text-white">Keyword Targeting</h3>
+                            <p
+                                class="text-sm text-muted-light dark:text-muted-dark leading-relaxed hover:text-white transition">
+                                Focused on 20 high-intent terms specific to car locksmith needs, optimizing pages for
+                                terms like "car door opening service Miami" and "ignition repair locksmith Miami."
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl border border-border-light dark:border-border-dark hover:shadow-lg transition duration-300 group">
+                            <div
+                                class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-purple-600 dark:text-purple-400 mb-6 group-hover:scale-110 transition duration-300">
+                                <span class="material-icons-outlined">storefront</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-text-light dark:text-white">GBP Enhancements</h3>
+                            <p
+                                class="text-sm text-muted-light dark:text-muted-dark leading-relaxed hover:text-white transition">
+                                Boosted profile interactions through regular updates to encourage calls, clicks, and
+                                directions.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl border border-border-light dark:border-border-dark hover:shadow-lg transition duration-300 group">
+                            <div
+                                class="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center text-orange-600 dark:text-orange-400 mb-6 group-hover:scale-110 transition duration-300">
+                                <span class="material-icons-outlined">verified</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-text-light dark:text-white">Link Building and
+                                Activities</h3>
+                            <p
+                                class="text-sm text-muted-light dark:text-muted-dark leading-relaxed hover:text-white transition">
+                                Aimed for 45 total activities, including classifieds (20 required, 12 obtained), content
+                                sharing (10/10), and others like articles, blogs, infographics, community participation,
+                                GBP posts, business profiles, and Facebook posts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mt-8">
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-2 rounded-2xl border border-border-light dark:border-border-dark shadow-sm">
+                            <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page3) Graph 2.png"
+                                alt="SEO Implementation Progress"
+                                class="w-full h-full object-cover rounded-xl cursor-pointer open-modal aspect-video">
+                        </div>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-2 rounded-2xl border border-border-light dark:border-border-dark shadow-sm">
+                            <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page3) Graph 3.png"
+                                alt="SEO Implementation Progress 2"
+                                class="w-full h-full object-cover rounded-xl cursor-pointer open-modal aspect-video">
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="bg-surface-light dark:bg-surface-dark rounded-3xl p-8 lg:p-12 shadow-sm border border-border-light dark:border-border-dark mb-12">
+                    <div class="space-y-8 mb-12 text-center">
+                        <div>
+                            <div class="flex items-center justify-center gap-2 mb-6 text-primary">
+                                <span class="material-icons-outlined">trending_up</span>
+                                <span class="text-sm font-bold uppercase tracking-wide">Tangible Outcomes</span>
+                            </div>
+                            <h2 class="text-3xl font-bold mb-6 text-text-light dark:text-white">Explosive Growth in
+                                Rankings</h2>
+                            <p
+                                class="text-muted-light dark:text-muted-dark leading-relaxed mb-6 hover:text-white transition max-w-2xl mx-auto">
+                                By the 4th month, the strategy produced measurable advancements:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                        <div
+                            class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-border-light dark:border-border-dark flex flex-col justify-center items-center text-center">
+                            <h4 class="font-bold text-lg mb-2 text-text-light dark:text-white">Miami Car Locksmith
+                                Service</h4>
+                            <p class="text-primary font-bold text-2xl">#2 <i
+                                    class="fas fa-arrow-right text-sm mx-2"></i> #5</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-border-light dark:border-border-dark flex flex-col justify-center items-center text-center">
+                            <h4 class="font-bold text-lg mb-2 text-text-light dark:text-white">Emergency Car Locksmith
+                                Miami</h4>
+                            <p class="text-primary font-bold text-2xl">#50 <i
+                                    class="fas fa-arrow-right text-sm mx-2"></i> #5</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-border-light dark:border-border-dark flex flex-col justify-center items-center text-center">
+                            <h4 class="font-bold text-lg mb-2 text-text-light dark:text-white">Locksmith for Cars Miami
+                            </h4>
+                            <p class="text-primary font-bold text-2xl">#25 <i
+                                    class="fas fa-arrow-right text-sm mx-2"></i> #5</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-border-light dark:border-border-dark flex flex-col justify-center items-center text-center">
+                            <h4 class="font-bold text-lg mb-2 text-text-light dark:text-white">Car Door Opening Service
+                                Miami</h4>
+                            <p class="text-primary font-bold text-2xl">70+ <i
+                                    class="fas fa-arrow-right text-sm mx-2"></i> #7</p>
+                        </div>
+                        <div
+                            class="bg-white dark:bg-surface-dark p-6 rounded-2xl shadow-sm border border-border-light dark:border-border-dark flex flex-col justify-center items-center text-center">
+                            <h4 class="font-bold text-lg mb-2 text-text-light dark:text-white">Ignition Repair Locksmith
+                                Miami</h4>
+                            <p class="text-primary font-bold text-2xl">70+ <i
+                                    class="fas fa-arrow-right text-sm mx-2"></i> #9</p>
+                        </div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-8 mb-16">
+                        <div
+                            class="bg-white dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-border-light dark:border-border-dark w-full">
+                            <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page4) Graph 4.png"
+                                alt="Ranking Growth Analysis"
+                                class="w-full h-full object-cover rounded-xl cursor-pointer open-modal aspect-video">
+                        </div>
+                        <div
+                            class="bg-white dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-border-light dark:border-border-dark w-full">
+                            <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page4) Graph 5.png"
+                                alt="Ranking Growth Analysis 2"
+                                class="w-full h-full object-cover rounded-xl cursor-pointer open-modal aspect-video">
+                        </div>
+                        <div
+                            class="bg-white dark:bg-surface-dark p-3 rounded-2xl shadow-sm border border-border-light dark:border-border-dark w-full lg:col-span-2">
+                            <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page4) Graph 6.png"
+                                alt="Ranking Growth Analysis 3"
+                                class="w-full h-[400px] object-cover rounded-xl cursor-pointer open-modal">
+                        </div>
+                    </div>
+
+                    <div class="space-y-12">
+                        <div class="space-y-6">
+                            <h3
+                                class="text-2xl font-bold text-text-light dark:text-white border-b pb-2 border-border-light dark:border-border-dark">
+                                Performance Metrics</h3>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div
+                                    class="bg-blue-50 dark:bg-blue-900/10 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+                                    <h4 class="font-bold text-lg mb-3 text-blue-800 dark:text-blue-300">Traffic Metrics
+                                    </h4>
+                                    <p class="text-sm text-muted-light dark:text-muted-dark">In the last 11 days (Dec
+                                        1-11, 2025), organic search delivered 4 users (14.81% of total), organic social
+                                        2 users (7.41%), and referral 1 user (3.7%).</p>
+                                </div>
+                                <div
+                                    class="bg-green-50 dark:bg-green-900/10 p-6 rounded-xl border border-green-100 dark:border-green-800">
+                                    <h4 class="font-bold text-lg mb-3 text-green-800 dark:text-green-300">GBP Engagement
+                                    </h4>
+                                    <p class="text-sm text-muted-light dark:text-muted-dark">From Dec 1-8, 2025, the
+                                        profile recorded 48 interactions (calls, directions, clicks) and 301 views (88%
+                                        mobile, 12% desktop). Specifics include 30 calls (Dec 1-6), 4 website clicks
+                                        (Dec 1-8), and 14 direction requests (Dec 1-7).</p>
+                                </div>
+                                <div
+                                    class="bg-purple-50 dark:bg-purple-900/10 p-6 rounded-xl border border-purple-100 dark:border-purple-800">
+                                    <h4 class="font-bold text-lg mb-3 text-purple-800 dark:text-purple-300">Activity
+                                        Completion</h4>
+                                    <p class="text-sm text-muted-light dark:text-muted-dark">Out of 45 required
+                                        activities, 22 were obtained, including all 10 content sharing and 12
+                                        classifieds, laying the groundwork for further authority.</p>
+                                </div>
+                            </div>
+                            <div class="text-center mt-6">
+                                <p class="text-lg font-medium text-text-light dark:text-white italic">These outcomes
+                                    reflect a positive shift, positioning the service for increased emergency inquiries.
+                                </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Strategic Implementation Plan Section -->
-            <div class="content-section">
-                <h2><i class="fas fa-clipboard-list"></i> Strategic Implementation Plan</h2>
-                <div class="content-block">
-                    <div class="content-side-layout reverse">
-                        <div class="side-text">
-                            <p>We executed a multi-faceted SEO and GBP strategy over four months:</p>
-                            <ul>
-                                <li><b>Keyword Targeting:</b> Focused on 20 high-intent terms like "car door opening
-                                    service Miami."</li>
-                                <li><b>GBP Enhancements:</b> Boosted profile interactions through regular updates and
-                                    monitoring.</li>
-                                <li><b>Authority Building:</b> Executed 45 total activities including classifieds and
-                                    content sharing.</li>
-                            </ul>
+                    <div class="grid md:grid-cols-2 gap-8 mt-12 mb-16">
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-2 rounded-2xl border border-border-light dark:border-border-dark shadow-sm">
+                            <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page5) Graph 7.png"
+                                alt="GBP Insights"
+                                class="w-full h-full object-cover rounded-xl cursor-pointer open-modal aspect-video">
                         </div>
-                        <div class="side-image">
-                            <div class="content-image-container">
-                                <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page3) Graph 2.png"
-                                    alt="SEO Implementation Progress">
-                            </div>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-2 rounded-2xl border border-border-light dark:border-border-dark shadow-sm">
+                            <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page5) Graph 8.png"
+                                alt="GBP Insights 2"
+                                class="w-full h-full object-cover rounded-xl cursor-pointer open-modal aspect-video">
                         </div>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <!-- Tangible Results Achieved Section -->
-            <div class="content-section">
-                <h2><i class="fas fa-chart-line"></i> Tangible Results Achieved</h2>
-                <div class="content-block">
-                    <div class="content-side-layout">
-                        <div class="side-text">
-                            <p>The four-month initiative produced substantial gains in local search rankings:</p>
-                            <ul>
-                                <li><b>Visibility Surge:</b> "Emergency car locksmith Miami" rose from #50 to #5.</li>
-                                <li><b>Market Dominance:</b> Multiple core terms reached the top 10 from previous
-                                    non-existence.</li>
-                                <li><b>Engagement Growth:</b> Recorded 48 interactions (calls/clicks) in just the first
-                                    week of December.</li>
-                            </ul>
-                            <h3>Organic traffic now contributes significantly to the lead generation funnel.</h3>
-                        </div>
-                        <div class="side-image">
-                            <div class="content-image-container">
-                                <img src="../../images/Case Study Car Locksmith Service Miami/Case Study 3 (Page4) Graph 4.png"
-                                    alt="Ranking Growth Analysis">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <!-- Strategic Insight -->
+                <section class="max-w-4xl mx-auto text-center px-4">
+                    <span class="material-icons-outlined text-4xl text-secondary mb-4">lightbulb</span>
+                    <h3 class="text-2xl font-bold mb-4 text-text-light dark:text-white">Key Insights and Recommendations
+                    </h3>
+                    <p class="text-lg text-muted-light dark:text-muted-dark leading-relaxed italic">
+                        "The report highlights the value of consistent link building and GBP optimization in local
+                        niches. Avoid unannounced website changes to prevent SEO setbacks. For continued momentum,
+                        complete remaining activities like articles and posts."
+                    </p>
+                </section>
 
-            <!-- Strategic Insights Section -->
-            <div class="content-section">
-                <h2><i class="fas fa-lightbulb"></i> Strategic Insights</h2>
-                <div class="content-block">
-                    <p>The report highlights the critical value of consistent link building and GBP optimization in
-                        high-urgency local niches. By aligning SEO efforts with the emergency nature of the service, we
-                        successfully positioned the client for sustainable growth and increased inquiry rates.</p>
-                </div>
-            </div>
-
-            <!-- Collaborative Growth Section -->
-            <div class="content-section">
-                <div class="cta-box"
-                    style="background: rgba(var(--accent-rgb), 0.05); padding: 3rem; border-radius: 20px; text-align: center; border: 1px solid rgba(var(--accent-rgb), 0.1);">
-                    <h2 style="margin-top: 0;"><i class="fas fa-handshake"></i> Collaborate for Continued Growth</h2>
-                    <p>If your locksmith or emergency service business seeks similar advancements, let's connect for a
-                        complimentary strategy session.</p>
-                    <a href="../../index.html#contact" class="cta-btn"
-                        style="display: inline-flex; margin-top: 1.5rem;">
-                        <span>Get Started Today</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+                <div style="padding-bottom: 60px;"></div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Image Modal -->
     <div class="image-modal" id="imageModal">

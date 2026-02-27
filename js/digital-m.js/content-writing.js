@@ -15,44 +15,44 @@ const modalImage = document.getElementById('modalImage');
 // Tools Data
 const seoTools = [
     {
-        name: 'Google My Business',
-        description: 'Manage your business profile on Google',
-        icon: 'fab fa-google'
+        name: 'Grammarly',
+        description: 'Advanced grammar, tone, and clarity checking',
+        icon: 'fas fa-spell-check'
     },
     {
-        name: 'BrightLocal',
-        description: 'Local SEO rank tracking & reporting',
+        name: 'Surfer SEO',
+        description: 'Data-driven content optimization for search',
         icon: 'fas fa-chart-line'
     },
     {
-        name: 'Moz Local',
-        description: 'Citation management & monitoring',
-        icon: 'fas fa-map-marker-alt'
+        name: 'Hemingway Editor',
+        description: 'Improves readability and makes writing bold',
+        icon: 'fas fa-edit'
     },
     {
-        name: 'SEMrush',
-        description: 'Local keyword research & tracking',
-        icon: 'fas fa-search'
-    },
-    {
-        name: 'Yext',
-        description: 'Listings management platform',
-        icon: 'fas fa-list-alt'
-    },
-    {
-        name: 'Whitespark',
-        description: 'Local citation building tool',
-        icon: 'fas fa-spark'
+        name: 'Jasper AI',
+        description: 'AI-assisted copywriting generation',
+        icon: 'fas fa-robot'
     },
     {
         name: 'Ahrefs',
-        description: 'Competitor analysis & backlinks',
-        icon: 'fas fa-link'
+        description: 'Content gap and keyword research',
+        icon: 'fas fa-search'
     },
     {
-        name: 'Review Management',
-        description: 'Monitor & respond to reviews',
-        icon: 'fas fa-star'
+        name: 'Copyscape',
+        description: 'Professional plagiarism detection',
+        icon: 'fas fa-shield-alt'
+    },
+    {
+        name: 'Google Docs',
+        description: 'Real-time content collaboration',
+        icon: 'fab fa-google'
+    },
+    {
+        name: 'Notion',
+        description: 'Content calendar and workspace planning',
+        icon: 'fas fa-book'
     }
 ];
 
@@ -60,7 +60,7 @@ const seoTools = [
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         enableDarkTheme();
     } else {
@@ -84,36 +84,46 @@ function enableLightTheme() {
     localStorage.setItem('theme', 'light');
 }
 
-themeToggle.addEventListener('click', () => {
-    if (body.classList.contains('dark-mode')) {
-        enableLightTheme();
-    } else {
-        enableDarkTheme();
-    }
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            enableLightTheme();
+        } else {
+            enableDarkTheme();
+        }
+    });
+}
 
 // Mobile Menu Toggle
-mobileToggle.addEventListener('click', () => {
-    navRight.classList.toggle('active');
-    
-    // Change menu icon
-    const icon = mobileToggle.querySelector('i');
-    if (navRight.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-});
+if (mobileToggle && navRight) {
+    mobileToggle.addEventListener('click', () => {
+        navRight.classList.toggle('active');
+
+        // Change menu icon
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+            if (navRight.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+}
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (!mobileToggle.contains(e.target) && !navRight.contains(e.target)) {
-        navRight.classList.remove('active');
-        const icon = mobileToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
+    if (mobileToggle && navRight) {
+        if (!mobileToggle.contains(e.target) && !navRight.contains(e.target)) {
+            navRight.classList.remove('active');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
     }
 });
 
@@ -140,18 +150,22 @@ document.querySelectorAll('.image-card').forEach(card => {
 });
 
 // Modal close buttons
-imageModalClose.addEventListener('click', closeImageModal);
-imageModal.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal-overlay')) {
-        closeImageModal();
-    }
-});
+if (imageModalClose) {
+    imageModalClose.addEventListener('click', closeImageModal);
+}
+if (imageModal) {
+    imageModal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay')) {
+            closeImageModal();
+        }
+    });
+}
 
 // Tools Modal Functions
 function openToolsModal() {
     const toolsGrid = document.getElementById('toolsGrid');
     toolsGrid.innerHTML = '';
-    
+
     seoTools.forEach(tool => {
         const toolCard = document.createElement('div');
         toolCard.className = 'tool-card';
@@ -164,7 +178,7 @@ function openToolsModal() {
         `;
         toolsGrid.appendChild(toolCard);
     });
-    
+
     toolsModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -174,23 +188,29 @@ function closeToolsModal() {
     document.body.style.overflow = '';
 }
 
-toolsBtn.addEventListener('click', openToolsModal);
-toolsModalClose.addEventListener('click', closeToolsModal);
-toolsModal.addEventListener('click', (e) => {
-    if (e.target.classList.contains('modal-overlay')) {
-        closeToolsModal();
-    }
-});
+if (toolsBtn) {
+    toolsBtn.addEventListener('click', openToolsModal);
+}
+if (toolsModalClose) {
+    toolsModalClose.addEventListener('click', closeToolsModal);
+}
+if (toolsModal) {
+    toolsModal.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay')) {
+            closeToolsModal();
+        }
+    });
+}
 
 // Counter Animation for Stats
 function animateCounter(element) {
     const target = parseInt(element.getAttribute('data-count'));
     if (!target) return;
-    
+
     const duration = 1500; // milliseconds
     const increment = target / (duration / 16); // 60fps
     let current = 0;
-    
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
@@ -227,11 +247,11 @@ document.querySelectorAll('.stat-item').forEach(item => {
 
 // Add smooth scrolling to all links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             window.scrollTo({
@@ -259,7 +279,7 @@ document.addEventListener('keydown', (e) => {
             icon.classList.add('fa-bars');
         }
     }
-    
+
     // Ctrl/Cmd + D to toggle theme
     if ((e.ctrlKey || e.metaKey) && e.key === 'd') {
         e.preventDefault();
@@ -270,20 +290,20 @@ document.addEventListener('keydown', (e) => {
 // Initialize everything when page loads
 window.addEventListener('DOMContentLoaded', () => {
     initTheme();
-    
+
     // Set current year in footer
     const currentYear = new Date().getFullYear();
     const copyrightElement = document.querySelector('.copy p');
     if (copyrightElement) {
         copyrightElement.innerHTML = copyrightElement.innerHTML.replace('2026', currentYear);
     }
-    
+
     // Add loading animation
     setTimeout(() => {
         document.body.style.opacity = '1';
         document.body.style.transition = 'opacity 0.5s ease';
     }, 100);
-    
+
     // Add animation to elements when they come into view
     const contentObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -296,7 +316,7 @@ window.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     });
-    
+
     // Observe content sections
     document.querySelectorAll('.content-block, .element-card, .image-card').forEach(element => {
         element.style.opacity = '0';
@@ -312,7 +332,7 @@ if (ctaButton) {
     ctaButton.addEventListener('mouseenter', () => {
         ctaButton.style.transform = 'translateY(-5px) scale(1.05)';
     });
-    
+
     ctaButton.addEventListener('mouseleave', () => {
         ctaButton.style.transform = 'translateY(0) scale(1)';
     });
