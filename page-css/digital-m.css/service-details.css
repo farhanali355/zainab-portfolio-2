@@ -1,0 +1,330 @@
+/* service-details.css - Shared styles for social media sub-services */
+:root {
+    --primary-color: #3b82f6;
+    /* Blue matching the image */
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --bg-main: #ffffff;
+    --bg-alt: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+body.dark-mode {
+    --primary-color: #3b82f6;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --bg-main: #111827;
+    --bg-alt: #1f2937;
+    --border-color: #374151;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.sd-hero {
+    padding: 8rem 0 4rem;
+    text-align: left;
+    max-width: 800px;
+}
+
+.sd-breadcrumb {
+    font-size: 0.875rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.sd-breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.sd-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.sd-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.sd-btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.875rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sd-btn-primary:hover {
+    background-color: #2563eb;
+}
+
+/* Strategy Section */
+.sd-section {
+    padding: 5rem 0;
+}
+
+.sd-section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.sd-strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .sd-strategy-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.strategy-item {
+    text-align: left;
+}
+
+.strategy-icon {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+img.strategy-icon-img {
+    height: 40px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.strategy-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.strategy-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Deliverables Section */
+.sd-deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .sd-deliverables-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.deliverable-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.deliverable-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.deliverable-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+img.deliverable-icon-img {
+    height: 48px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.deliverable-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Action Section (Case Study) */
+.sd-action-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .sd-action-split {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.action-image {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.action-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.action-content .action-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.action-label {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.action-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Pricing Section */
+.sd-pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .sd-pricing-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.pricing-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.pricing-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.pricing-price {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pricing-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Footer CTA */
+.sd-footer-cta {
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.sd-footer-cta h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.sd-cta-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.875rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics & Listening | Social Media Marketing</title>
+    <!-- Common Digital Marketing CSS (Navbar/Footer) -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
+
+    <!-- User Provided Tailwind Script & Styles for Main Content -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '.dark-mode'],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1d4ed8', // Blue 700
+                        primaryHover: '#1e40af', // Blue 800
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        /* Override body bg for tailwind section but keep dark-mode wrapper */
+        .tailwind-wrapper {
+            font-family: 'Inter', sans-serif;
+            background-color: transparent;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Neumorphic / Soft Card Design */
+        .analytics-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .analytics-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Dark mode overrides for the provided content */
+        .dark-mode .analytics-card {
+            background-color: #1f2937; /* Tailwind Gray-800 */
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+        }
+
+        .navbar .logo-text {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Social Media Marketing</span>
+                    <span class="logo-dot"></span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fas fa-moon"></i></button>
+                    <a href="../../index.html" class="cta-btn"><span>Home</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tailwind-wrapper bg-[#f8fafc] dark:bg-[#111827] text-slate-900 dark:text-zinc-100 antialiased"
+        style="padding-top: 80px;">
+        <main class="w-full overflow-hidden min-h-screen py-12 px-4 md:px-8 flex flex-col items-center">
+
+            <!-- White Wrapper Container matching image style (light mode) -->
+            <div
+                class="bg-white dark:bg-[#111827] w-full max-w-[1200px] mx-auto rounded-3xl shadow-sm dark:shadow-none min-h-screen py-16 px-6 md:px-12 lg:px-20 border border-slate-100 dark:border-none">
+
+                <!-- Hero Section -->
+                <div class="max-w-3xl mb-24">
+
+                    <h1
+                        class="text-4xl md:text-[3.25rem] font-extrabold leading-[1.1] mb-6 text-slate-900 dark:text-white tracking-tight">
+                        Strategic Social Media that Drives Engagement & Growth
+                    </h1>
+                    <p class="text-[17px] text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl">
+                        We go beyond vanity metrics to build a loyal community and drive measurable business results on
+                        Instagram, Facebook, and TikTok.
+                    </p>
+                    <a href="../../index.html#contact"
+                        class="inline-block bg-primary hover:bg-primaryHover text-white px-8 py-3.5 rounded-lg font-semibold transition-colors text-sm">
+                        Get a custom strategy
+                    </a>
+                </div>
+
+                <!-- The Strategy -->
+                <div class="mb-32">
+                    <h2 class="text-xl font-bold text-center mb-10 text-slate-900 dark:text-white">The Strategy</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Strategy Card 1 -->
+                        <div class="analytics-card p-10">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span
+                                    class="material-symbols-outlined text-indigo-600 dark:text-indigo-400 text-3xl font-light">troubleshoot</span>
+                                <span
+                                    class="text-slate-300 dark:text-slate-600 text-xl font-medium tracking-wide">search</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Data Harvesting & Audit
+                            </h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                                Gathering comprehensive data from all social channels to benchmark performance and
+                                establish baseline metrics.
+                            </p>
+                        </div>
+
+                        <!-- Strategy Card 2 -->
+                        <div class="analytics-card p-10">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span
+                                    class="material-symbols-outlined text-blue-500 dark:text-blue-400 text-3xl font-light">calendar_month</span>
+                                <span
+                                    class="text-slate-300 dark:text-slate-600 text-xl font-medium tracking-wide">campaign</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Sentiment & Trend Analysis
+                            </h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                                Monitoring brand mentions, industry keywords, and audience sentiment to proactively
+                                identify emerging trends.
+                            </p>
+                        </div>
+
+                        <!-- Strategy Card 3 -->
+                        <div class="analytics-card p-10">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span
+                                    class="material-symbols-outlined text-blue-600 dark:text-blue-400 text-3xl font-light">trending_up</span>
+                                <span
+                                    class="text-slate-300 dark:text-slate-600 text-xl font-medium tracking-wide">favorite</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Actionable Reporting</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+                                Translating complex marketing data into clear, strategic insights that drive continuous
+                                optimization and ROI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Deliverables -->
+                <div class="mb-32">
+                    <h2 class="text-2xl font-bold text-center mb-10 text-slate-900 dark:text-white">Key Deliverables
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                        <div class="analytics-card py-5 px-6 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-orange-50 dark:bg-orange-900/30 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-orange-400 text-[20px]">event_note</span>
+                            </div>
+                            <span class="text-[15px] font-semibold text-slate-900 dark:text-slate-100">Monthly
+                                Performance Dashboards</span>
+                        </div>
+                        <div class="analytics-card py-5 px-6 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-blue-400 text-[20px]">play_circle</span>
+                            </div>
+                            <span class="text-[15px] font-semibold text-slate-900 dark:text-slate-100">Sentiment
+                                Analysis Reports</span>
+                        </div>
+                        <div class="analytics-card py-5 px-6 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-emerald-400 text-[20px]">bar_chart</span>
+                            </div>
+                            <span class="text-[15px] font-semibold text-slate-900 dark:text-slate-100">Competitor
+                                Benchmarking</span>
+                        </div>
+                        <div class="analytics-card py-5 px-6 flex items-center gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-fuchsia-50 dark:bg-fuchsia-900/30 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-fuchsia-400 text-[20px]">forum</span>
+                            </div>
+                            <span class="text-[15px] font-semibold text-slate-900 dark:text-slate-100">Custom Campaign
+                                Deep-Dives</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media In Action -->
+                <div class="mb-32">
+                    <div class="analytics-card p-1.5 overflow-hidden">
+                        <div class="grid md:grid-cols-2 rounded-xl overflow-hidden bg-white dark:bg-slate-800">
+                            <!-- Image/Gradient Box side -->
+                            <div
+                                class="bg-gradient-to-br from-[#e0f2fe] via-[#f3e8ff] to-[#fce7f3] dark:from-[#0f172a] dark:to-[#1e1b4b] p-12 flex items-center justify-center relative min-h-[350px]">
+                                <!-- Central floating video player like box -->
+                                <div
+                                    class="w-48 h-48 bg-[#4B9088] rounded-xl shadow-2xl relative flex items-center justify-center transform hover:scale-105 transition-transform duration-300">
+                                    <span class="material-symbols-outlined text-white/80 text-6xl">play_circle</span>
+                                </div>
+                            </div>
+                            <!-- Content Side -->
+                            <div class="p-10 md:p-14 flex flex-col justify-center">
+                                <h4 class="text-[11px] font-bold text-blue-600 uppercase tracking-widest mb-4">Social
+                                    Media In Action</h4>
+                                <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">200%
+                                    Increase in Retention for a SaaS Startup</h3>
+
+                                <div class="mb-5">
+                                    <p class="text-[13px] font-bold text-slate-900 dark:text-slate-200 mb-1">The
+                                        Challenge:</p>
+                                    <p
+                                        class="text-[13px] text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                                        High churn rate and lack of understanding regarding user pain points and feature
+                                        requests.</p>
+                                </div>
+
+                                <div>
+                                    <p class="text-[13px] font-bold text-slate-900 dark:text-slate-200 mb-1">The
+                                        Solution:</p>
+                                    <p
+                                        class="text-[13px] text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
+                                        Implemented comprehensive social listening to capture user feedback, enabling
+                                        product teams to prioritize updates resulting in massive retention gains.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQs -->
+                <section
+                    class="max-w-4xl mx-auto w-full pt-16 border-t border-slate-100 dark:border-slate-800 mt-20 mb-10">
+                    <div class="text-center mb-16">
+                        <p class="text-[10px] tracking-[0.2em] font-medium uppercase text-zinc-500 mb-4">FAQS</p>
+                        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Frequently asked
+                            questions</h2>
+                    </div>
+
+                    <div class="space-y-0 text-left">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item border-y border-zinc-200 dark:border-slate-700/50 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">What specific metrics
+                                    do you track for social media?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8 font-medium">
+                                        We move beyond vanity metrics to track key performance indicators (KPIs) like
+                                        engagement rates, reach, conversion pathways, audience demographics, and
+                                        sentiment shifts that directly affect your ROI.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 2 -->
+                        <div class="faq-item border-b border-zinc-200 dark:border-slate-700/50 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">How does social
+                                    listening differ from standard analytics?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8 font-medium">
+                                        While standard analytics show how your specific posts are performing, social
+                                        listening tracks wider conversations across the web—monitoring your brand name,
+                                        competitors, and industry keywords even when you aren't directly tagged.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 3 -->
+                        <div class="faq-item border-b border-zinc-200 dark:border-slate-700/50 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">Can you track my
+                                    competitors' performance?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8 font-medium">
+                                        Absolutely. Competitor benchmarking is a core part of our strategy. We analyze
+                                        your top competitors to identify their successful tactics and find gaps where
+                                        your brand can stand out.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 4 -->
+                        <div class="faq-item border-b border-zinc-200 dark:border-slate-700/50 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">How often will I
+                                    receive performance reports?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8 font-medium">
+                                        We provide comprehensive monthly performance deep-dives, as well as weekly
+                                        pacing reports so you are always aware of how campaigns are performing in
+                                        real-time.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Simple Footer CTA to Match Screenshot -->
+                <div class="text-center pt-8 pb-4">
+                    <p class="text-base md:text-lg text-slate-600 dark:text-slate-300 mb-6 font-medium">Ready to elevate
+                        your social
+                        presence? Talk to Zainab today.</p>
+                    <a href="../../index.html#contact"
+                        class="inline-block bg-primary hover:bg-primaryHover text-white px-10 py-3 rounded-lg font-semibold transition-colors text-base shadow-md">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <div class="grax_tm_section" style="margin-top: 0;">
+        <div class="grax_tm_copyright">
+            <div class="container">
+                <div class="copyright_inner">
+                    <div class="logo"><span class="footer-logo">Zainab Samnan</span></div>
+                    <div class="footer-nav-center">
+                        <ul class="footer-nav-menu">
+                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item"><a href="../../index.html"
+                                    class="footer-nav-link"><span class="icon"><ion-icon
+                                            name="home-outline"></ion-icon></span><span class="title">Home</span></a>
+                            </li>
+                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item"><a href="../../index.html#about"
+                                    class="footer-nav-link"><span class="icon"><ion-icon
+                                            name="person-outline"></ion-icon></span><span class="title">About</span></a>
+                            </li>
+                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item"><a
+                                    href="../../index.html#portfolio" class="footer-nav-link"><span
+                                        class="icon"><ion-icon name="briefcase-outline"></ion-icon></span><span
+                                        class="title">Portfolio</span></a></li>
+                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item"><a
+                                    href="../../index.html#contact" class="footer-nav-link"><span class="icon"><ion-icon
+                                            name="mail-outline"></ion-icon></span><span class="title">Contact</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <p>&copy; Copyright 2026 by Zainab Samnan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const body = document.body;
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                const icon = themeToggleBtn.querySelector('i');
+                if (body.classList.contains('dark-mode')) { icon.className = 'fas fa-sun'; } else { icon.className = 'fas fa-moon'; }
+            });
+        }
+
+        // FAQ Toggle logic
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+            const icon = item.querySelector('.faq-icon');
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-content-wrapper').style.gridTemplateRows = '0fr';
+                otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                otherItem.querySelector('.faq-icon').textContent = '+';
+            });
+
+            // Open clicked item if it was not active
+            if (!isActive) {
+                item.classList.add('active');
+                item.querySelector('.faq-content-wrapper').style.gridTemplateRows = '1fr';
+                icon.style.transform = 'rotate(45deg)';
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Strategy | Social Media Marketing</title>
+    <!-- Common Digital Marketing CSS (Navbar/Footer) -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
+    <!-- Service Specific Layout CSS -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/service-details.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+        }
+
+        .navbar .logo-text {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700;
+        }
+
+        /* FAQ Styles */
+        .faq-section {
+            padding: 4rem 0;
+            background-color: transparent;
+        }
+
+        .faq-item {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-item:last-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body:not(.dark-mode) .faq-item {
+            border-top: 1px solid #e5e7eb;
+        }
+
+        body:not(.dark-mode) .faq-item:last-child {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .faq-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: opacity 0.3s ease;
+        }
+
+        .faq-button:hover {
+            opacity: 0.8;
+        }
+
+        .faq-icon {
+            font-size: 1.875rem;
+            font-weight: 300;
+            line-height: 1;
+            transition: transform 0.5s ease;
+            color: #a1a1aa;
+            flex-shrink: 0;
+        }
+
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s ease-in-out;
+        }
+
+        .faq-content-inner {
+            overflow: hidden;
+        }
+
+        .faq-content-text {
+            padding-bottom: 1.5rem;
+            padding-right: 2rem;
+            color: var(--text-color-light);
+            line-height: 1.625;
+            font-size: 1rem;
+        }
+
+        body.dark-mode .faq-button {
+            color: #fff;
+        }
+
+        body.dark-mode .faq-content-text {
+            color: #a1a1aa;
+        }
+
+        body:not(.dark-mode) .faq-button {
+            color: #18181b;
+        }
+
+        body:not(.dark-mode) .faq-content-text {
+            color: #52525b;
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <!-- Navigation (1000% Same as Digital Marketing) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo on Left -->
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Social Media Marketing</span>
+                    <span class="logo-dot"></span>
+                </a>
+
+                <!-- Right Side Icons -->
+                <div class="nav-right">
+                    <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+
+                    <a href="../../index.html" class="cta-btn">
+                        <span>Home</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div style="padding-top: 80px;"> <!-- Padding for fixed navbar -->
+
+        <!-- Hero -->
+        <div class="container">
+            <div class="sd-hero">
+
+                <h1 class="sd-title">Strategic Content that Drives Engagement & Growth</h1>
+                <p class="sd-subtitle">We go beyond vanity metrics to build a loyal community and drive measurable
+                    business results on Instagram, Facebook, and TikTok.</p>
+                <a href="../../index.html#contact" class="sd-btn-primary">Get a custom strategy</a>
+            </div>
+        </div>
+
+        <!-- The Strategy -->
+        <div class="sd-section">
+            <div class="container">
+                <h2 class="sd-section-title">The Strategy</h2>
+                <div class="sd-strategy-grid">
+                    <div class="strategy-item">
+                        <div class="strategy-icon"
+                            style="margin-bottom: 1rem; display: flex; align-items: flex-start; justify-content: flex-start;">
+                            <img src="../../images/new-images/loupe (1).png" alt="Audit"
+                                style="height: 70px; object-fit: contain;" />
+                        </div>
+                        <h3 class="strategy-title">Brand Voice & Persona</h3>
+                        <p class="strategy-desc">Defining your unique tone, visual style, and communication guidelines
+                            to resonate authentically with your target audience.</p>
+                    </div>
+                    <div class="strategy-item">
+                        <div class="strategy-icon"
+                            style="margin-bottom: 1rem; display: flex; align-items: flex-start; justify-content: flex-start;">
+                            <img src="../../images/new-images/Untitled design - 2026-03-02T214410.309.png"
+                                alt="Content Ecosystem"
+                                style="height: 70px; transform: scale(1.8); transform-origin: left center; object-fit: contain;" />
+                        </div>
+                        <h3 class="strategy-title">Content Pillars & Themes</h3>
+                        <p class="strategy-desc">Establishing core topics and engaging narratives that provide
+                            continuous value and drive your brand's story forward.</p>
+                    </div>
+                    <div class="strategy-item">
+                        <div class="strategy-icon"
+                            style="margin-bottom: 1rem; display: flex; align-items: flex-start; justify-content: flex-start;">
+                            <img src="../../images/new-images/Untitled design - 2026-03-02T215056.734.png"
+                                alt="Growth and Engagement"
+                                style="height: 70px; transform: scale(1.8); transform-origin: left center; object-fit: contain;" />
+                        </div>
+                        <h3 class="strategy-title">Editorial Calendar</h3>
+                        <p class="strategy-desc">Structuring actionable publishing schedules to maintain a steady,
+                            optimized stream of high-quality posts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Deliverables -->
+        <div class="sd-section">
+            <div class="container">
+                <h2 class="sd-section-title">Key Deliverables</h2>
+                <div class="sd-deliverables-grid">
+                    <div class="deliverable-card"
+                        style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+                        <div class="deliverable-icon"
+                            style="display:flex; justify-content:flex-start; margin-bottom: 0.5rem;"><img
+                                src="../../images/new-images/calendar.png" alt="Calendar"
+                                style="height: 60px; object-fit: contain;" /></div>
+                        <div class="deliverable-title" style="font-size: 1.25rem; font-weight: 700;">Custom
+                            Strategy<br>Playbook</div>
+                    </div>
+                    <div class="deliverable-card"
+                        style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+                        <div class="deliverable-icon"
+                            style="display:flex; justify-content:flex-start; margin-bottom: 0.5rem;"><img
+                                src="../../images/new-images/Untitled design - 2026-03-02T215728.620.png"
+                                alt="Custom Graphics"
+                                style="height: 60px; transform: scale(1.8); transform-origin: left center; object-fit: contain;" />
+                        </div>
+                        <div class="deliverable-title" style="font-size: 1.25rem; font-weight: 700;">30-Day
+                            Content<br>Calendar</div>
+                    </div>
+                    <div class="deliverable-card"
+                        style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+                        <div class="deliverable-icon"
+                            style="display:flex; justify-content:flex-start; margin-bottom: 0.5rem;"><img
+                                src="../../images/new-images/Untitled design - 2026-03-02T220035.370.png" alt="Reports"
+                                style="height: 60px; transform: scale(1.8); transform-origin: left center; object-fit: contain;" />
+                        </div>
+                        <div class="deliverable-title" style="font-size: 1.25rem; font-weight: 700;">
+                            Copywriting<br>Guidelines</div>
+                    </div>
+                    <div class="deliverable-card"
+                        style="padding: 2.5rem; text-align: left; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;">
+                        <div class="deliverable-icon"
+                            style="display:flex; justify-content:flex-start; margin-bottom: 0.5rem;"><img
+                                src="../../images/new-images/Untitled design - 2026-03-02T221139.878.png"
+                                alt="Community Management"
+                                style="height: 60px; transform: scale(1.8); transform-origin: left center; object-fit: contain;" />
+                        </div>
+                        <div class="deliverable-title" style="font-size: 1.25rem; font-weight: 700;">Competitor
+                            Content<br>Analysis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media in Action -->
+        <div class="sd-section">
+            <div class="container">
+                <h2 class="sd-section-title">Social Media in Action</h2>
+                <div class="sd-action-split">
+                    <div class="action-image" style="display: flex; justify-content: center; align-items: center;">
+                        <!-- Using a placeholder or reusing an image from digital-marketing folder -->
+                        <img src="../../images/new-images/content.png" alt="Social Media Content Action"
+                            style="width: 75%; height: auto; border-radius: 1rem;">
+                    </div>
+                    <div class="action-content">
+                        <h3 class="action-title">300% Increase in Content Reach & Brand Recall</h3>
+                        <div class="action-label">The Challenge:</div>
+                        <p class="action-desc" style="margin-bottom: 1.5rem;">Inconsistent posting, scattered messaging,
+                            and lack of visual identity resulting in low follower retention.</p>
+
+                        <div class="action-label">The Solution:</div>
+                        <p class="action-desc">Developed a robust content pillars framework and an actionable editorial
+                            calendar aligning promotional and educational content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQs Section -->
+        <div class="faq-section">
+            <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <p
+                        style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; color: #a1a1aa;">
+                        FAQS</p>
+                    <h2 class="sd-section-title" style="margin-bottom: 0;">Frequently asked questions</h2>
+                </div>
+
+                <div class="faq-container">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleFAQ(this)">
+                            <span style="padding-right: 2rem;">What does a content strategy actually include?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="faq-content-text">
+                                    A robust content strategy covers deep audience research, establishing content
+                                    pillars, format planning (e.g., reels, carousels), distinct brand tone of voice, a
+                                    monthly editorial calendar, and efficient distribution strategies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleFAQ(this)">
+                            <span style="padding-right: 2rem;">How often should my brand be posting on social
+                                media?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="faq-content-text">
+                                    Frequency depends on the platform and your audience's appetite. We generally
+                                    recommend 3-5 high-quality feed posts per week combined with daily stories, but we
+                                    tailor this exact cadence based on our audit of your account.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleFAQ(this)">
+                            <span style="padding-right: 2rem;">Do you provide the creative assets or just the
+                                plan?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="faq-content-text">
+                                    We do both! Beyond creating the strategic roadmap, we fully execute on it by
+                                    designing custom graphics, writing compelling punchy copy, and producing engaging
+                                    short-form video content aligned with the strategy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleFAQ(this)">
+                            <span style="padding-right: 2rem;">How do you decide what topics to post about?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="faq-content-text">
+                                    We dive deep into your target audience's pain points, industry trends, and keyword
+                                    research. By combining this data with your brand's unique value proposition, we
+                                    develop tailored "content pillars" that guide all future posts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 5 -->
+                    <div class="faq-item">
+                        <button class="faq-button" onclick="toggleFAQ(this)">
+                            <span style="padding-right: 2rem;">How do we know if the content strategy is working?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-content-wrapper">
+                            <div class="faq-content-inner">
+                                <p class="faq-content-text">
+                                    We track key performance indicators (KPIs) specific to your goals—such as reach,
+                                    engagement rates, website clicks, and follower growth. Weekly and monthly analytics
+                                    reports keep you informed on what's resonating best.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="sd-footer-cta">
+            <div class="container">
+                <h2>Ready to elevate your social presence? Talk to Zainab today.</h2>
+                <a href="../../index.html#contact" class="sd-cta-btn">Contact</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer (1000% Same as Digital Marketing) -->
+    <div class="grax_tm_section">
+        <div class="grax_tm_copyright">
+            <div class="container">
+                <div class="copyright_inner">
+                    <!-- Left: Logo -->
+                    <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                        <span class="footer-logo">Zainab Samnan</span>
+                    </div>
+
+                    <!-- Center: Navigation Menu -->
+                    <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <ul class="footer-nav-menu">
+                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                <a href="../../index.html" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                <a href="../../index.html#about" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">About</span>
+                                </a>
+                            </li>
+                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                <a href="../../index.html#portfolio" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="briefcase-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Portfolio</span>
+                                </a>
+                            </li>
+                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                <a href="../../index.html#contact" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="mail-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Copyright Text -->
+                    <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                        <p>&copy; Copyright 2026 by Zainab Samnan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme JS -->
+    <script>
+        // Simple dark mode toggle functionality based on existing classes
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const body = document.body;
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                const icon = themeToggleBtn.querySelector('i');
+                if (body.classList.contains('dark-mode')) {
+                    icon.className = 'fas fa-sun';
+                } else {
+                    icon.className = 'fas fa-moon';
+                }
+            });
+        }
+
+        // FAQ Toggle Logic
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+            const icon = item.querySelector('.faq-icon');
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-content-wrapper').style.gridTemplateRows = '0fr';
+                otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                otherItem.querySelector('.faq-icon').textContent = '+';
+            });
+
+            // Open clicked item if it was not active
+            if (!isActive) {
+                item.classList.add('active');
+                item.querySelector('.faq-content-wrapper').style.gridTemplateRows = '1fr';
+                icon.style.transform = 'rotate(45deg)';
+            }
+        }
+    </script>
+</body>
+
+</html>

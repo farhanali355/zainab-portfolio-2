@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Management | Social Media Marketing</title>
+    <!-- Common Digital Marketing CSS (Navbar/Footer) -->
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
+
+    <!-- User Provided Tailwind Script & Styles for Main Content -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '.dark-mode'],
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        :root {
+            --primary: #4176b8;
+            --primary-dark: #345e94;
+            --bg-light: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        
+        /* Override body bg for tailwind section but keep dark-mode wrapper */
+        .tailwind-wrapper {
+            font-family: 'Inter', sans-serif;
+            background-color: transparent;
+        }
+
+        .stitched-card {
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Dark mode overrides for the provided content */
+        .dark-mode .stitched-card {
+            background-color: transparent;
+            border: none;
+        }
+        .dark-mode .stitched-card .bg-white {
+            background-color: #111827; /* Tailwind Gray-900 */
+            border-color: #374151;
+        }
+        .dark-mode .stitched-card .bg-slate-50\/50 {
+            background-color: transparent;
+        }
+        .dark-mode .text-slate-900, 
+        .dark-mode .text-slate-800,
+        .dark-mode .stitched-card h1,
+        .dark-mode .stitched-card h2,
+        .dark-mode .stitched-card h3 {
+            color: #f1f5f9; /* Tailwind Slate-100 */
+        }
+        .dark-mode .text-slate-700,
+        .dark-mode .text-slate-600,
+        .dark-mode .text-slate-500,
+        .dark-mode .text-slate-400,
+        .dark-mode .stitched-card p {
+            color: #94a3b8; /* Tailwind Slate-400 */
+        }
+        .dark-mode .stitched-card .text-white {
+            color: #ffffff;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+        }
+
+        .navbar .logo-text {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Social Media Marketing</span>
+                    <span class="logo-dot"></span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme"><i
+                            class="fas fa-moon"></i></button>
+                    <a href="../../index.html" class="cta-btn"><span>Home</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tailwind-wrapper bg-[#f1f5f9] dark:bg-[#111827] text-zinc-900 dark:text-zinc-100 antialiased"
+        style="padding-top: 80px;">
+        <main class="w-full overflow-hidden min-h-screen py-12 px-4 md:px-8 flex flex-col items-center">
+            <div class="max-w-6xl mx-auto space-y-8 w-full">
+                <section class="stitched-card p-8 md:p-16">
+
+                    <div class="max-w-3xl">
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-slate-900">
+                            Strategic Social Media that Drives Engagement &amp; Growth
+                        </h1>
+                        <p class="text-xl text-[var(--text-muted)] leading-relaxed mb-10">
+                            We go beyond vanity metrics to build a loyal community and drive measurable business results
+                            on
+                            Instagram, Facebook, and TikTok.
+                        </p>
+                        <a href="../../index.html#contact"
+                            class="inline-block bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-4 rounded-lg font-bold transition-all shadow-md">
+                            Get a custom strategy
+                        </a>
+                    </div>
+                    <div class="mt-24 border-t border-slate-100 dark:border-slate-700 pt-16">
+                        <h2 class="text-2xl font-bold text-center mb-16 text-slate-900">The Strategy</h2>
+                        <div class="grid md:grid-cols-3 gap-12">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img alt="Audit" class="w-[70px] h-[70px] rounded-lg object-contain"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFGDo9NVll6ghHyHroKUbeRRmsjl5e0V-6ax7LJcTMGuh_mOkWtEip5R1-5h6_1hypPkIChIo7mAdAe2QwsO1lRNRLGWNilqJGgSOpThWnhW3a2iQTyi3VTYen5E7Mn5k2APdzCrURK7rqC2MpJA06BHj8heUB4MlxTINP7XXL4Da0QrbC_wH4Kox5jH368TzFBU8hsK4QhMVa4NqJG8NlHbYeO1x_hKxPcs3OOHObfGDrJTKnT6KnVuNsoozd48h8ulz5W45pNoAY" />
+                                </div>
+                                <h3 class="text-xl font-extrabold text-slate-900">Brand Monitoring</h3>
+                                <p class="text-[var(--text-muted)] leading-relaxed">
+                                    Keeping a pulse on your brand's digital presence by tracking mentions, hashtags, and
+                                    sentiment across platforms.
+                                </p>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img alt="Content" class="w-[70px] h-[70px] rounded-lg object-contain"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuChbd4szElaqfNJkob1EMo6uFzGj5L2YIfC0_uyilqcTmBTMP3xRZ-RHdAh4OpdPKd9gkUZkbCi4VNaeSDby4nToo7uMr6awdqkxcVN0eJe0aVi7w1Yp3gaNFI_f3YKOFMHsFP8nUKvswvaw_FW9fdoK9pe_QUw6gMyBzZBs6XdQK2LfcMT_PdoiKXAAeYfw-Y3E5VEq9f577QT3hYfuGhQjc4KiOxuxKi-8ZfsAdWhckICiq_c3J3Y47AH4ltzaMa-jjazGzHblwrg" />
+                                </div>
+                                <h3 class="text-xl font-extrabold text-slate-900">Audience Engagement</h3>
+                                <p class="text-[var(--text-muted)] leading-relaxed">
+                                    Nurturing relationships through authentic and timely interactions, turning passive
+                                    followers into active advocates.
+                                </p>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <img alt="Growth" class="w-[70px] h-[70px] rounded-lg object-contain"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzIfLD6x3YuvAbn7aoouLDZNCpE-zmP-RYKs6qiOMZ4Tqpajsz_DR0pYuWXSrJj3yGIWUBQmtn8w_exj56gxqwknvLeL2TH0QQou4Kx7aSfU2wEpjy069Lo3CEzWL2RcMWqp-UCegVDaeoGAcK5nut7W5uv9YOgKsT9tSlZ5D6nmHYIBkQmTyLS1M-FXK6wL-Jokd2Jk9I_qaksMEaFGAVbEfRscu4wvlCPkNlIbBQFyIfmUYdOR1EqCvRYgsD8sY1e0K-aTUpHrRH" />
+                                </div>
+                                <h3 class="text-xl font-extrabold text-slate-900">Crisis Management</h3>
+                                <p class="text-[var(--text-muted)] leading-relaxed">
+                                    Swiftly addressing negative feedback and resolving customer issues publicly and
+                                    privately to maintain a pristine reputation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="stitched-card bg-slate-50/50 p-8 md:p-16">
+                    <h2 class="text-2xl font-bold text-center mb-12 text-slate-900">Key Deliverables</h2>
+                    <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-5 shadow-sm">
+                            <div class="flex-shrink-0 flex items-center justify-center">
+                                <img alt="Deliverable" class="w-[50px] h-[50px] object-contain"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPH2nGyrVn86Tb-TUdXjQb7xXSHLCUAjZrMWo7riFtcZMLdpMoleddsKVXPjrkuU2kgCkqH5Txnu2tXHLHDh1amyWM2OM7eruvWrWA1Xgt-z423rSaAkTjb1wX9n0ouDPmpTuSJIgQspKKhtJJOd6JyqnoHuHODfDCoVSfVj1p1CRnM_h8IQgUDI28oCpM7knwq4Ye6aEAWGbodfEmOiHWAixW_usQTkZJeyrU4iUrGHhIYYRImZ-CPhupAAn8dHoR0o8823IxIP2X" />
+                            </div>
+                            <span class="text-lg font-semibold text-slate-800">24/7 Response Management</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-5 shadow-sm">
+                            <div class="flex-shrink-0 flex items-center justify-center">
+                                <img alt="Deliverable" class="w-[50px] h-[50px] object-contain"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl5gRHvGXBGeU0MBaEz2Cc7Uvwh3gpbANFb-as5O5avxlwu4MqRAVo0oVrj7swe5W1L8sVErFNyzNrqkM7MgJ34j6m0rzfzbfRLKyF_UkKqCGTb-osD-RwpOSkhVfkDh91inwAO7QskkYsiJcVkNVl22Cddd3ihOOpL-QPfGATRRBjum-mmsioe0xeCcSOM66vAtmCA6M_YGGsS0KBrx78qQaukV1-i0KroytOorxO9w19SJd1Jkey2b27UQesgnikqVigVcWzx7do" />
+                            </div>
+                            <span class="text-lg font-semibold text-slate-800">Community Sentiment Reports</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-5 shadow-sm">
+                            <div class="flex-shrink-0 flex items-center justify-center">
+                                <img alt="Deliverable" class="w-[50px] h-[50px] object-contain"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0DQN6djTrXRSboLYEBoCI9-EgSSazCNzQmiqlkFNx6Y-SB8rVYCVS2TKu19SGNCie3_U2zvNGmKgtR5T2vYK_0wHRXnWBxRapkP1B0LkoYXpygvhYOrkNrf8LVfjouW-VYzwejeHpaYnRILtqwjPqC7yDJyMJwP5MrYFR-NiHSRpGzjv1TA5mj8OB8Jc-FmaysAulKmdHgAfNBPMGsF7zvVBwoix8Ty72Hcf9AkQgwAi5vg_p1384ien9M8z318QA2NwPxmlswedu" />
+                            </div>
+                            <span class="text-lg font-semibold text-slate-800">Engagement Playbook</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-center gap-5 shadow-sm">
+                            <div class="flex-shrink-0 flex items-center justify-center">
+                                <img alt="Deliverable" class="w-[50px] h-[50px] object-contain"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtnihF4yBYlpA8eb9frtdhTuQDmZqWwMZMMoLfORCfauU9HrMP2Exm1IE0CyHjZZDxbIc2-v4H1v4gsyGNzphMx9Onz9HSqIae69SRRO_5ZTu4-_tJwR97yJlAixMhCUgikuRXNlAvHIPrRJrnB9WBeyC6UtsomfDTP9gxuIgzXnnfh2rvwEbLUEgIIj3mMHQUbaxInumlBeZSsgKbtjlep1vH8rIqusb-McTt9vNOTaC61l0h9qlMUmEd9IFoU5-Q5XxykbCiitta" />
+                            </div>
+                            <span class="text-lg font-semibold text-slate-800">Follower Growth Strategies</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="stitched-card p-8 md:p-16 overflow-hidden relative">
+                    <h2 class="text-2xl font-bold mb-12 text-slate-900">Social Media in Action</h2>
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="relative">
+                            <div
+                                class="absolute -inset-4 bg-gradient-to-tr from-pink-100 to-indigo-100 rounded-[2rem] -z-10 opacity-70">
+                            </div>
+                            <img alt="Success Story" class="rounded-2xl shadow-xl w-full aspect-square object-cover"
+                                src="../../images/new-images/community.png" />
+                            <div
+                                class="absolute bottom-6 right-6 bg-white/90 dark:bg-zinc-800/90 backdrop-blur p-4 rounded-xl shadow-lg">
+                                <p class="text-3xl font-black text-[var(--primary)]">+500%</p>
+                                <p class="text-xs font-bold uppercase tracking-tighter text-slate-500">Positive Brand
+                                    Sentiment
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4 text-slate-900">Transforming Customer Support into
+                                    Brand Loyalty</h3>
+                                <p class="text-lg text-[var(--text-muted)]">Boosted positive brand interactions and
+                                    resolved customer service inquiries effectively within 6 weeks.</p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="text-sm font-bold uppercase text-slate-400 mb-2">The Challenge</h4>
+                                    <p class="text-slate-700">High volume of unanswered customer queries and negative
+                                        comments impacting the brand's digital reputation and trust.</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold uppercase text-slate-400 mb-2">The Solution</h4>
+                                    <p class="text-slate-700">Deployed an active listening strategy and a human-centered
+                                        response protocol to address concerns and turn detractors into loyal advocates.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="max-w-4xl mx-auto w-full pt-16 border-t border-slate-100 dark:border-slate-700 mt-20">
+                    <div class="text-center mb-16">
+                        <p class="text-[10px] tracking-[0.2em] font-medium uppercase text-zinc-500 mb-4">FAQS</p>
+                        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Frequently asked
+                            questions</h2>
+                    </div>
+
+                    <div class="space-y-0 text-left">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item border-y border-zinc-200 dark:border-white/10 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">Why is community
+                                    management so important?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8">
+                                        Community management turns passive followers into active brand advocates. It
+                                        builds human connections, fosters trust, and provides a direct line to your
+                                        audience for immediate feedback and proactive customer service.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 2 -->
+                        <div class="faq-item border-b border-zinc-200 dark:border-white/10 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">How do you manage
+                                    negative comments or a brand crisis?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8">
+                                        We establish clear crisis protocols before issues arise. When negative sentiment
+                                        hits, we acknowledge, de-escalate, and move the conversation to private
+                                        channels, ensuring transparency while protecting brand reputation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 3 -->
+                        <div class="faq-item border-b border-zinc-200 dark:border-white/10 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">Do you adapt to our
+                                    specific brand voice?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8">
+                                        Absolutely. Before we start, we immerse ourselves in your brand guidelines, past
+                                        interactions, and unique persona—whether your tone is highly professional,
+                                        sharply witty, or deeply empathetic.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 4 -->
+                        <div class="faq-item border-b border-zinc-200 dark:border-white/10 group">
+                            <button
+                                class="flex items-center justify-between w-full text-left font-semibold text-lg md:text-xl text-slate-900 dark:text-white py-6 hover:opacity-80 transition-opacity"
+                                onclick="toggleFAQ(this)">
+                                <span class="pr-8 group-[.active]:text-blue-600 transition-colors">Will you run
+                                    ambassador or UGC campaigns?</span>
+                                <span
+                                    class="faq-icon text-zinc-400 dark:text-zinc-500 text-3xl font-light leading-none shrink-0 transition-transform duration-500 ease-in-out">+</span>
+                            </button>
+                            <div
+                                class="faq-content-wrapper grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                                <div class="faq-content-inner overflow-hidden">
+                                    <p class="pb-6 text-slate-600 dark:text-zinc-400 leading-relaxed pr-8">
+                                        Yes, as part of our full-scale growth strategy, we actively identify super-fans
+                                        and micro-influencers, structure ambassador programs, and encourage the creation
+                                        of User Generated Content (UGC) to scale your organic reach.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="stitched-card p-4 md:p-12 text-center border-0 mt-8 mb-4">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900 dark:text-white">Ready to elevate your
+                        social presence?</h2>
+                    <p class="text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto">Let's discuss how a custom
+                        social strategy can help
+                        you
+                        reach your business goals this year.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a class="bg-[var(--primary)] text-white px-8 py-3 rounded-lg font-bold hover:bg-[var(--primary-dark)] transition-colors shadow-sm"
+                            href="../../index.html#contact">Talk to Zainab today</a>
+                        <a class="border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-8 py-3 rounded-lg font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                            href="../../index.html#portfolio">View other services</a>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <div class="grax_tm_section" style="margin-top: 0;">
+        <div class="grax_tm_copyright">
+            <div class="container">
+                <div class="copyright_inner">
+                    <div class="logo"><span class="footer-logo">Zainab Samnan</span></div>
+                    <div class="footer-nav-center">
+                        <ul class="footer-nav-menu">
+                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item"><a href="../../index.html"
+                                    class="footer-nav-link"><span class="icon"><ion-icon
+                                            name="home-outline"></ion-icon></span><span class="title">Home</span></a>
+                            </li>
+                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item"><a href="../../index.html#about"
+                                    class="footer-nav-link"><span class="icon"><ion-icon
+                                            name="person-outline"></ion-icon></span><span class="title">About</span></a>
+                            </li>
+                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item"><a
+                                    href="../../index.html#portfolio" class="footer-nav-link"><span
+                                        class="icon"><ion-icon name="briefcase-outline"></ion-icon></span><span
+                                        class="title">Portfolio</span></a></li>
+                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item"><a
+                                    href="../../index.html#contact" class="footer-nav-link"><span class="icon"><ion-icon
+                                            name="mail-outline"></ion-icon></span><span class="title">Contact</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <p>&copy; Copyright 2026 by Zainab Samnan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const body = document.body;
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                const icon = themeToggleBtn.querySelector('i');
+                if (body.classList.contains('dark-mode')) { icon.className = 'fas fa-sun'; } else { icon.className = 'fas fa-moon'; }
+            });
+        }
+
+        // FAQ Toggle logic
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+            const icon = item.querySelector('.faq-icon');
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-content-wrapper').style.gridTemplateRows = '0fr';
+                otherItem.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                otherItem.querySelector('.faq-icon').textContent = '+';
+            });
+
+            // Open clicked item if it was not active
+            if (!isActive) {
+                item.classList.add('active');
+                item.querySelector('.faq-content-wrapper').style.gridTemplateRows = '1fr';
+                icon.style.transform = 'rotate(45deg)';
+            }
+        }
+    </script>
+</body>
+
+</html>
