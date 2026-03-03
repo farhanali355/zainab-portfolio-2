@@ -57,6 +57,12 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --background-dark: #101822;
+            /* Matches tailwind config */
+            --background-light: #f6f7f8;
+        }
+
         body.dark-mode {
             background-color: var(--background-dark) !important;
         }
@@ -68,6 +74,12 @@
         body.dark-mode .navbar {
             background: rgba(15, 23, 42, 0.95) !important;
             border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hero text glow in dark mode */
+        body.dark-mode .text-primary.italic {
+            text-shadow: 0 0 20px rgba(19, 109, 236, 0.3);
         }
     </style>
 </head>
@@ -100,7 +112,7 @@
 
     <main class="mt-24">
         <!-- Hero Section -->
-        <section class="relative py-20 lg:py-32 overflow-hidden">
+        <section class="relative py-20 lg:py-32 overflow-hidden bg-background-light dark:bg-background-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="z-10">
@@ -209,7 +221,7 @@
         </section>
 
         <!-- Core Services Bento Grid -->
-        <section class="py-24">
+        <section class="py-24 bg-background-light dark:bg-background-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div class="max-w-2xl">
@@ -373,7 +385,7 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="py-24">
+        <section class="py-24 bg-background-light dark:bg-background-dark">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-4xl lg:text-5xl font-black mb-8 leading-tight text-slate-900 dark:text-white">Ready to
                     transform your Meta advertising performance?</h2>
@@ -435,28 +447,34 @@
     </footer>
 
     <script>
-        // Theme Toggle Logic
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
+        const html = document.documentElement;
         const icon = themeToggle.querySelector('i');
 
         // Check for saved theme
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             body.classList.replace('light-mode', 'dark-mode');
-            body.classList.add('dark'); // For Tailwind
+            body.classList.add('dark');
+            html.classList.add('dark');
             icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            body.classList.add('light-mode');
+            html.classList.remove('dark');
         }
 
         themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('light-mode')) {
+            if (!html.classList.contains('dark')) {
                 body.classList.replace('light-mode', 'dark-mode');
-                body.classList.add('dark'); // For Tailwind
+                body.classList.add('dark');
+                html.classList.add('dark');
                 icon.classList.replace('fa-moon', 'fa-sun');
                 localStorage.setItem('theme', 'dark');
             } else {
                 body.classList.replace('dark-mode', 'light-mode');
-                body.classList.remove('dark'); // For Tailwind
+                body.classList.remove('dark');
+                html.classList.remove('dark');
                 icon.classList.replace('fa-sun', 'fa-moon');
                 localStorage.setItem('theme', 'light');
             }
