@@ -476,41 +476,200 @@ body.dark-mode .why-section {
 /* FOOTER */
 .grax_tm_section.footer-section {
     position: relative;
-    background: var(--bg-white);
+    background: var(--bg-light);
     padding: 100px 0 40px;
+    margin-top: 50px;
     overflow: hidden;
 }
 
+.grax_tm_copyright {
+    position: relative;
+    width: 100%;
+}
+
+.grax_tm_copyright .container {
+    position: relative;
+    z-index: 2;
+}
+
 .copyright_inner {
+    width: 100%;
+    height: auto;
+    clear: both;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.copyright_inner .logo {
+    flex: 0 0 auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 36px;
+    background: linear-gradient(45deg, var(--text-dark), var(--text-muted));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+}
+
+.footer-nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .footer-nav-menu {
     display: flex;
+    position: relative;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
     list-style: none;
-    gap: 20px;
 }
 
 .footer-nav-item {
+    position: relative;
+    list-style: none;
     width: 60px;
     height: 60px;
-    background: var(--bg-light);
-    border-radius: 50%;
+    background: var(--bg-white);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 60px;
+    cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
-    transition: 0.3s;
+    align-items: center;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.footer-nav-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 60px;
+    background: linear-gradient(45deg, var(--i), var(--j));
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .footer-nav-item:hover {
+    width: 180px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
     transform: translateY(-5px);
 }
 
+.footer-nav-item:hover::before {
+    opacity: 1;
+}
+
 .footer-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-nav-item .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-nav-item .icon ion-icon {
+    color: #888888;
+    font-size: 28px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.footer-nav-item:hover .icon ion-icon {
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.footer-nav-item .title {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: absolute;
+    white-space: nowrap;
+    font-family: var(--font-body);
+}
+
+.footer-nav-item:hover .title {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.copy {
+    flex: 0 0 auto;
+    margin-left: 20px;
+    text-align: right;
+}
+
+.copy p {
+    text-transform: uppercase;
     color: var(--text-muted);
-    font-size: 1.5rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+    .copyright_inner {
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 40px;
+    }
+
+    .copyright_inner .logo,
+    .footer-nav-center,
+    .copy {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-nav-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-nav-item {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-nav-item:hover {
+        width: 140px;
+    }
 }
 
 /* DARK MODE OVERWRITES */
