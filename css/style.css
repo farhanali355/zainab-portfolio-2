@@ -2763,7 +2763,7 @@ body.dark .grax_tm_settings .cursor li .svg,
 .grax_tm_section {
     position: relative;
     background: var(--secondary-bg);
-    padding: 100px 0 40px;
+    padding: 100px 0 0px;
     margin-top: 100px;
     overflow: hidden;
 }
@@ -3065,6 +3065,7 @@ body.dark .grax_tm_settings .cursor li .svg,
     .grax_tm_section {
         padding: 60px 0 30px;
         margin-top: 60px;
+
     }
 }
 
