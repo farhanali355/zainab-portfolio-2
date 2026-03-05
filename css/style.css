@@ -2802,10 +2802,10 @@ body.dark .grax_tm_settings .cursor li .svg,
     margin: 0 auto;
     padding: 0 40px;
 } */
-.grax_tm_copyright .container {
+/* .grax_tm_copyright .container {
   position: relative;
   z-index: 2;
-}
+} */
 /* Footer Layout - Centered and Consistent */
 .copyright_inner {
   width: 100%;
