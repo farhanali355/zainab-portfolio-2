@@ -995,14 +995,14 @@ p {
   padding: 0 20px;
 }
 
-.footer-nav-menu {
+/* .footer-nav-menu {
   display: flex;
   position: relative;
   gap: 12px;
   padding: 0;
   margin: 0;
   list-style: none;
-}
+} */
 
 /* Navigation Items */
 .footer-nav-item {

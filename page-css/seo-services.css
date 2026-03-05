@@ -591,9 +591,9 @@ p {
   padding: 6px 20px;
   border-radius: var(--radius-full);
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 1px;
   border: 1px solid var(--border-color);
 }
@@ -601,6 +601,7 @@ p {
 .section-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  text-decoration: none;
 }
 
 .section-subtitle {
@@ -608,6 +609,8 @@ p {
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
+    text-decoration: none;
+
 }
 
 /* Services Grid - UPDATED: 2 columns for PC/Tablet, 1 for mobile */
@@ -845,10 +848,12 @@ p {
 }
 
 .grax_tm_section {
-  position: relative;
-  width: 100%;
+    position: relative;
+    background: var(--secondary-bg);
+    /* padding: 100px 0 40px; */
+    margin-top: 100px;
+    overflow: hidden;
 }
-
 .grax_tm_copyright {
   position: relative;
   background: var(--secondary-bg) !important;
