@@ -1836,8 +1836,8 @@ body.modal {
 	clear: both;
 	float: left;
 	position: relative;
-	margin-bottom: 110px;
-	padding-top: 140px;
+	margin-bottom: -100px;
+	padding-top: 100px;
 }
 
 .grax_tm_contact .contact_inner {
