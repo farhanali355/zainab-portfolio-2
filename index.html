@@ -176,9 +176,6 @@
 
 		<!-- HERO -->
 		<div class="grax_tm_hero" id="home">
-			<div class="bg">
-				<div class="image" data-img-url="img/portfolio/zainab.png"></div>
-			</div>
 			<div class="ripple" id="ripple"></div>
 			<div class="container water">
 				<div class="details" data-animation="toRight"> <!-- Animation Values: toTop, toRight, scale, rotate -->
@@ -200,7 +197,7 @@
 				<div class="container">
 					<div class="about_inner">
 						<div class="left wow fadeInLeft" data-wow-duration="1.5s">
-							<div class="image parallax" data-relative-input="true">
+							<div class="image  parallax" data-relative-input="true">
 								<img src="img/placeholders/3-4.jpg" alt="" />
 								<div class="main layer" data-img-url="img/portfolio/zainab-about.png" data-depth="0.04">
 								</div>
@@ -855,74 +852,74 @@
 					</svg>
 				</div>
 
-				<div class="container">
-					<!-- Original Content - Layout Changed -->
-					<div class="copyright_inner">
-						<!-- Left: Logo -->
-						<div class="logo wow fadeInLeft" data-wow-duration="1s">
-							<span class="footer-logo">Zainab Samnan</span>
-						</div>
+				<!-- <div class="container"> -->
+				<!-- Original Content - Layout Changed -->
+				<!-- <div class="copyright_inner"> -->
+				<!-- Left: Logo -->
+				<div class="logo wow fadeInLeft" data-wow-duration="1s">
+					<span class="footer-logo">Zainab Samnan</span>
+				</div>
 
-						<!-- Center: Navigation Menu -->
-						<div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-							<ul class="footer-nav-menu">
-								<li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
-									<a href="#home" class="footer-nav-link">
-										<span class="icon">
-											<ion-icon name="home-outline"></ion-icon>
-										</span>
-										<span class="title">Home</span>
-									</a>
-								</li>
-								<li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
-									<a href="#about" class="footer-nav-link">
-										<span class="icon">
-											<ion-icon name="person-outline"></ion-icon>
-										</span>
-										<span class="title">About</span>
-									</a>
-								</li>
-								<li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
-									<a href="#portfolio" class="footer-nav-link">
-										<span class="icon">
-											<ion-icon name="briefcase-outline"></ion-icon>
-										</span>
-										<span class="title">Portfolio</span>
-									</a>
-								</li>
-								<li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
-									<a href="#contact" class="footer-nav-link">
-										<span class="icon">
-											<ion-icon name="mail-outline"></ion-icon>
-										</span>
-										<span class="title">Contact</span>
-									</a>
-								</li>
+				<!-- Center: Navigation Menu -->
+				<div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+					<ul class="footer-nav-menu">
+						<li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+							<a href="#home" class="footer-nav-link">
+								<span class="icon">
+									<ion-icon name="home-outline"></ion-icon>
+								</span>
+								<span class="title">Home</span>
+							</a>
+						</li>
+						<li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+							<a href="#about" class="footer-nav-link">
+								<span class="icon">
+									<ion-icon name="person-outline"></ion-icon>
+								</span>
+								<span class="title">About</span>
+							</a>
+						</li>
+						<li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+							<a href="#portfolio" class="footer-nav-link">
+								<span class="icon">
+									<ion-icon name="briefcase-outline"></ion-icon>
+								</span>
+								<span class="title">Portfolio</span>
+							</a>
+						</li>
+						<li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+							<a href="#contact" class="footer-nav-link">
+								<span class="icon">
+									<ion-icon name="mail-outline"></ion-icon>
+								</span>
+								<span class="title">Contact</span>
+							</a>
+						</li>
 
-							</ul>
-						</div>
+					</ul>
+				</div>
 
-						<!-- Right: Copyright Text -->
-						<div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-							<p>&copy; Copyright 2026 by Zainab Samnan</p>
-						</div>
-					</div>
+				<!-- Right: Copyright Text -->
+				<div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+					<p>&copy; Copyright 2026 by Zainab Samnan</p>
 				</div>
 			</div>
 		</div>
-		<!-- /COPYRIGHT -->
+	</div>
+	</div>
+	<!-- /COPYRIGHT -->
 
-		<!-- CURSOR -->
-		<div class="mouse-cursor cursor-outer"></div>
-		<div class="mouse-cursor cursor-inner"></div>
-		<!-- /CURSOR -->
+	<!-- CURSOR -->
+	<div class="mouse-cursor cursor-outer"></div>
+	<div class="mouse-cursor cursor-inner"></div>
+	<!-- /CURSOR -->
 
-		<!-- START: Page Progress -->
-		<div class="progressbar">
-			<a href="#"><span class="text">To Top</span></a>
-			<span class="line"></span>
-		</div>
-		<!-- END: Page Progress -->
+	<!-- START: Page Progress -->
+	<div class="progressbar">
+		<a href="#"><span class="text">To Top</span></a>
+		<span class="line"></span>
+	</div>
+	<!-- END: Page Progress -->
 
 	</div>
 	<!-- / WRAPPER ALL -->
@@ -991,37 +988,54 @@
 			const nextBtn = document.querySelector('.slider_btn.next');
 			const prevBtn = document.querySelector('.slider_btn.prev');
 
-			let index = 0;
+			// 1. Pehle aur aakhri kuch cards ko clone (copy) karein
+			const visibleCards = window.innerWidth > 768 ? 3 : 1;
 
-			// Function to calculate how much to move based on screen size
+			// Start ke cards clone karke end mein lagayen
+			for (let i = 0; i < visibleCards; i++) {
+				const clone = cards[i].cloneNode(true);
+				track.appendChild(clone);
+			}
+
+			let index = 0;
+			const totalCardsCount = cards.length;
+
 			function updateSlider() {
 				const cardWidth = cards[0].offsetWidth + 30; // 30 is the gap
+				track.style.transition = "transform 0.5s ease-in-out";
 				track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+				// 2. Jab loop khatam ho jaye to bina animation ke reset karein
+				track.addEventListener('transitionend', () => {
+					if (index >= totalCardsCount) {
+						track.style.transition = "none"; // Animation band karein
+						index = 0;
+						track.style.transform = `translateX(0px)`;
+					}
+					if (index < 0) {
+						track.style.transition = "none";
+						index = totalCardsCount - 1;
+						track.style.transform = `translateX(-${index * cardWidth}px)`;
+					}
+				});
 			}
 
 			nextBtn.addEventListener('click', () => {
-				// Agar last card par hai, to wapis 0 par le jao
-				if (index < cards.length - 1) {
-					index++;
-				} else {
-					index = 0;
-				}
+				index++;
 				updateSlider();
 			});
 
 			prevBtn.addEventListener('click', () => {
-				// Agar pehle card par hai, to last par le jao
-				if (index > 0) {
-					index--;
-				} else {
-					index = cards.length - 1;
-				}
+				index--;
 				updateSlider();
 			});
 
-			// Window resize hone par slider fix rahe
-			window.addEventListener('resize', updateSlider);
-		});
+			window.addEventListener('resize', () => {
+				// Resize par transition band rakhen taake ajeeb na lage
+				track.style.transition = "none";
+				updateSlider();
+			});
+		});;
 	</script>
 
 	<!-- cv -->
