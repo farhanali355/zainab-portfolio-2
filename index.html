@@ -197,10 +197,14 @@
 				<div class="container">
 					<div class="about_inner">
 						<div class="left wow fadeInLeft" data-wow-duration="1.5s">
-							<div class="image  parallax" data-relative-input="true">
-								<img src="img/placeholders/3-4.jpg" alt="" />
-								<div class="main layer" data-img-url="img/portfolio/zainab-about.png" data-depth="0.04">
-								</div>
+							<div class="about_image_fix" style="background-image: url('img/portfolio/zainab-about1.png'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        height: 500px; 
+        border-radius: 5px;
+        position: relative;
+        width: 100%;" data-depth="0.0">
 							</div>
 						</div>
 						<div class="right wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
@@ -416,10 +420,10 @@
 
 			<div class="grax_tm_testimonials">
 				<div class="container">
-					<div class="grax_tm_title_holder">
-						<!-- <h3>What <span>Clients</span> Say</h3> -->
-						<h2 style="color: #fff;">Testimonials</h2>
-					</div>
+
+					<!-- <h3>What <span>Clients</span> Say</h3> -->
+					<h2 style="color: #fff; margin-top:20px ;">Testimonials</h2>
+
 
 					<div class="testimonial_slider">
 						<div class="testimonial_track">
@@ -750,75 +754,26 @@
 		<!-- CONTACT -->
 		<div class="grax_tm_contact" id="contact">
 			<div class="container">
-				<div class="grax_tm_title_holder">
-					<h3>Contact <span>Us</span></h3>
-				</div>
 				<div class="contact_inner">
-					<div class="left wow fadeInLeft" data-wow-duration="1s">
-						<div class="text">
+
+					<div style="display: flex;flex-direction: column; align-items: start;  ">
+						<div class="grax_tm_title_holder">
+							<h3>Contact <span>Us</span></h3>
+						</div>
+						<div style="padding-right: 100px; padding-bottom: 50px; padding-top: 20px;">
 							<p>Feel free to reach out by filling out the form below. I’m always happy to discuss new
 								projects, ideas, or collaborations.</p>
 						</div>
-						<div class="info_list">
-							<ul>
-								<!-- <li>
-									<div class="list_inner">
-										<img class="svg" src="img/svg/location.svg" alt="" />
-										<p><span class="first">Address:</span><span class="second">Brook 103, New York,
-												USA</span></p>
-									</div>
-								</li> -->
-								<li>
-									<!-- <div class="list_inner">
-										<img class="svg" src="img/svg/email.svg" alt="" />
-										<p><span class="first">Email:</span><span class="second"><a
-													href="#">example@gmail.com</a></span></p>
-									</div> -->
-								</li>
-								<!-- <li>
-									<div class="list_inner">
-										<img class="svg" src="img/svg/phone.svg" alt="" />
-										<p><span class="first">Phone:</span><span class="second"><a href="#">+77 033 442
-													55 57</a></span></p>
-									</div>
-								</li> -->
-								<!-- <li>
-									<div class="list_inner">
-										<img class="svg" src="img/svg/social/dribbble.svg" alt="" />
-										<p><span class="first">Website:</span><span class="second"><a
-													href="#">www.myaddress.com</a></span></p>
-									</div>
-								</li> -->
-								<!-- <li>
-									<div class="list_inner">
-										<img class="svg" src="img/svg/social/twitter.svg" alt="" />
-										<p><span class="first">Twitter:</span><span class="second"><a
-													href="#">@twitternickname</a></span></p>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<img class="svg" src="img/svg/social/facebook.svg" alt="" />
-										<p><span class="first">Facebook:</span><span class="second"><a
-													href="#">@facebooknickname</a></span></p>
-									</div>
-								</li> -->
-							</ul>
-						</div>
 					</div>
-					<div class="right wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+
+					<div class="right_side wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
 						<div class="fields">
 							<form action="/" method="post" class="contact_form" id="contact_form">
-								<div class="returnmessage"
-									data-success="Your message has been received, We will contact you soon."></div>
-								<div class="empty_notice"><span>Please Fill Required Fields</span></div>
 								<div class="first">
 									<ul>
-										<li>
-											<input id="name" type="text" placeholder="Name" name="from_name" required>
+										<li><input id="name" type="text" placeholder="Name" name="from_name" required>
 										</li>
-										<li>
-											<input id="email" type="text" placeholder="Email" name="from-email"
+										<li><input id="email" type="text" placeholder="Email" name="from_email"
 												required>
 										</li>
 									</ul>
@@ -829,40 +784,71 @@
 								<div class="grax_tm_button">
 									<a id="send_message" href="#">Send Message</a>
 								</div>
-
-								<!-- If you want to change mail address to yours, please open modal.php and go to line 4 -->
-
 							</form>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
 		<!-- /CONTACT -->
 
 		<!-- COPYRIGHT -->
-		<div class="grax_tm_section">
-			<div class="grax_tm_copyright">
-				<div class="my_wave">
-					<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-						<defs></defs>
-						<path id="wave_img" data-color="#fff"
-							d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-							fill="#fff"></path>
-					</svg>
-				</div>
+		<div class="grax_tm_copyright">
+			<div class="container">
+				<div class="copyright_inner">
 
-				<!-- <div class="container"> -->
-				<!-- Original Content - Layout Changed -->
-				<!-- <div class="copyright_inner"> -->
-				<!-- Left: Logo -->
-				<div class="logo wow fadeInLeft" data-wow-duration="1s">
-					<span class="footer-logo">Zainab Samnan</span>
-				</div>
+					<div class="footer-logo-wrapper">
+						<span class="footer-logo">Zainab Samnan</span>
+					</div>
 
-				<!-- Center: Navigation Menu -->
-				<div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-					<ul class="footer-nav-menu">
+					<div class="footer-nav-center wow fadeInUp" data-wow-duration="1s">
+						<ul class="footer-nav-menu">
+							<li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+								<a href="#home" class="footer-nav-link">
+									<span class="icon">
+										<ion-icon name="home-outline"></ion-icon>
+									</span>
+									<span class="title">Home</span>
+								</a>
+							</li>
+							<li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+								<a href="#about" class="footer-nav-link">
+									<span class="icon">
+										<ion-icon name="person-outline"></ion-icon>
+									</span>
+									<span class="title">About</span>
+								</a>
+							</li>
+							<li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+								<a href="#portfolio" class="footer-nav-link">
+									<span class="icon">
+										<ion-icon name="briefcase-outline"></ion-icon>
+									</span>
+									<span class="title">Portfolio</span>
+								</a>
+							</li>
+							<li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+								<a href="#contact" class="footer-nav-link">
+									<span class="icon">
+										<ion-icon name="mail-outline"></ion-icon>
+									</span>
+									<span class="title">Contact</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="copy wow fadeInRight" data-wow-duration="1s">
+						<p>&copy; Copyright 2026 by Zainab Samnan</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- </div> -->
+		<!-- /COPYRIGHT -->
+		<!-- <ul class="footer-nav-menu">
 						<li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
 							<a href="#home" class="footer-nav-link">
 								<span class="icon">
@@ -896,30 +882,18 @@
 							</a>
 						</li>
 
-					</ul>
-				</div>
+						</ul> -->
+		<!-- CURSOR -->
+		<div class="mouse-cursor cursor-outer"></div>
+		<div class="mouse-cursor cursor-inner"></div>
+		<!-- /CURSOR -->
 
-				<!-- Right: Copyright Text -->
-				<div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-					<p>&copy; Copyright 2026 by Zainab Samnan</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	<!-- /COPYRIGHT -->
-
-	<!-- CURSOR -->
-	<div class="mouse-cursor cursor-outer"></div>
-	<div class="mouse-cursor cursor-inner"></div>
-	<!-- /CURSOR -->
-
-	<!-- START: Page Progress -->
-	<div class="progressbar">
+		<!-- START: Page Progress -->
+		<!-- <div class="progressbar">
 		<a href="#"><span class="text">To Top</span></a>
 		<span class="line"></span>
-	</div>
-	<!-- END: Page Progress -->
+	</div> -->
+		<!-- END: Page Progress -->
 
 	</div>
 	<!-- / WRAPPER ALL -->
@@ -984,59 +958,202 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const track = document.querySelector('.testimonial_track');
-			const cards = document.querySelectorAll('.testimonial_card');
+			const cards = Array.from(document.querySelectorAll('.testimonial_card'));
 			const nextBtn = document.querySelector('.slider_btn.next');
 			const prevBtn = document.querySelector('.slider_btn.prev');
 
-			// 1. Pehle aur aakhri kuch cards ko clone (copy) karein
-			const visibleCards = window.innerWidth > 768 ? 3 : 1;
+			if (!track || cards.length === 0) return;
 
-			// Start ke cards clone karke end mein lagayen
-			for (let i = 0; i < visibleCards; i++) {
-				const clone = cards[i].cloneNode(true);
-				track.appendChild(clone);
+			const totalOriginalCards = cards.length;
+			let index = totalOriginalCards; // Start at the first real card (after clones)
+
+			// 1. Clone cards for seamless looping
+			cards.forEach(card => {
+				const cloneBefore = card.cloneNode(true);
+				const cloneAfter = card.cloneNode(true);
+				track.appendChild(cloneAfter);
+				track.insertBefore(cloneBefore, track.firstChild);
+			});
+
+			// 2. Dynamic width calculation
+			function getOffset() {
+				const firstCard = track.children[0];
+				const secondCard = track.children[1];
+				// Calculates card width + the actual CSS gap automatically
+				return secondCard.offsetLeft - firstCard.offsetLeft;
 			}
 
-			let index = 0;
-			const totalCardsCount = cards.length;
+			function updateSlider(animate = true) {
+				const offset = getOffset();
+				track.style.transition = animate ? "transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)" : "none";
+				track.style.transform = `translateX(-${index * offset}px)`;
+			}
 
-			function updateSlider() {
-				const cardWidth = cards[0].offsetWidth + 30; // 30 is the gap
-				track.style.transition = "transform 0.5s ease-in-out";
-				track.style.transform = `translateX(-${index * cardWidth}px)`;
+			// Initial position
+			updateSlider(false);
 
-				// 2. Jab loop khatam ho jaye to bina animation ke reset karein
-				track.addEventListener('transitionend', () => {
-					if (index >= totalCardsCount) {
-						track.style.transition = "none"; // Animation band karein
-						index = 0;
-						track.style.transform = `translateX(0px)`;
-					}
-					if (index < 0) {
-						track.style.transition = "none";
-						index = totalCardsCount - 1;
-						track.style.transform = `translateX(-${index * cardWidth}px)`;
-					}
-				});
+			function handleNext() {
+				index++;
+				updateSlider(true);
+
+				if (index >= totalOriginalCards * 2) {
+					setTimeout(() => {
+						index = totalOriginalCards;
+						updateSlider(false);
+					}, 300);
+				}
+			}
+
+			function handlePrev() {
+				index--;
+				updateSlider(true);
+
+				if (index < totalOriginalCards) {
+					setTimeout(() => {
+						index = (totalOriginalCards * 2) - 1;
+						updateSlider(false);
+					}, 400);
+				}
 			}
 
 			nextBtn.addEventListener('click', () => {
-				index++;
-				updateSlider();
+				handleNext();
+				resetAutoSlide();
 			});
 
 			prevBtn.addEventListener('click', () => {
-				index--;
-				updateSlider();
+				handlePrev();
+				resetAutoSlide();
 			});
 
+			// 3. Resizing fix
 			window.addEventListener('resize', () => {
-				// Resize par transition band rakhen taake ajeeb na lage
-				track.style.transition = "none";
-				updateSlider();
+				updateSlider(false);
 			});
-		});;
+
+			// 4. Auto play logic
+			let autoSlide = setInterval(handleNext, 5000);
+			function resetAutoSlide() {
+				clearInterval(autoSlide);
+				autoSlide = setInterval(handleNext, 5000);
+			}
+		});
 	</script>
+
+	<!-- document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector('.testimonial_track');
+    const cards = Array.from(document.querySelectorAll('.testimonial_card'));
+    const nextBtn = document.querySelector('.slider_btn.next');
+    const prevBtn = document.querySelector('.slider_btn.prev');
+
+    if (!track || cards.length === 0) return;
+
+    const totalOriginalCards = cards.length;
+    // Hum index ko totalOriginalCards par set karte hain kyunki pehle clones hain
+    let index = totalOriginalCards; 
+    let isTransitioning = false; // "Jhatke" se bachne ke liye flag
+
+    // 1. Clone cards (Seamless loop ke liye)
+    cards.forEach(card => {
+        const cloneBefore = card.cloneNode(true);
+        const cloneAfter = card.cloneNode(true);
+        track.appendChild(cloneAfter);
+        track.insertBefore(cloneBefore, track.firstChild);
+    });
+
+    function getOffset() {
+        const firstCard = track.children[0];
+        const secondCard = track.children[1];
+        return secondCard.offsetLeft - firstCard.offsetLeft;
+    }
+
+    function updateSlider(animate = true) {
+        const offset = getOffset();
+        if (animate) {
+            track.style.transition = "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)";
+            isTransitioning = true;
+        } else {
+            track.style.transition = "none";
+            isTransitioning = false;
+        }
+        track.style.transform = `translateX(-${index * offset}px)`;
+    }
+
+    // Initial setup
+    updateSlider(false);
+
+    // 2. Transition End Logic (Jhatka khatam karne ka real tarika)
+    track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        
+        // Agar aakhri clone par pohanch gaye, to bina animation ke real card par jump karo
+        if (index >= totalOriginalCards * 2) {
+            index = totalOriginalCards;
+            updateSlider(false);
+        }
+        // Agar pehle clone par pohanch gaye, to real aakhri card par jump karo
+        if (index < totalOriginalCards) {
+            if (index <= 0) { // Safety for fast clicks
+                 index = totalOriginalCards;
+                 updateSlider(false);
+            } else if (index < totalOriginalCards) {
+                 // Do nothing, handled by handlePrev logic usually
+            }
+        }
+    });
+
+    function handleNext() {
+        if (isTransitioning) return;
+        index++;
+        updateSlider(true);
+    }
+
+    function handlePrev() {
+        if (isTransitioning) return;
+        index--;
+        updateSlider(true);
+        
+        // Special check for transition from first real card to clone
+        if (index < totalOriginalCards) {
+            // Hum transition khatam hone ka wait karenge transitionend mein
+        }
+    }
+
+    nextBtn.addEventListener('click', () => {
+        handleNext();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (index <= totalOriginalCards) {
+            // Instant jump back if at the start to allow smooth back-scroll
+            if (index === totalOriginalCards) {
+                index = totalOriginalCards * 2;
+                updateSlider(false);
+                // Delay slightly to allow "none" transition to apply
+                setTimeout(() => {
+                    index--;
+                    updateSlider(true);
+                }, 10);
+            } else {
+                handlePrev();
+            }
+        } else {
+            handlePrev();
+        }
+        resetAutoSlide();
+    });
+
+    window.addEventListener('resize', () => updateSlider(false));
+
+    let autoSlide = setInterval(handleNext, 5000);
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(handleNext, 5000);
+    }
+}); -->
+
+
 
 	<!-- cv -->
 	<script>
@@ -1057,23 +1174,8 @@
 			if (e.target === cvOverlay) cvOverlay.style.display = 'none';
 		});
 	</script>
-	<script>
-		// Testimonials carousel functionality
-		(function () {
-			const slider = document.querySelector('.testimonials_slider');
-			if (!slider) return;
-			const cards = slider.querySelectorAll('.testimonial_card');
-			let index = 0;
-			const prev = document.querySelector('.slider_nav .prev');
-			const next = document.querySelector('.slider_nav .next');
-			function update() {
-				slider.style.transform = 'translateX(-' + index * 100 + '%)';
-			}
-			if (prev) prev.addEventListener('click', function () { index = (index - 1 + cards.length) % cards.length; update(); });
-			if (next) next.addEventListener('click', function () { index = (index + 1) % cards.length; update(); });
-			setInterval(function () { index = (index + 1) % cards.length; update(); }, 5000);
-		})();
-	</script>
+	<!-- <script>
+	
 
 </body>
 

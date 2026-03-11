@@ -847,9 +847,9 @@ h6 {
 }
 
 .grax_tm_about .about_inner {
-	Margin-top: -80px;
+	Margin-top: 20px;
 	width: 100%;
-	height: auto;
+	/* height: auto; */
 	clear: both;
 	display: flex;
 	align-items: center;
@@ -1103,6 +1103,10 @@ h6 {
 	clear: both;
 	float: left;
 	margin-top: 20px;
+	/* padding-right: 50px;
+	padding-left: 50px; */
+
+
 }
 
 .grax_tm_title_holder span {
@@ -1833,202 +1837,255 @@ body.modal {
 /*	09) GRAX CONTACT
 /*---------------------------------------------------*/
 
-.grax_tm_contact {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	margin-bottom: -100px;
-	padding-top: 100px;
+
+
+@media (max-width: 3000px) {
+
+
+	.grax_tm_contact {
+		width: 100%;
+		height: auto;
+		clear: both;
+		float: left;
+		position: relative;
+		flex-direction: row;
+		display: flex;
+		/* justify-content: center; */
+
+	}
+
+	.grax_tm_contact .contact_inner {
+		width: 100%;
+		height: auto;
+		clear: both;
+		display: flex;
+		flex-direction: row;
+		padding-top: 100px;
+
+	}
+
+	.grax_tm_contact .left {
+		width: 50%;
+	}
+
+	.grax_tm_contact .left .text {
+		width: 100%;
+		float: left;
+		margin-bottom: 40px;
+
+	}
+
+	.grax_tm_contact .text {
+		width: 100%;
+		float: left;
+		margin-bottom: 40px;
+		padding: auto;
+
+	}
+
+	.grax_tm_contact .info_list {
+		width: 100%;
+		height: auto;
+		clear: both;
+		float: left;
+	}
+
+	.grax_tm_contact .info_list ul {
+		margin: 0px;
+		list-style-type: none;
+	}
+
+	.grax_tm_contact .info_list li {
+		margin: 0px 0px 18px 0px;
+		float: left;
+		width: 100%;
+		position: relative;
+	}
+
+	.grax_tm_contact .info_list ul li .list_inner {
+		width: 100%;
+		height: auto;
+		clear: both;
+		float: left;
+		position: relative;
+		padding-left: 27px;
+	}
+
+	.grax_tm_contact .info_list ul li span.first {
+		min-width: 100px;
+		display: inline-block;
+	}
+
+	.grax_tm_contact .info_list ul li span.second {
+		font-weight: 400 !important;
+		color: inherit !important;
+	}
+
+	.grax_tm_contact .info_list ul li span {
+		font-family: "Poppins";
+		font-weight: 600;
+		color: #000;
+	}
+
+	.grax_tm_contact .info_list ul li a {
+		text-decoration: none;
+		color: inherit !important;
+		transition: all .3s ease;
+		display: inline-block;
+		position: relative;
+	}
+
+	.grax_tm_contact .info_list ul li a:hover {
+		color: #000;
+	}
+
+	.grax_tm_contact .info_list ul li a:after {
+		content: '';
+		width: 0;
+		height: 1px;
+		position: absolute;
+		left: auto;
+		right: 0;
+		bottom: 0;
+		transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+		background: currentColor;
+	}
+
+	.grax_tm_contact .info_list ul li a:hover:after {
+		width: 100%;
+		left: 0;
+		right: auto;
+	}
+
+	.grax_tm_contact .info_list ul li a:hover {
+		color: #000 !important;
+	}
+
+	.grax_tm_contact .info_list ul li .svg {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		left: 0px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #000;
+		margin-top: -1px;
+	}
+
+	.grax_tm_contact .right {
+		width: 50%;
+		padding-left: 50px;
+	}
+
+	.grax_tm_contact .fields {
+		width: 100%;
+		height: auto;
+		clear: both;
+		float: left;
+	}
+
+	.grax_tm_contact .fields .first {
+		width: 100%;
+		float: left;
+	}
+
+	.grax_tm_contact .fields ul {
+		margin: 0px;
+		list-style-type: none;
+	}
+
+	.grax_tm_contact .fields ul li {
+		width: 100%;
+		margin: 0px 0px 30px 0px;
+		float: left;
+	}
+
+	.grax_tm_contact .fields ul li input {
+		width: 100%;
+		border: 1px solid rgba(0, 0, 0, .2);
+		background-color: #fff;
+		border-radius: 5px;
+	}
+
+	.grax_tm_contact .fields ul li input:focus {
+		outline: none;
+		border: 1px solid rgba(0, 0, 0, .5);
+	}
+
+	.grax_tm_contact .fields .last textarea {
+		width: 100%;
+		border: 1px solid rgba(0, 0, 0, .2);
+		height: 120px;
+		resize: none;
+		margin-bottom: 20px;
+		background-color: #fff;
+		border-radius: 5px;
+	}
+
+	.grax_tm_contact .fields .last textarea:focus {
+		outline: none;
+		border: 1px solid rgba(0, 0, 0, .5);
+	}
+
+	.grax_tm_contact .empty_notice {
+		color: #F52225;
+		margin-bottom: 7px;
+		display: none;
+		text-align: left;
+		font-weight: 500;
+	}
+
+	.grax_tm_contact .contact_error {
+		color: #F52225;
+		text-align: left;
+		font-weight: 500;
+	}
+
+	.grax_tm_contact .returnmessage {
+		color: #3A00FF;
+		margin-bottom: 7px;
+		text-align: left;
+		font-weight: 500;
+	}
+
+	.grax_tm_contact .grax_tm_button a {
+		display: block;
+		text-align: center;
+	}
+
+	.left_side,
+	.right_side {
+		width: 100%;
+		max-width: 100%;
+		text-align: start;
+		/* Centers text for better mobile look */
+
+
+
+	}
 }
 
-.grax_tm_contact .contact_inner {
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: flex;
-	padding-top: 77px;
-}
+@media (max-width: 768px) {
+	.contact_inner {
+		flex-direction: column;
+		/* Stacks items vertically */
+		align-items: centers;
+		gap: 40px;
+	}
 
-.grax_tm_contact .left {
-	width: 50%;
-}
+	.left_side,
+	.right_side {
+		width: 100%;
+		max-width: 100%;
+		text-align: center;
+		/* Centers text for better mobile look */
+		margin-right: 100px;
+		margin-bottom: 100px;
+	}
 
-.grax_tm_contact .left .text {
-	width: 100%;
-	float: left;
-	margin-bottom: 40px;
-}
-
-.grax_tm_contact .info_list {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-
-.grax_tm_contact .info_list ul {
-	margin: 0px;
-	list-style-type: none;
-}
-
-.grax_tm_contact .info_list li {
-	margin: 0px 0px 18px 0px;
-	float: left;
-	width: 100%;
-	position: relative;
-}
-
-.grax_tm_contact .info_list ul li .list_inner {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-	padding-left: 27px;
-}
-
-.grax_tm_contact .info_list ul li span.first {
-	min-width: 100px;
-	display: inline-block;
-}
-
-.grax_tm_contact .info_list ul li span.second {
-	font-weight: 400 !important;
-	color: inherit !important;
-}
-
-.grax_tm_contact .info_list ul li span {
-	font-family: "Poppins";
-	font-weight: 600;
-	color: #000;
-}
-
-.grax_tm_contact .info_list ul li a {
-	text-decoration: none;
-	color: inherit !important;
-	transition: all .3s ease;
-	display: inline-block;
-	position: relative;
-}
-
-.grax_tm_contact .info_list ul li a:hover {
-	color: #000;
-}
-
-.grax_tm_contact .info_list ul li a:after {
-	content: '';
-	width: 0;
-	height: 1px;
-	position: absolute;
-	left: auto;
-	right: 0;
-	bottom: 0;
-	transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
-	background: currentColor;
-}
-
-.grax_tm_contact .info_list ul li a:hover:after {
-	width: 100%;
-	left: 0;
-	right: auto;
-}
-
-.grax_tm_contact .info_list ul li a:hover {
-	color: #000 !important;
-}
-
-.grax_tm_contact .info_list ul li .svg {
-	width: 15px;
-	height: 15px;
-	position: absolute;
-	left: 0px;
-	top: 50%;
-	transform: translateY(-50%);
-	color: #000;
-	margin-top: -1px;
-}
-
-.grax_tm_contact .right {
-	width: 50%;
-	padding-left: 50px;
-}
-
-.grax_tm_contact .fields {
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-
-.grax_tm_contact .fields .first {
-	width: 100%;
-	float: left;
-}
-
-.grax_tm_contact .fields ul {
-	margin: 0px;
-	list-style-type: none;
-}
-
-.grax_tm_contact .fields ul li {
-	width: 100%;
-	margin: 0px 0px 30px 0px;
-	float: left;
-}
-
-.grax_tm_contact .fields ul li input {
-	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .2);
-	background-color: #fff;
-	border-radius: 5px;
-}
-
-.grax_tm_contact .fields ul li input:focus {
-	outline: none;
-	border: 1px solid rgba(0, 0, 0, .5);
-}
-
-.grax_tm_contact .fields .last textarea {
-	width: 100%;
-	border: 1px solid rgba(0, 0, 0, .2);
-	height: 120px;
-	resize: none;
-	margin-bottom: 20px;
-	background-color: #fff;
-	border-radius: 5px;
-}
-
-.grax_tm_contact .fields .last textarea:focus {
-	outline: none;
-	border: 1px solid rgba(0, 0, 0, .5);
-}
-
-.grax_tm_contact .empty_notice {
-	color: #F52225;
-	margin-bottom: 7px;
-	display: none;
-	text-align: left;
-	font-weight: 500;
-}
-
-.grax_tm_contact .contact_error {
-	color: #F52225;
-	text-align: left;
-	font-weight: 500;
-}
-
-.grax_tm_contact .returnmessage {
-	color: #3A00FF;
-	margin-bottom: 7px;
-	text-align: left;
-	font-weight: 500;
-}
-
-.grax_tm_contact .grax_tm_button a {
-	display: block;
-	text-align: center;
+	.grax_tm_contact {
+		padding: 60px 20px;
+	}
 }
 
 /*---------------------------------------------------*/
@@ -2846,12 +2903,15 @@ body.dark .grax_tm_settings .cursor li .svg,
 	background-color: #111111;
 }
 
+
 .testimonial_slider {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
 	/* Taake extra cards hide ho jayen */
-	padding: 20px 0;
+	padding: 25px 4px;
+	margin-left: 2px;
+	margin-right: 10px;
 }
 
 .testimonial_track {
@@ -2866,27 +2926,86 @@ body.dark .grax_tm_settings .cursor li .svg,
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-
-	/* Desktop (Default) settings */
-	min-width: calc(25.33% - 20px);
+	align-items: center;
+	/* Centers content for the 'quote' look */
+	/* width: calc(33.33% - 20px);  */
+	/* Structure */
+	flex: 0 0 auto;
+	/* Prevents cards from shrinking */
 	background: #1a1a1a;
-	padding: 20px 20px;
+	padding: 30px 25px;
+	/* margin-left: 2px;
+	margin-right: 2px; */
 	border-radius: 15px;
 	text-align: center;
 	position: relative;
 	border: 1px solid #333;
-	transition: all 0.3s ease;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
-	/* Pehle 450px tha, ab isay thora kam ya auto rakhein */
-	min-height: 200px;
-	/* height: auto; */
+	/* Height Logic: Use min-height instead of fixed height 
+       to allow cards to expand if the text is long */
+	min-height: 380px;
+	height: auto;
 }
 
+/* Hover Effect for Premium Feel */
 .testimonial_card:hover {
-	border-color: crimson;
-	/* Aapka theme color */
+	border-color: #ff004f;
+	/* Or your primary theme color */
 	transform: translateY(-5px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
+/* --- Responsive Breakpoints --- */
+
+/* Desktop & Large Laptops (3 Cards visible) */
+@media (min-width: 1200px) {
+	.testimonial_card {
+		width: calc(33.33% - 20px);
+	}
+}
+
+/* Laptops & Small Desktops (Still 3 cards, but slightly tighter) */
+@media (max-width: 1199px) {
+	.testimonial_card {
+		width: calc(33.33% - 15px);
+		padding: 20px;
+		min-height: 100px;
+	}
+}
+
+/* Tablets (2 Cards visible) */
+@media (max-width: 991px) {
+	.testimonial_card {
+		width: calc(33.33% - 15px);
+		min-height: 340px;
+	}
+}
+
+@media (max-width: 730px) {
+	.testimonial_track {
+		gap: 0px;
+		/* Remove gaps for mobile to make math 100% accurate */
+	}
+
+	.testimonial_card {
+		/* Set width to exactly 100% of the container */
+		width: 100%;
+		flex: 0 0 100%;
+		/* Force it to stay 100% width */
+		min-height: 350px;
+		/* If you want side spacing, use margin or padding INSIDE the card */
+		box-sizing: border-box;
+	}
+
+	.testimonial_slider {
+		padding: 20px 0;
+		/* Container padding is fine */
+	}
+}
+
+/* Mobile Phones (1 Card visible - Full Width) */
+
 
 .quote_icon {
 	position: absolute;
@@ -2957,11 +3076,7 @@ body.dark .grax_tm_settings .cursor li .svg,
 }
 
 /* Responsive: Mobile par 1 card dikhayen */
-@media (max-width: 768px) {
-	.testimonial_card {
-		min-width: 100%;
-	}
-}
+
 
 /* TESTIMONIALS */
 
@@ -2998,7 +3113,23 @@ body.dark .grax_tm_settings .cursor li .svg,
 	}
 }
 
+
+/* .grax_tm_about {
+		margin-top: 400px;
+		display: flex;
+		flex-direction: row	;
+	} */
 @media (max-width: 1040px) {
+	grax_tm_title_holder h3 {
+		letter-spacing: 1px;
+		text-align: left;
+		/* padding-left: 50px */
+
+	}
+
+	/* .grax_tm_about {
+		margin-top: 200px;
+	} */
 	#preloader {
 		display: none;
 	}
@@ -3067,12 +3198,39 @@ body.dark .grax_tm_settings .cursor li .svg,
 		padding-left: 30px;
 		margin-bottom: 30px;
 	}
+
+	.grax_tm_about .about_inner {
+		display: flex;
+		flex-direction: column;
+		/* Image upar aur text niche aa jaye */
+		align-items: center;
+	}
+
+	.grax_tm_about .left {
+		width: 100% !important;
+		padding-right: 0px !important;
+		margin-bottom: 30px;
+	}
+
+	/* Image ki height responsive karne ke liye */
+	.about_image_fix {
+		height: 600px !important;
+		/* Mobile/Tablet par height kam kar di */
+		background-size: cover !important;
+		/* Agar poori photo dikhani hai bina kate */
+		background-color: #838383;
+		/* Khali jagah bhadne ke liye halka color */
+	}
 }
 
 @media (max-width: 768px) {
 	.grax_tm_title_holder h3 {
 		letter-spacing: 5px;
+		/* text-align: left; */
+		/* padding-left: 50px */
+
 	}
+
 
 	.grax_tm_hero .name {
 		font-size: 45px;
@@ -3561,19 +3719,6 @@ body.dark .grax_tm_settings .cursor li .svg,
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Default (light mode) styles */
 .my_trigger .hamburger-inner,
 .my_trigger .hamburger-inner::before,
@@ -3620,10 +3765,10 @@ body.dark .grax_tm_settings .cursor li .svg,
 /* ========== CONSISTENT FOOTER STYLES - STANDARDIZED ACROSS ALL PAGES ========== */
 /* Based on content-writing.css design with consistent padding and centering */
 
-/* .grax_tm_section {
+.grax_tm_section {
 	position: relative;
 	background: var(--secondary-bg);
-	padding: 100px 0px 0px;
+
 	margin-top: 50px;
 	overflow: hidden;
 }
@@ -3631,7 +3776,7 @@ body.dark .grax_tm_settings .cursor li .svg,
 .grax_tm_copyright {
 	display: flex;
 	align-items: center;
-	/* sab items vertically center 
+
 	justify-content: space-between;
 }
 
@@ -3669,8 +3814,8 @@ body.dark .grax_tm_settings .cursor li .svg,
 .grax_tm_copyright .container {
 	position: relative;
 	z-index: 2;
-} 
-*/
+}
+
 
 /* Footer Layout - Centered and Consistent */
 /* ===============================
@@ -3697,6 +3842,22 @@ FOOTER BASE LAYOUT
 /* ===============================
 LOGO
 ================================*/
+
+@media (max-width: 768px) {
+
+	.footer-logo {
+		font-family: var(--font-secondary);
+		font-weight: 1000;
+		letter-spacing: 2px;
+		font-size: 36px;
+		background: linear-gradient(45deg, #ffffff, #999999);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		white-space: nowrap;
+	}
+
+}
 
 .footer-logo {
 	font-family: var(--font-secondary);
@@ -3727,6 +3888,7 @@ NAVIGATION
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
 }
 
 .footer-nav-menu {

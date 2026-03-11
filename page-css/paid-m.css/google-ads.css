@@ -477,11 +477,13 @@ body.dark-mode .comp-icon img {
 
 .mock-table {
     font-size: 0.75rem;
+
 }
 
 .t-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 6px 0;
     border-bottom: 1px solid var(--bg-light);
 }
