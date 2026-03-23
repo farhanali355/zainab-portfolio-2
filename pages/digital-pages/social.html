@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing | Professional Digital Solutions</title>
+    <link rel="stylesheet" href="../../page-css/digital-m.css/social.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Robust Dark Mode Overrides for Footer */
+        .dark-mode .grax_tm_section,
+        .dark-mode .grax_tm_copyright {
+            background-color: #1a1a1a !important;
+            background: #1a1a1a !important;
+        }
+
+        .dark-mode .copyright_inner {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 40px;
+        }
+
+        /* Standardized FAQ Styles mimicking Tailwind */
+        .faq-section {
+            background: #fdfdfb;
+            padding: 6rem 1rem;
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .dark-mode .faq-section {
+            background: #252525;
+            border-color: #333333;
+        }
+
+        .faq-container {
+            max-width: 56rem;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .faq-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: #9ca3af;
+        }
+
+        .faq-title {
+            margin-top: 1rem;
+            font-size: 2.25rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            color: #1a1c1e;
+        }
+
+        @media (min-width: 640px) {
+            .faq-title {
+                font-size: 3.75rem;
+            }
+        }
+
+        .dark-mode .faq-title {
+            color: #ffffff;
+        }
+
+        .faq-list {
+            border-top: 1px solid #f3f4f6;
+        }
+
+        .dark-mode .faq-list {
+            border-top: 1px solid #1f2937;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #f3f4f6;
+            padding: 2rem 0;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .dark-mode .faq-item {
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .faq-button {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            outline: none;
+        }
+
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            color: #1a1c1e;
+            transition: color 0.3s;
+        }
+
+        @media (min-width: 768px) {
+            .faq-question {
+                font-size: 1.5rem;
+            }
+        }
+
+        .dark-mode .faq-question {
+            color: #ffffff;
+        }
+
+        .faq-button:hover .faq-question {
+            color: #137fec;
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            margin-left: 1.5rem;
+            color: #9ca3af;
+            width: 2rem;
+            height: 2rem;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-content-inner {
+            overflow: hidden;
+        }
+
+        .faq-answer {
+            padding-top: 1.5rem;
+            padding-right: 3rem;
+            font-size: 1rem;
+            line-height: 1.625;
+            color: #4b5563;
+        }
+
+        @media (min-width: 768px) {
+            .faq-answer {
+                font-size: 1.125rem;
+            }
+        }
+
+        .dark-mode .faq-answer {
+            color: #9ca3af;
+        }
+
+        /* Branding consistency */
+        .navbar .logo-text {
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700;
+        }
+    </style>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body class="dark-mode">
+    <!-- Navigation (1000% Same as Digital Marketing) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <!-- Logo on Left -->
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">Social Media Marketing</span>
+                    <span class="logo-dot"></span>
+                </a>
+
+                <!-- Right Side Icons -->
+                <div class="nav-right">
+                    <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <button class="nav-icon tools-btn" id="toolsBtn" title="Our Marketing Tools">
+                        <i class="fas fa-tools"></i>
+                        <span class="tooltip">Our Tools</span>
+                    </button>
+
+                    <a href="../../index.html" class="cta-btn">
+                        <span>Home</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title Section -->
+    <section class="page-title-section">
+        <div class="container">
+            <h1 class="main-page-title">Social Media Marketing</h1>
+        </div>
+    </section>
+
+    <!-- Hero Collage Section -->
+    <!-- <section class="hero-collage">
+        <div class="container">
+            <div class="collage-container">
+                <div class="collage-item item-1">
+                    <img src="../../images/digital-marketing/Affiliate Marketing.jpg" alt="Affiliate Dashboard">
+                </div>
+                <div class="collage-item item-2">
+                    <img src="../../images/digital-marketing/affiliate-marketing.webp" alt="Affiliate Strategy">
+                </div>
+                <div class="collage-item item-3">
+                    <img src="../../images/digital-marketing/affiliate.webp" alt="Affiliate App">
+                </div>
+                <div class="collage-item item-4">
+                    <img src="../../images/digital-marketing/card-image.webp" alt="Affiliate Stats">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Definition Section -->
+    <section class="definition-section">
+        <div class="container">
+            <div class="definition-grid">
+                <div class="definition-content">
+                    <h2 class="section-title">What is Social Media Marketing?</h2>
+                    <div class="definition-text">
+                        <p>Social media marketing is the strategic use of social platforms to connect with your
+                            audience,
+                            build your brand, and drive meaningful business results through engaging content and
+                            targeted
+                            advertising.</p>
+                        <p>By leveraging the power of Instagram, Facebook, LinkedIn, and more, we help you create a
+                            consistent brand voice that resonates with your followers and converts them into loyal
+                            customers.</p>
+                    </div>
+                </div>
+                <div class="definition-image">
+                    <div class="megaphone-wrapper">
+                        <img src="../../images/new-images/section-2.png" alt="Social Media Strategies">
+                        <div class="social-icons-floating">
+                            <span class="float-icon fb"><i class="fab fa-facebook-f"></i></span>
+                            <span class="float-icon ig"><i class="fab fa-instagram"></i></span>
+                            <span class="float-icon li"><i class="fab fa-linkedin-in"></i></span>
+                            <span class="float-icon tk"><i class="fab fa-tiktok"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-heading-centered">Why Social Media Matters</h2>
+            <div class="why-grid">
+                <!-- Why 1 -->
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-users"></i></div>
+                    <div class="why-number">4.9<span>B</span></div>
+                    <p class="why-text">active social users</p>
+                    <p class="why-subtext">Reach a global audience where they spend their most time daily.</p>
+                </div>
+
+                <!-- Why 2 -->
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-heart"></i></div>
+                    <div class="why-number">71<span>%</span></div>
+                    <p class="why-text">purchase influence</p>
+                    <p class="why-subtext">Consumers are more likely to buy from brands they follow on social.</p>
+                </div>
+
+                <!-- Why 3 -->
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-comments"></i></div>
+                    <div class="why-number">3<span>X</span></div>
+                    <p class="why-text">higher engagement</p>
+                    <p class="why-subtext">Social platforms offer direct, real-time engagement with customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services-grid-section">
+        <div class="container">
+            <h2 class="section-heading-centered">Key Social Media Marketing Services</h2>
+            <div class="services-modern-grid">
+                <!-- Service 1 -->
+                <a href="content-strategy.html" class="modern-service-card"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Content Strategy & Planning</h3>
+                            <p class="card-desc">Developing platform-specific content calendars and creative strategies
+                                that align with your brand voice and business objectives.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Content Calendar</span>
+                            <span class="card-tag">Brand Voice</span>
+                            <span class="card-tag">Creative Direction</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/new-images/content-strategy.jpg" alt="Content Strategy">
+                    </div>
+                </a>
+
+                <!-- Service 2 -->
+                <a href="social-paid-advertising.html" class="modern-service-card"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-ad"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Social Paid Advertising</h3>
+                            <p class="card-desc">Highly targeted ad campaigns across Meta, TikTok, and LinkedIn to reach
+                                your ideal customers and drive measurable ROI.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Meta Ads</span>
+                            <span class="card-tag">TikTok Ads</span>
+                            <span class="card-tag">Retargeting</span>
+                            <span class="card-tag">A/B Testing</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/new-images/social-paid-advertising.jpg" alt="Paid Advertising">
+                    </div>
+                </a>
+
+                <!-- Service 3 -->
+                <a href="community-management.html" class="modern-service-card"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-comments"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Community Management</h3>
+                            <p class="card-desc">Active engagement with your audience, managing comments, messages, and
+                                building lasting brand loyalty through human interaction.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Engagement</span>
+                            <span class="card-tag">Customer Support</span>
+                            <span class="card-tag">Brand Identity</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/new-images/community-managment.jpg" alt="Community Management">
+                    </div>
+                </a>
+
+                <!-- Service 4 -->
+                <a href="analytics-listening.html" class="modern-service-card"
+                    style="text-decoration: none; color: inherit;">
+                    <div class="card-left">
+                        <div class="card-icon"><i class="fas fa-chart-area"></i></div>
+                        <div class="card-content-top">
+                            <h3 class="card-title">Analytics & Listening</h3>
+                            <p class="card-desc">Monitoring brand mentions and analyzing performance metrics to refine
+                                strategies and uncover new growth opportunities.</p>
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">Performance Tracking</span>
+                            <span class="card-tag">Social Listening</span>
+                            <span class="card-tag">ROI Analysis</span>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <img src="../../images/new-images/analytics.jpg" alt="Analytics">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results" id="results">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Proven Results</div>
+                <h2 class="section-title">Our Social Media Success Stories</h2>
+                <p class="section-subtitle">Real growth generated through strategic social media campaigns</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="result-number" data-count="320">0</div>
+                    <h3 class="result-title">Revenue Growth</h3>
+                    <p class="result-desc">For e-commerce brand in 6 months</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="result-number" data-count="45" data-suffix="%">0%</div>
+                    <h3 class="result-title">Partner Retention</h3>
+                    <p class="result-desc">High-performing quality partners</p>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="result-number" data-count="280">0</div>
+                    <h3 class="result-title">New Customer Acq.</h3>
+                    <p class="result-desc">Generated via affiliate networks</p>
+                </div>
+
+                <div class="result-card" data-aos="fade-up">
+                    <div class="result-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="result-number" data-count="95">0</div>
+                    <h3 class="result-title">Client Satisfaction</h3>
+                    <p class="result-desc">Long-term affiliate success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="faq-header">
+                <span class="faq-label">FAQS</span>
+                <h2 class="faq-title">Frequently asked questions</h2>
+            </div>
+
+            <div class="faq-list">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFAQ(this)">
+                        <span class="faq-question">What social media platforms do you manage?</span>
+                        <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-content-wrapper">
+                        <div class="faq-content-inner">
+                            <p class="faq-answer">
+                                We specialize in the major platforms that drive business growth, including Facebook,
+                                Instagram, LinkedIn, TikTok, and Twitter (X). The exact mix depends on where your target
+                                audience spends their time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFAQ(this)">
+                        <span class="faq-question">How do you measure social media success?</span>
+                        <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-content-wrapper">
+                        <div class="faq-content-inner">
+                            <p class="faq-answer">
+                                We track Key Performance Indicators (KPIs) such as engagement rate, follower growth,
+                                website clicks, and most importantly, lead generation and conversions to ensure a
+                                positive ROI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFAQ(this)">
+                        <span class="faq-question">Do I need to provide the content?</span>
+                        <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-content-wrapper">
+                        <div class="faq-content-inner">
+                            <p class="faq-answer">
+                                Not necessarily. While we welcome any brand assets you have, our team can handle full
+                                content creation, including graphics, copy, and video strategy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFAQ(this)">
+                        <span class="faq-question">How long does it take to see results from social media
+                            marketing?</span>
+                        <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-content-wrapper">
+                        <div class="faq-content-inner">
+                            <p class="faq-answer">
+                                While paid social can generate immediate traffic, organic social media growth is a
+                                long-term strategy. Most clients start seeing significant improvements in engagement and
+                                reach within the first 3 to 6 months.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFAQ(this)">
+                        <span class="faq-question">How is social media marketing different from social media
+                            advertising?</span>
+                        <svg class="faq-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                    </button>
+                    <div class="faq-content-wrapper">
+                        <div class="faq-content-inner">
+                            <p class="faq-answer">
+                                Social media marketing (organic) focuses on building a community and brand loyalty over
+                                time. Social advertising (paid) uses budget to push specific campaigns to highly
+                                targeted audiences for quicker conversions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-banner">
+                <h2 class="cta-title">Ready to Boost Your Social Presence?</h2>
+                <p class="cta-desc">Let's build a high-impact social media presence for your brand today.</p>
+                <div class="cta-actions">
+                    <a href="../../index.html#contact" class="cta-btn main">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (1000% Same as Digital Marketing) -->
+    <div class="grax_tm_section">
+        <div class="grax_tm_copyright">
+
+            <div class="container">
+                <div class="copyright_inner">
+                    <!-- Left: Logo -->
+                    <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                        <span class="footer-logo">Zainab Samnan</span>
+                    </div>
+
+                    <!-- Center: Navigation Menu -->
+                    <div class="footer-nav-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <ul class="footer-nav-menu">
+                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                <a href="../../index.html" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                <a href="../../index.html#about" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">About</span>
+                                </a>
+                            </li>
+                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                <a href="../../index.html#portfolio" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="briefcase-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Portfolio</span>
+                                </a>
+                            </li>
+                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                <a href="../../index.html#contact" class="footer-nav-link">
+                                    <span class="icon">
+                                        <ion-icon name="mail-outline"></ion-icon>
+                                    </span>
+                                    <span class="title">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Copyright Text -->
+                    <div class="copy wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                        <p>&copy; Copyright 2026 by Zainab Samnan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Tools Modal -->
+    <div class="tools-modal" id="toolsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="toolsModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h2>Our Social Media Marketing Tools</h2>
+                <p>Professional tools we use to deliver exceptional results</p>
+            </div>
+
+            <div class="tools-grid" id="toolsGrid"></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(button) {
+            const item = button.closest('.faq-item');
+
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        }
+    </script>
+    <!-- JavaScript file -->
+    <script src="../../js/digital-m.js/social.js"></script>
+</body>
+
+</html>

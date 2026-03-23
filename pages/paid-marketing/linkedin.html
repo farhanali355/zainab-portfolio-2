@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Ads Management | Zainab Samnan</title>
+
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Portfolio CSS (For Navbar & Footer Consistency) -->
+    <link rel="stylesheet" href="../../page-css/paid-m.css/meta-ads.css">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Fix for Tailwind vs Portfolio Navbar/Footer */
+        .navbar {
+            z-index: 100 !important;
+        }
+
+        .footer-section {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Prevent Tailwind from overriding portfolio styles in navbar/footer */
+        .navbar *,
+        .footer-section * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background-dark: #101822;
+            /* Matches tailwind config */
+            --background-light: #f6f7f8;
+        }
+
+        body.dark-mode {
+            background-color: var(--background-dark) !important;
+        }
+
+        body.dark-mode .logo-text {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .navbar {
+            background: rgba(15, 23, 42, 0.95) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hero text glow in dark mode */
+        body.dark-mode .text-primary.italic {
+            text-shadow: 0 0 20px rgba(19, 109, 236, 0.3);
+        }
+    </style>
+</head>
+
+<body class="light-mode bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <!-- Navbar (Portfolio Style) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">LinkedInAds Pro</span>
+                    <span class="logo-dot"></span>
+                </a>
+
+                <div class="nav-right">
+                    <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <a href="../../index.html" class="cta-btn">
+                        <span>Home</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="mt-24">
+        <!-- Hero Section -->
+        <section class="relative py-20 lg:py-32 overflow-hidden bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="z-10">
+                        <span
+                            class="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider mb-6">Premier
+                            B2B Advertising Partner</span>
+                        <h1
+                            class="text-5xl lg:text-7xl font-black leading-[1.1] text-slate-900 dark:text-white mb-8 tracking-tighter">
+                            Dominate B2B with <span class="text-primary italic">LinkedIn Ads</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed">
+                            We deploy data-driven advertising strategies that bypass the noise to put your brand
+                            directly in front of the world's most influential B2B decision-makers.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 text-center">
+                            <a href="../../index.html#contact"
+                                class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/30 hover:scale-[1.02] transition-all">
+                                Audit My LinkedIn Strategy
+                            </a>
+                            <a href="../../index.html#portfolio"
+                                class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                View Case Studies
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+                        <div
+                            class="relative bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-700">
+                            <div class="w-full aspect-video rounded-xl bg-slate-100 dark:bg-slate-700 overflow-hidden"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSed_DRvPaIjIkr18rBU5lZMxLCVKUi4BIjUq23lzpl0-CmreS1EfGHZU-OUKQeudl7IVHu5NOpDYlFxPjHzllyKKRG_pz8OEJLZPwQTfXAr4mvjav_oXpfDwB4f7PIgtrJrcC6mK6wxBuh7pMzy2dOHeOsngwb7pXu1KNpURPwKRTknjiL7CL9TFOxiyI1Ms5Y9kcHV62f8giqyDVWWrqhDyD4J241FYpqJi8K6Op1vozBzGjZx5YzZ7ZBy1lvuVnokJvG4NlxPZG'); background-size: cover; background-position: center;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-white dark:bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="flex flex-col gap-2 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 shadow-sm hover:shadow-md transition-all">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">
+                        Professional Members</p>
+                    <p class="text-primary text-5xl font-black tracking-tighter">930M+</p>
+                    <p class="text-slate-400 dark:text-slate-500 text-xs font-semibold">Untapped global network of
+                        decision makers</p>
+                </div>
+                <div
+                    class="flex flex-col gap-2 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 shadow-sm hover:shadow-md transition-all">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">B2B Leads
+                        from LinkedIn</p>
+                    <p class="text-primary text-5xl font-black tracking-tighter">80%</p>
+                    <p class="text-slate-400 dark:text-slate-500 text-xs font-semibold">Market share for professional
+                        lead generation</p>
+                </div>
+                <div
+                    class="flex flex-col gap-2 p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 shadow-sm hover:shadow-md transition-all">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-wider">Higher
+                        Conversion Rates</p>
+                    <p class="text-primary text-5xl font-black tracking-tighter">46%</p>
+                    <p class="text-slate-400 dark:text-slate-500 text-xs font-semibold">Compared to standard social
+                        display ads</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="py-12 border-y border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by 200+ Fast-Growing
+                    B2B Brands</p>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                    <i class="fas fa-building text-3xl"></i>
+                    <i class="fas fa-industry text-3xl"></i>
+                    <i class="fas fa-briefcase text-3xl"></i>
+                    <i class="fas fa-city text-3xl"></i>
+                    <i class="fas fa-laptop-code text-3xl"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Pillars -->
+        <section class="py-24 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-slate-900 dark:text-white">Our
+                        Performance Pillars</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">End-to-end management
+                        services designed to turn LinkedIn into a predictable revenue engine for your business.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div
+                        class="group p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-primary transition-all hover:shadow-xl">
+                        <div
+                            class="bg-primary/10 text-primary w-14 h-14 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                            <i class="fas fa-play-circle text-2xl"></i>
+                        </div>
+                        <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">High-Impact Sponsored Content
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Command attention in the
+                            professional feed with native ad formats that build authority and drive measurable
+                            engagement.</p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-primary transition-all hover:shadow-xl">
+                        <div
+                            class="bg-primary/10 text-primary w-14 h-14 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </div>
+                        <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Conversational InMail Strategy
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Break through the inbox
+                            clutter with personalized sequences that open doors to high-figure deals.</p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-primary transition-all hover:shadow-xl">
+                        <div
+                            class="bg-primary/10 text-primary w-14 h-14 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                            <i class="fas fa-bullseye text-2xl"></i>
+                        </div>
+                        <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Hyper-Granular Targeting</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Reach the exact Buying
+                            Committee members responsible for your solution category using firmographics.</p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-800/50 hover:border-primary transition-all hover:shadow-xl">
+                        <div
+                            class="bg-primary/10 text-primary w-14 h-14 flex items-center justify-center rounded-2xl mb-8 group-hover:bg-primary group-hover:text-white transition-all">
+                            <i class="fas fa-file-invoice text-2xl"></i>
+                        </div>
+                        <h3 class="text-slate-900 dark:text-white text-xl font-bold mb-4">Frictionless Lead Capture</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Convert intent instantly
+                            with optimized native forms that pre-fill professional data for 3x higher volume.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Features -->
+        <section class="py-24 bg-slate-900 text-white overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="flex flex-col gap-6">
+                        <h2 class="text-4xl md:text-5xl font-black tracking-tight leading-tight">Engineered for
+                            Exponential B2B Growth</h2>
+                        <p class="text-slate-400 text-lg leading-relaxed">Our methodology goes beyond basic campaign
+                            setup. We create a closed-loop attribution model that proves ROI.</p>
+                        <div class="flex flex-col gap-8 mt-4">
+                            <div class="flex gap-6">
+                                <div
+                                    class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fas fa-network-wired text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-2xl mb-2 tracking-tight">Precision Account Intelligence
+                                    </h4>
+                                    <p class="text-slate-400 text-sm">Identify high-value accounts showing active buying
+                                        signals through advanced behavioral layering.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div
+                                    class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fas fa-globe text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-2xl mb-2 tracking-tight">Multi-Channel Authority</h4>
+                                    <p class="text-slate-400 text-sm">Surround your prospects across the web while
+                                        maintaining the precision of professional targeting data.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-6">
+                                <div
+                                    class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary flex-shrink-0">
+                                    <i class="fas fa-filter text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-2xl mb-2 tracking-tight">High-Velocity Pipeline</h4>
+                                    <p class="text-slate-400 text-sm">Shift focus from vanity metrics like CTR to
+                                        bottom-line results: Sales Qualified Leads (SQLs).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-primary to-blue-700 rounded-3xl p-1 shadow-2xl">
+                            <div
+                                class="bg-slate-900 rounded-[calc(1.5rem-4px)] p-12 aspect-square flex items-center justify-center relative overflow-hidden">
+                                <div class="relative w-full h-full flex items-center justify-center">
+                                    <div
+                                        class="absolute w-full h-full border-2 border-primary/20 rounded-full animate-pulse">
+                                    </div>
+                                    <div class="absolute w-3/4 h-3/4 border-2 border-primary/40 rounded-full"></div>
+                                    <div
+                                        class="absolute w-32 h-32 bg-primary/20 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-chart-bar text-5xl text-primary"></i>
+                                    </div>
+                                    <div
+                                        class="absolute top-0 right-0 bg-slate-800 p-4 rounded-2xl shadow-lg border border-slate-700">
+                                        <p class="text-sm font-black text-primary">+240% Growth</p>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-0 left-0 bg-slate-800 p-4 rounded-2xl shadow-lg border border-slate-700">
+                                        <p class="text-sm font-black text-emerald-400">Low CPA Engine</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-background-light dark:bg-background-dark">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <div
+                    class="bg-primary rounded-[2.5rem] p-12 lg:p-20 text-white shadow-2xl shadow-primary/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+                    <div class="relative z-10 flex flex-col items-center gap-8">
+                        <h2 class="text-4xl lg:text-5xl font-black tracking-tight leading-tight">The Science of
+                            Hyper-Scaling</h2>
+                        <p class="text-white/80 text-xl max-w-2xl mx-auto leading-relaxed">Stop guessing and start
+                            scaling. Request a comprehensive audit of your current LinkedIn presence and receive a
+                            data-backed growth roadmap.</p>
+                        <a href="../../index.html#contact"
+                            class="bg-white text-primary hover:bg-slate-100 px-10 py-5 rounded-2xl text-xl font-black transition-all shadow-xl shadow-black/10">
+                            Audit My LinkedIn Strategy
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Portfolio Style) -->
+    <footer class="grax_tm_section footer-section mt-0">
+        <div class="grax_tm_copyright">
+            <div class="container">
+                <div class="copyright_inner">
+                    <div class="logo">
+                        <span class="footer-logo">Zainab Samnan</span>
+                    </div>
+                    <div class="footer-nav-center">
+                        <ul class="footer-nav-menu">
+                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                <a href="../../index.html" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                    <span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                <a href="../../index.html#about" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                    <span class="title">About</span>
+                                </a>
+                            </li>
+                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                <a href="../../index.html#portfolio" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                                    <span class="title">Portfolio</span>
+                                </a>
+                            </li>
+                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                <a href="../../index.html#contact" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                    <span class="title">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <p>&copy; Copyright 2026 by Zainab Samnan. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.replace('light-mode', 'dark-mode');
+            body.classList.add('dark');
+            html.classList.add('dark');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            body.classList.add('light-mode');
+            html.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (!html.classList.contains('dark')) {
+                body.classList.replace('light-mode', 'dark-mode');
+                body.classList.add('dark');
+                html.classList.add('dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.replace('dark-mode', 'light-mode');
+                body.classList.remove('dark');
+                html.classList.remove('dark');
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+
+</html>

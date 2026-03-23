@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Ads Management | Zainab Samnan</title>
+
+    <!-- External Resources -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Portfolio CSS (For Navbar & Footer Consistency) -->
+    <link rel="stylesheet" href="../../page-css/paid-m.css/meta-ads.css">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Fix for Tailwind vs Portfolio Navbar/Footer */
+        .navbar {
+            z-index: 100 !important;
+        }
+
+        .footer-section {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Prevent Tailwind from overriding portfolio styles in navbar/footer */
+        .navbar *,
+        .footer-section * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --background-dark: #101822;
+            /* Matches tailwind config */
+            --background-light: #f6f7f8;
+        }
+
+        body.dark-mode {
+            background-color: var(--background-dark) !important;
+        }
+
+        body.dark-mode .logo-text {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .navbar {
+            background: rgba(15, 23, 42, 0.95) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hero text glow in dark mode */
+        body.dark-mode .text-primary.italic {
+            text-shadow: 0 0 20px rgba(19, 109, 236, 0.3);
+        }
+    </style>
+</head>
+
+<body class="light-mode bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <!-- Navbar (Portfolio Style) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-text">MetaAds Management</span>
+                    <span class="logo-dot"></span>
+                </a>
+
+                <div class="nav-right">
+                    <button class="nav-icon theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                        <span class="tooltip">Dark Mode</span>
+                    </button>
+                    <a href="../../index.html" class="cta-btn">
+                        <span>Home</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="mt-24">
+        <!-- Hero Section -->
+        <section class="relative py-20 lg:py-32 overflow-hidden bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="z-10">
+                        <span
+                            class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">Certified
+                            Meta Business Partner</span>
+                        <h1
+                            class="text-5xl lg:text-7xl font-black leading-[1.1] text-slate-900 dark:text-white mb-8 tracking-tighter">
+                            Scale Your Brand with <span class="text-primary italic">Data-Driven</span> Facebook
+                            Advertising
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed">
+                            Master Meta Ads management with our expert-led strategies designed to maximize ROI and reach
+                            your ideal customers across Facebook and Instagram.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="../../index.html#contact"
+                                class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary/30 hover:scale-[1.02] transition-transform text-center">
+                                Get a Free Audit
+                            </a>
+                            <a href="../../index.html#portfolio"
+                                class="border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-center">
+                                View Case Studies
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+                        <div
+                            class="relative bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-700">
+                            <div class="w-full aspect-video rounded-xl bg-slate-100 dark:bg-slate-700 overflow-hidden"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmLqoLDHYFt3n4ZOM-f_qWHxmA3UH6qiAtqisZPEynoVPEARiEEMVAzRXpyj8tpTd6Jph4HkSFWT5eleREIWeFzCebzzQqSUONL4fGlvHrvCTsmiENqrMVIw1M6LG4c2ZzWndkg91d9u6ssP0xGNSwFvRO-8LZDyoQ0Vepzl-qNYCxJulldN9zc_WGwRDkm2lBwVMFsEmVO9gkL1o6dJtFjjnz6a3S36HGO50htqUkGMLiduR-5mlim5FjZ59sBeoQbatL9LdH2-Q4'); background-size: cover; background-position: center;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Logos -->
+        <section class="py-12 border-y border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-background-dark/50">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-10">Trusted by 200+ Fast-Growing
+                    Brands</p>
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                    <i class="fab fa-shopify text-3xl"></i>
+                    <i class="fab fa-amazon text-3xl"></i>
+                    <i class="fab fa-ebay text-3xl"></i>
+                    <i class="fab fa-magento text-3xl"></i>
+                    <i class="fab fa-wordpress text-3xl"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Stats -->
+        <section class="py-24 bg-slate-50 dark:bg-slate-900/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider mb-4">Market
+                        Impact</span>
+                    <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-slate-900 dark:text-white">Why
+                        Meta Advertising Matters</h2>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg">Reach your audience where they spend their
+                        time.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <p class="text-slate-500 text-sm font-bold mb-2 uppercase tracking-wide">Total Users</p>
+                        <p class="text-5xl font-black text-slate-900 dark:text-white mb-2 tracking-tighter">3.96B</p>
+                        <p class="text-green-500 text-sm font-bold flex items-center gap-1">
+                            <i class="fas fa-arrow-up text-xs"></i> +12% YoY growth
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                            <i class="fas fa-compass text-2xl"></i>
+                        </div>
+                        <p class="text-slate-500 text-sm font-bold mb-2 uppercase tracking-wide">Discovery Rate</p>
+                        <p class="text-5xl font-black text-slate-900 dark:text-white mb-2 tracking-tighter">71%</p>
+                        <p class="text-green-500 text-sm font-bold flex items-center gap-1">
+                            <i class="fas fa-arrow-up text-xs"></i> Users discover brands
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-slate-800 p-10 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all">
+                        <div
+                            class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+                            <i class="fas fa-bolt text-2xl"></i>
+                        </div>
+                        <p class="text-slate-500 text-sm font-bold mb-2 uppercase tracking-wide">Active Users</p>
+                        <p class="text-5xl font-black text-slate-900 dark:text-white mb-2 tracking-tighter">2.9B</p>
+                        <p class="text-green-500 text-sm font-bold flex items-center gap-1">
+                            <i class="fas fa-arrow-up text-xs"></i> Active daily reach
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Services Bento Grid -->
+        <section class="py-24 bg-background-light dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-slate-900 dark:text-white">
+                            Core Advertising Services</h2>
+                        <p class="text-slate-600 dark:text-slate-400 text-xl max-w-xl">Comprehensive management across
+                            the entire
+                            Meta ecosystem to drive growth at every stage of the funnel.</p>
+                    </div>
+                    <a href="../../index.html#portfolio"
+                        class="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        View All Services <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Facebook Ads -->
+                    <div
+                        class="md:col-span-2 group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all cursor-pointer overflow-hidden relative">
+                        <div class="relative z-10">
+                            <div
+                                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Facebook Advertising</h3>
+                            <p class="text-slate-600 dark:text-slate-400 mb-6 max-w-md">Precision-targeted campaigns on
+                                the world's largest social network. We optimize for conversions, traffic, and brand
+                                awareness.</p>
+                            <ul class="space-y-3 font-semibold">
+                                <li class="flex items-center gap-2 text-sm font-medium"><i
+                                        class="fas fa-check-circle text-primary text-lg"></i> Pixel
+                                    & Conversion API Setup</li>
+                                <li class="flex items-center gap-2 text-sm font-medium"><i
+                                        class="fas fa-check-circle text-primary text-lg"></i>
+                                    Lookalike Audience Expansion</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="absolute right-0 bottom-0 w-64 h-64 bg-slate-50 dark:bg-slate-700/30 rounded-tl-full translate-x-12 translate-y-12 group-hover:bg-primary/5 transition-colors">
+                        </div>
+                    </div>
+                    <!-- Instagram Ads -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all cursor-pointer">
+                        <div
+                            class="w-12 h-12 bg-pink-500/10 rounded-lg flex items-center justify-center text-pink-500 mb-6">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Instagram Ads</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Visual-first storytelling through Feed,
+                            Stories, and Reels to capture engagement.</p>
+                        <button
+                            class="bg-slate-100 dark:bg-slate-700 p-2 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <!-- Messenger & WhatsApp -->
+                    <div
+                        class="group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all cursor-pointer">
+                        <div
+                            class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-500 mb-6">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Conversational Ads</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">Drive leads directly into Messenger and
+                            WhatsApp for high-touch sales.</p>
+                        <button
+                            class="bg-slate-100 dark:bg-slate-700 p-2 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <!-- Advanced Strategy -->
+                    <div
+                        class="md:col-span-2 group bg-slate-900 text-white rounded-2xl p-8 hover:shadow-xl transition-all cursor-pointer relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-4 !text-white">Strategic Pillars of Success</h3>
+                            <div class="grid sm:grid-cols-2 gap-8 mt-8">
+                                <div>
+                                    <h4 class="font-bold text-primary mb-2 flex items-center gap-2 text-lg">
+                                        <i class="fas fa-bullseye text-sm"></i> Audience Strategy
+                                    </h4>
+                                    <p class="text-slate-400 text-sm">Granular targeting using first-party data,
+                                        behavioral signals, and interest-based segmentation.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary mb-2 flex items-center gap-2 text-lg">
+                                        <i class="fas fa-chart-line text-sm"></i> Campaign Optimization
+                                    </h4>
+                                    <p class="text-slate-400 text-sm">Real-time scaling and A/B testing to ensure your
+                                        budget is always working its hardest.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-0 right-0 w-full h-full opacity-10"
+                            style="background-image: radial-gradient(circle at 100% 0%, #136dec 0%, transparent 50%);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Features -->
+        <section class="py-24 bg-white dark:bg-background-dark">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-primary/5 rounded-[2rem] p-12 lg:p-20 overflow-hidden relative">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span
+                                class="inline-block py-1.5 px-4 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider mb-6">Strategy
+                                Hub</span>
+                            <h2
+                                class="text-4xl md:text-5xl font-black mb-10 leading-tight tracking-tight text-slate-900 dark:text-white">
+                                Advanced Full-Funnel Marketing</h2>
+                            <div class="space-y-8">
+                                <div class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center text-primary">
+                                        <i class="fas fa-shopping-cart text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-2xl mb-2 tracking-tight">E-commerce & Shopping</h4>
+                                        <p class="text-slate-600 dark:text-slate-400 text-lg">Dynamic product ads and
+                                            integrated
+                                            Meta shops to streamline the path to purchase.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center text-primary">
+                                        <i class="fas fa-play-circle text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-2xl mb-2 tracking-tight">Video & Reels Strategy</h4>
+                                        <p class="text-slate-600 dark:text-slate-400 text-lg">Short-form video content
+                                            designed
+                                            specifically for the mobile-first era of social browsing.</p>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div
+                                        class="flex-shrink-0 w-14 h-14 bg-white dark:bg-slate-800 rounded-2xl shadow-sm flex items-center justify-center text-primary">
+                                        <i class="fas fa-network-wired text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-2xl mb-2 tracking-tight">Omnichannel Attribution</h4>
+                                        <p class="text-slate-600 dark:text-slate-400 text-lg">Clear reporting that shows
+                                            exactly
+                                            how your Meta ads influence sales across all channels.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-6 border border-slate-100 dark:border-slate-700">
+                                <div class="aspect-[4/5] rounded-xl bg-slate-200 dark:bg-slate-700"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD61aCNpMnEq6y3mYxFi3GY-qllEfTjanAPW48nm3fhDddANg_IQZKxMze_uDpyARk4zL2AvHFfyMKdFAWhJc2YaV0AYKfHWrcU81YkSYk_k5dhYm6WmaD3Y7YCHwjOe7GMfKjrmno29JcqW13nUZgbkbUsoCYBGWqibLaJsOcJVyibLx05P7umLVYNyq901FnGR3CdLFSFGoqFLoup_PQ3AF_oIV6i73wVAZkPo98Y-76AWiNRGaTMTkpR_TXnUVXKjZbUlyFKSz6Y'); background-size: cover; background-position: center;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-background-light dark:bg-background-dark">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-4xl lg:text-5xl font-black mb-8 leading-tight text-slate-900 dark:text-white">Ready to
+                    transform your Meta advertising performance?</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 mb-10">Get a comprehensive audit of your current
+                    campaigns and a 90-day growth roadmap.</p>
+                <div class="flex justify-center">
+                    <a href="../../index.html#contact"
+                        class="bg-primary text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl shadow-primary/30 hover:scale-105 transition-transform flex items-center gap-3">
+                        Claim Your Free Audit <i class="fas fa-arrow-right text-lg"></i>
+                    </a>
+                </div>
+                <p class="mt-6 text-sm font-medium text-slate-500 italic">No credit card required. No obligation.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Portfolio Style) -->
+    <footer class="grax_tm_section footer-section mt-0">
+        <div class="grax_tm_copyright">
+            <div class="container">
+                <div class="copyright_inner">
+                    <div class="logo">
+                        <span class="footer-logo">Zainab Samnan</span>
+                    </div>
+                    <div class="footer-nav-center">
+                        <ul class="footer-nav-menu">
+                            <li style="--i:#e54b4b;--j:#ff7b7b" class="footer-nav-item">
+                                <a href="../../index.html" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                                    <span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li style="--i:#56CCF2;--j:#2F80ED" class="footer-nav-item">
+                                <a href="../../index.html#about" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                                    <span class="title">About</span>
+                                </a>
+                            </li>
+                            <li style="--i:#FF9966;--j:#FF5E62" class="footer-nav-item">
+                                <a href="../../index.html#portfolio" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                                    <span class="title">Portfolio</span>
+                                </a>
+                            </li>
+                            <li style="--i:#80FF72;--j:#7EE8FA" class="footer-nav-item">
+                                <a href="../../index.html#contact" class="footer-nav-link">
+                                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                                    <span class="title">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <p>&copy; Copyright 2026 by Zainab Samnan. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const html = document.documentElement;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.replace('light-mode', 'dark-mode');
+            body.classList.add('dark');
+            html.classList.add('dark');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            body.classList.add('light-mode');
+            html.classList.remove('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (!html.classList.contains('dark')) {
+                body.classList.replace('light-mode', 'dark-mode');
+                body.classList.add('dark');
+                html.classList.add('dark');
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.replace('dark-mode', 'light-mode');
+                body.classList.remove('dark');
+                html.classList.remove('dark');
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        mobileToggle.addEventListener('click', () => {
+            window.location.href = "../../index.html";
+        });
+    </script>
+</body>
+
+</html>
